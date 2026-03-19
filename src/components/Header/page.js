@@ -231,9 +231,12 @@ const Header = () => {
                 >
                   Our Projects
                 </Link>
-                <li className="px-6 py-3 hover:bg-white/10 cursor-pointer">
-                  <Link href="/showcase">Marketing</Link>
-                </li>
+                <Link
+                  href="/showcase"
+                  className="block py-2 pl-3 cursor-pointer"
+                >
+                  Marketing
+                </Link>
               </div>
             </div>
           </div>
