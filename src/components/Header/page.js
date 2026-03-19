@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react"; // ✅ added useRef
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaPhoneFlip, FaPhone } from "react-icons/fa6";
@@ -24,10 +24,6 @@ const Header = () => {
     if (!menuOpen) setDropOpen(false);
   }, [menuOpen]);
 
-  // const handleMouseEnter = () => !isMobile && setDropOpen(true);
-  // const handleMouseLeave = () => !isMobile && setDropOpen(false);
-  // const handleClick = () => isMobile && setDropOpen((p) => !p);
-
   /* ===== DESKTOP HOVER ===== */
   const openDropdownSafe = () => {
     if (isMobile) return;
@@ -48,7 +44,7 @@ const Header = () => {
       <header
         className="
   fixed top-0 md:top-5 left-1/2 -translate-x-1/2
-  w-full md:w-[calc(100%-40px)] max-w-[1280px]
+  w-full md:w-[calc(100%-40px)] max-w-7xl
   bg-[#0f032b] text-white
   md:rounded-full
   px-5 py-3 md:py-2
@@ -99,7 +95,7 @@ const Header = () => {
               className={`
         absolute left-1/2 -translate-x-1/2 top-full
         bg-[#0f032b] text-white rounded-lg mt-4
-        shadow-xl min-w-[220px]
+        shadow-xl min-w-55
         transform transition-all duration-300 origin-top
         ${
           dropOpen
@@ -118,6 +114,9 @@ const Header = () => {
               <li className="px-6 py-3 hover:bg-white/10 cursor-pointer">
                 <Link href="/snapshot-project">Our Projects</Link>
               </li>
+              <li className="px-6 py-3 hover:bg-white/10 cursor-pointer">
+                <Link href="/showcase">Marketing</Link>
+              </li>
             </ul>
           </div>
         </nav>
@@ -134,7 +133,7 @@ const Header = () => {
           <Link href="https://calendly.com/sayam-unnity/30min">
             <button className="group flex items-center gap-3 bg-white text-[#0f032b] hover:bg-[#0f032b] hover:text-white hover:border hover:border-white px-6 py-2.5 rounded-full text-base font-medium overflow-hidden cursor-pointer transition-all duration-200 max-sm:w-full max-sm:justify-center">
               Start Now
-              <span className="relative w-7 h-7 overflow-hidden rounded-full bg-[#0f032b] text-white flex-shrink-0">
+              <span className="relative w-7 h-7 overflow-hidden rounded-full bg-[#0f032b] text-white shrink-0">
                 <span className="absolute inset-0 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-8">
                   <svg
                     viewBox="0 0 24 24"
@@ -182,7 +181,7 @@ const Header = () => {
       {/* ================= MOBILE DRAWER ================= */}
       <div
         className={`
-        fixed top-20 right-0 h-[calc(100vh-5rem)] w-[80%] max-w-[340px]
+        fixed top-20 right-0 h-[calc(100vh-5rem)] w-[80%] max-w-85
         bg-white text-black
         transform transition-transform duration-300 ease-out
         ${menuOpen ? "translate-x-0" : "translate-x-full"}
@@ -232,6 +231,9 @@ const Header = () => {
                 >
                   Our Projects
                 </Link>
+                <li className="px-6 py-3 hover:bg-white/10 cursor-pointer">
+                  <Link href="/showcase">Marketing</Link>
+                </li>
               </div>
             </div>
           </div>

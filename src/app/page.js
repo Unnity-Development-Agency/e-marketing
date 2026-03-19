@@ -523,7 +523,7 @@ export default function Home() {
           />
 
           {/* ── Dark gradient overlay on top of grid ── */}
-          <div className="absolute inset-0 z-[2] bg-gradient-to-b from-[#0F032B]/80 via-[#0F032B]/40 to-[#0F032B]/90 pointer-events-none" />
+          <div className="absolute inset-0 z-2 bg-linear-to-b from-[#0F032B]/80 via-[#0F032B]/40 to-[#0F032B]/90 pointer-events-none" />
           <div className="w-full h-[650px] absolute -bottom-2 z-10 hidden md:block">
             <LightRays
               raysOrigin="bottom-center"
@@ -559,12 +559,12 @@ export default function Home() {
           {/* Soft purple glow top */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[450px] rounded-full bg-[#6d28d9]/8 blur-[140px] z-[2] pointer-events-none" />
           {/* Soft purple glow bottom */}
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full bg-[#4c1d95]/5 blur-[110px] z-[2] pointer-events-none" />
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-75 rounded-full bg-[#4c1d95]/5 blur-[110px] z-2 pointer-events-none" />
 
           {/* ════════════════════════════════════
               LEFT SIDE PANEL
           ════════════════════════════════════ */}
-          <div className="absolute left-0 top-0 bottom-0 w-14 z-[3] hidden lg:flex flex-col items-center justify-between py-10 pointer-events-none select-none">
+          <div className="absolute left-0 top-0 bottom-0 w-14 z-3 hidden lg:flex flex-col items-center justify-between py-10 pointer-events-none select-none">
             <div
               className="flex flex-col items-center gap-3"
               style={{
@@ -572,7 +572,7 @@ export default function Home() {
                 transform: "rotate(180deg)",
               }}
             >
-              <span className="w-px h-10 bg-gradient-to-t from-white/15 to-transparent" />
+              <span className="w-px h-10 bg-linear-to-t from-white/15 to-transparent" />
               <span
                 className="text-[10px] font-semibold tracking-[0.25em] uppercase text-white/20"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
@@ -607,20 +607,20 @@ export default function Home() {
               >
                 Est. 2024
               </span>
-              <span className="w-px h-10 bg-gradient-to-b from-white/15 to-transparent" />
+              <span className="w-px h-10 bg-linear-to-b from-white/15 to-transparent" />
             </div>
-            <div className="absolute right-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/[0.06] to-transparent" />
+            <div className="absolute right-0 top-0 bottom-0 w-px bg-linear-to-b from-transparent via-white/[0.06] to-transparent" />
           </div>
 
           {/* ════════════════════════════════════
               RIGHT SIDE PANEL
           ════════════════════════════════════ */}
-          <div className="absolute right-0 top-0 bottom-0 w-14 z-[3] hidden lg:flex flex-col items-center justify-between py-10 pointer-events-none select-none">
+          <div className="absolute right-0 top-0 bottom-0 w-14 z-3 hidden lg:flex flex-col items-center justify-between py-10 pointer-events-none select-none">
             <div
               className="flex flex-col items-center gap-3"
               style={{ writingMode: "vertical-rl" }}
             >
-              <span className="w-px h-10 bg-gradient-to-t from-white/15 to-transparent" />
+              <span className="w-px h-10 bg-linear-to-t from-white/15 to-transparent" />
               <span
                 className="text-[10px] font-semibold tracking-[0.25em] uppercase text-white/20"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
@@ -651,9 +651,9 @@ export default function Home() {
               >
                 Scroll Down
               </span>
-              <span className="w-px h-10 bg-gradient-to-b from-white/15 to-transparent" />
+              <span className="w-px h-10 bg-linear-to-b from-white/15 to-transparent" />
             </div>
-            <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/[0.06] to-transparent" />
+            <div className="absolute left-0 top-0 bottom-0 w-px bg-linear-to-b from-transparent via-white/[0.06] to-transparent" />
           </div>
 
           {/* ══════════════════════════════════
@@ -662,7 +662,7 @@ export default function Home() {
           <div className="relative top-8 z-10 flex-1 flex flex-col items-center justify-center text-center px-6 lg:px-20 pt-20 pb-8">
             {/* Pill label */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/[0.04] mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#a78bfa] animate-pulse flex-shrink-0" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#a78bfa] animate-pulse shrink-0" />
               <span
                 className="text-[11px] font-medium text-white/50 tracking-[0.2em] uppercase"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
@@ -683,7 +683,7 @@ export default function Home() {
               }}
             >
               <span className="block text-white">Crafting Digital Brands</span>
-              <span className="block mt-1 bg-gradient-to-r from-[#e0d7ff] via-[#a78bfa] to-[#7c3aed] bg-clip-text text-transparent">
+              <span className="block mt-1 bg-linear-to-r from-[#e0d7ff] via-[#a78bfa] to-[#7c3aed] bg-clip-text text-transparent">
                 That Stand Out.
               </span>
             </h1>
@@ -796,7 +796,7 @@ export default function Home() {
               BOTTOM — SERVICE BADGES
           ══════════════════════════════════ */}
           <div className="relative z-10 w-full px-6 lg:px-20 pb-8">
-            <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-5" />
+            <div className="w-full h-px bg-linear-to-r from-transparent via-white/10 to-transparent mb-5" />
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
@@ -841,14 +841,14 @@ export default function Home() {
                     }`}
                 >
                   <div
-                    className={`absolute top-0 left-6 right-6 h-px bg-gradient-to-r from-transparent ${featured ? "via-[#a78bfa]/45" : "via-white/8"} to-transparent`}
+                    className={`absolute top-0 left-6 right-6 h-px bg-linear-to-r from-transparent ${featured ? "via-[#a78bfa]/45" : "via-white/8"} to-transparent`}
                   />
                   <div
-                    className={`absolute left-0 top-3 bottom-3 w-[2.5px] rounded-full bg-gradient-to-b ${featured ? "from-[#c4b5fd] to-[#8b5cf6]" : "from-[#a78bfa]/45 to-[#7c3aed]/15"}`}
+                    className={`absolute left-0 top-3 bottom-3 w-[2.5px] rounded-full bg-linear-to-b ${featured ? "from-[#c4b5fd] to-[#8b5cf6]" : "from-[#a78bfa]/45 to-[#7c3aed]/15"}`}
                   />
 
                   <div
-                    className={`flex-shrink-0 w-9 h-9 rounded-xl flex items-center justify-center border ${featured ? "bg-[#a78bfa]/12 border-[#a78bfa]/25" : "bg-white/[0.04] border-white/[0.07]"}`}
+                    className={`shrink-0 w-9 h-9 rounded-xl flex items-center justify-center border ${featured ? "bg-[#a78bfa]/12 border-[#a78bfa]/25" : "bg-white/[0.04] border-white/[0.07]"}`}
                   >
                     {icon}
                   </div>
@@ -864,7 +864,7 @@ export default function Home() {
                         {title}
                       </span>
                       <span
-                        className={`text-[9px] px-1.5 py-[3px] rounded-md font-semibold uppercase tracking-wider border ${tagColor}`}
+                        className={`text-[9px] px-1.5 py-0.75 rounded-md font-semibold uppercase tracking-wider border ${tagColor}`}
                         style={{ fontFamily: "'DM Sans', sans-serif" }}
                       >
                         {tag}
@@ -880,7 +880,7 @@ export default function Home() {
 
                   <svg
                     viewBox="0 0 24 24"
-                    className="w-3.5 h-3.5 text-white/12 group-hover:text-[#a78bfa]/50 flex-shrink-0 transition-colors duration-200"
+                    className="w-3.5 h-3.5 text-white/12 group-hover:text-[#a78bfa]/50 shrink-0 transition-colors duration-200"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
@@ -944,7 +944,7 @@ export default function Home() {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="relative snap-start rounded-[18px] overflow-hidden flex-shrink-0 w-60 h-96 transition-all duration-500 cursor-pointer hover:w-80 group max-sm:w-full max-sm:max-w-sm max-sm:h-36 max-sm:hover:h-96 max-sm:hover:w-full"
+                  className="relative snap-start rounded-[18px] overflow-hidden shrink-0 w-60 h-96 transition-all duration-500 cursor-pointer hover:w-80 group max-sm:w-full max-sm:max-w-sm max-sm:h-36 max-sm:hover:h-96 max-sm:hover:w-full"
                 >
                   <img
                     src={feature.image}
@@ -1359,14 +1359,14 @@ export default function Home() {
               <h1 className="text-5xl text-white leading-tight mb-5 max-md:text-3xl">
                 Real projects shipped, measurable results
               </h1>
-              <p className="md:text-lg leading-[1.5] text-white/45 mb-8">
+              <p className="md:text-lg leading-normal text-white/45 mb-8">
                 A snapshot of the work we've delivered — websites, funnels, and
                 performance campaigns that moved the needle for our clients.
               </p>
               <Link href="/snapshot-project">
                 <button className="group flex items-center gap-3 bg-white text-black px-6 py-3 rounded-full font-semibold cursor-pointer transition-all duration-300 w-fit">
                   Explore our work
-                  <span className="relative w-7 h-7 overflow-hidden flex-shrink-0">
+                  <span className="relative w-7 h-7 overflow-hidden shrink-0">
                     <span className="absolute inset-0 bg-white rounded-full flex items-center justify-center transition-all duration-300 group-hover:translate-x-10 group-hover:opacity-0">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -1453,7 +1453,7 @@ export default function Home() {
                   key={i}
                   className="group relative flex flex-col bg-white rounded-2xl overflow-hidden border border-black/5 shadow-[0_2px_8px_rgba(0,0,0,0.06)] cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_24px_rgba(0,0,0,0.15)]"
                 >
-                  <div className="relative aspect-[3/4] w-full overflow-hidden">
+                  <div className="relative aspect-3/4 w-full overflow-hidden">
                     <Image
                       src={m.photo}
                       width={0}
