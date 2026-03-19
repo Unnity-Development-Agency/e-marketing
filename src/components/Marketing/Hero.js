@@ -25,7 +25,7 @@ const Hero = () => {
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#0c0322]"
     >
       {/* Aurora Background */}
-      <div className="w-full h-[650px] absolute -bottom-2 z-10 hidden md:block">
+      <div className="w-full h-full absolute -bottom-2 z-10 hidden md:block">
         <LightRays
           raysOrigin="bottom-center"
           raysColor="#ffffff"
@@ -149,7 +149,7 @@ const Hero = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-4xl mx-auto">
+      <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-6xl mx-auto">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 border border-white/[0.12] rounded-full px-4 py-1.5 mb-8 bg-white/[0.04] backdrop-blur-sm">
           <span className="w-1.5 h-1.5 rounded-full bg-[#7B6EF6] shadow-[0_0_6px_#7B6EF6]" />
@@ -159,14 +159,19 @@ const Hero = () => {
         </div>
 
         {/* Heading */}
-        <h1 className="text-[clamp(2.6rem,5.8vw,4.5rem)] font-black leading-[1.06] tracking-[-0.02em] text-white mb-6">
-          Scaling Brands
-          <br />
-          <span className="relative inline-block">
-            Beyond{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#9b8fff] to-[#5227FF]">
-              Boundaries.
-            </span>
+        <h1
+          className="max-w-[800px] w-full"
+          style={{
+            fontFamily: "'Plus Jakarta Sans', sans-serif",
+            fontWeight: 700,
+            fontSize: "clamp(2.2rem, 4.6vw, 4.2rem)",
+            lineHeight: "1.08",
+            letterSpacing: "-0.03em",
+          }}
+        >
+          <span className="block text-white">Scroll Through the Work.</span>
+          <span className="block mt-1 bg-linear-to-r from-[#e0d7ff] via-[#a78bfa] to-[#7c3aed] bg-clip-text text-transparent">
+            Feel the Difference.
           </span>
         </h1>
 

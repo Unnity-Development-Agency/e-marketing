@@ -111,12 +111,19 @@ const Header = () => {
                 Creative
               </Link>
 
-              <li className="px-6 py-3 hover:bg-white/10 cursor-pointer">
-                <Link href="/snapshot-project">Our Projects</Link>
-              </li>
-              <li className="px-6 py-3 hover:bg-white/10 cursor-pointer">
-                <Link href="/showcase">Marketing</Link>
-              </li>
+              <Link
+                href="/snapshot-project"
+                className="bg-[#0f032b] block px-6 py-3 hover:bg-white/10 cursor-pointer"
+              >
+                Our Projects
+              </Link>
+
+              <Link
+                href="/showcase"
+                className="bg-[#0f032b] block px-6 py-3 hover:bg-white/10 cursor-pointer"
+              >
+                Marketing
+              </Link>
             </ul>
           </div>
         </nav>
