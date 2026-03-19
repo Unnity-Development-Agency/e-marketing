@@ -114,7 +114,7 @@ const Hero = () => {
       <div className="absolute left-[4%] top-[50%] max-xl:hidden flex flex-col gap-3">
         <div className="bg-white/[0.04] border border-white/[0.08] backdrop-blur-xl rounded-2xl px-5 py-4 flex flex-col gap-1">
           <span className="text-white text-2xl font-bold tracking-tight">
-            500+
+            50+
           </span>
           <span className="text-white/35 text-[11px] tracking-widest uppercase">
             Brands Scaled
@@ -122,7 +122,7 @@ const Hero = () => {
         </div>
         <div className="bg-white/[0.04] border border-white/[0.08] backdrop-blur-xl rounded-2xl px-5 py-4 flex flex-col gap-1">
           <span className="text-white text-2xl font-bold tracking-tight">
-            3.2×
+            3.6×
           </span>
           <span className="text-white/35 text-[11px] tracking-widest uppercase">
             Avg. ROI
