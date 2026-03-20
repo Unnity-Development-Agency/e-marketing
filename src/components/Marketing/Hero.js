@@ -176,7 +176,7 @@ const Hero = () => {
         </h1>
 
         {/* Divider */}
-        <div className="w-12 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-6" />
+        <div className="w-12 h-px bg-linear-to-r from-transparent via-white/20 to-transparent mb-6" />
 
         {/* Subtext */}
         <p className="text-white/40 text-[0.92rem] leading-[1.85] max-w-md mb-10">

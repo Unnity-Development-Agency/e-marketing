@@ -103,7 +103,7 @@ const SocialProof = () => {
           </div>
         </div>
 
-        <div className={styles.marqueeWrapper}>
+        {/* <div className={styles.marqueeWrapper}>
           <div className={`${styles.marquee} ${styles.rightToLeft}`}>
             {[...logos, ...logos].map((logo, i) => (
               <Image
@@ -116,7 +116,7 @@ const SocialProof = () => {
               />
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* ── Testimonials ── */}
