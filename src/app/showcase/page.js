@@ -7,7 +7,6 @@ import ImageAccordion from "@/components/Marketing/ImageAccordion";
 import Header from "@/components/Header/page";
 import StickyScrollAnimation from "@/components/Marketing/StickyScrollAnimation";
 import Footer from "@/components/footer/page";
-import Aurora from "@/components/reactBits/Aurora";
 import Hero from "@/components/Marketing/Hero";
 
 export default function Showcase() {

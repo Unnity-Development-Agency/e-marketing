@@ -15,7 +15,7 @@ const projects = [
     ],
     image: "/brand-img3.png",
     color: "#2d5b88",
-    textColor: "#ffffff",
+    accent: "#5b9bd5",
   },
   {
     id: "02",
@@ -29,7 +29,7 @@ const projects = [
     ],
     image: "/brand-img1.png",
     color: "#191a3a",
-    textColor: "#ffffff",
+    accent: "#6c6cff",
   },
   {
     id: "03",
@@ -43,7 +43,7 @@ const projects = [
     ],
     image: "/brand-img2.png",
     color: "#23234d",
-    textColor: "#ffffff",
+    accent: "#8b8bff",
   },
   {
     id: "04",
@@ -57,72 +57,128 @@ const projects = [
     ],
     image: "/brand-img4.png",
     color: "#111827",
-    textColor: "#ffffff",
+    accent: "#6b7280",
   },
 ];
 
 const Card = ({ project, index, total, range, targetScale, progress }) => {
   const container = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ["start end", "start start"],
-  });
-
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
     <div
       ref={container}
       className="h-dvh flex items-center justify-center sticky top-0"
+      style={{ backgroundColor: project.color }}
     >
-      <motion.div
-        className="w-full max-w-[1300px] h-[600px] rounded-3xl shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] overflow-hidden origin-top
-          max-lg:h-auto max-lg:min-h-[600px]"
+      {/* Grain overlay */}
+      <div
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
-          backgroundColor: project.color,
-          color: project.textColor,
+          backgroundImage:
+            "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")",
+        }}
+      />
+
+      <motion.div
+        className="w-full max-w-[1300px] mx-6 overflow-hidden origin-top max-lg:h-auto"
+        style={{
           scale: index === total - 1 ? 1 : scale,
           top: `calc(10vh + ${index * 25}px)`,
         }}
       >
-        <div className="flex w-full h-full max-lg:flex-col">
-          {/* Image side */}
-          <div className="w-[45%] h-full p-8 max-lg:w-full max-lg:h-[300px] max-lg:pb-0 max-lg:px-6 max-lg:pt-6">
-            <div className="w-full h-full rounded-[2rem] overflow-hidden">
+        <div
+          className="flex w-full h-[520px] max-lg:flex-col max-lg:h-auto rounded-2xl overflow-hidden"
+          style={{ backgroundColor: project.color }}
+        >
+          {/* ── Image side ── */}
+          <div className="w-[42%] h-full p-5 max-lg:w-full max-lg:h-64 max-lg:p-4 shrink-0">
+            <div className="relative w-full h-full rounded-xl overflow-hidden">
               <img
                 src={project.image}
                 alt={project.name}
                 className="w-full h-full object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+
+              {/* ID pill */}
+              <div className="absolute top-4 left-4">
+                <span className="text-[10.5px] font-black tracking-[0.25em] uppercase text-white/60 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1 border border-white/10">
+                  {project.id}
+                </span>
+              </div>
+
+              {/* Name */}
+              <div className="absolute bottom-4 left-4 right-4">
+                <h3 className="text-[1.75rem] max-lg:text-[1.35rem] font-black leading-[1.05] text-white tracking-[-0.025em]">
+                  {project.name}
+                </h3>
+              </div>
             </div>
           </div>
 
-          {/* Text side */}
-          <div className="w-[55%] px-16 py-16 flex flex-col justify-center max-lg:w-full max-lg:px-8 max-lg:py-8">
-            {/* ID badge */}
-            <span className="text-xs font-bold tracking-[0.2em] uppercase opacity-50 mb-3">
+          {/* ── Text side ── */}
+          <div className="flex-1 flex flex-col justify-between px-10 py-10 max-lg:px-5 max-lg:py-5 relative overflow-hidden">
+            {/* Watermark */}
+            <span className="absolute -right-4 -top-6 text-[10rem] font-black leading-none select-none pointer-events-none text-white/[0.04]">
               {project.id}
             </span>
 
-            <h3 className="text-[2.5rem] font-bold leading-[1.1] mb-6 max-lg:text-[2rem]">
-              {project.name}
-            </h3>
+            {/* Description block */}
+            <div>
+              <div
+                className="w-9 h-[2px] rounded-full mb-5 opacity-50"
+                style={{ backgroundColor: project.accent }}
+              />
+              <p className="text-[1.05rem] leading-[1.88] text-white/70 max-w-md tracking-[-0.01em] font-normal">
+                {project.desc}
+              </p>
+            </div>
 
-            <p className="text-[1.05rem] leading-[1.65] opacity-90 mb-8">
-              {project.desc}
-            </p>
+            {/* Divider */}
+            <div className="w-full h-px bg-white/8 my-5" />
 
-            <ul className="space-y-3 p-0 list-none">
-              {project.points.map((point, i) => (
-                <li
-                  key={i}
-                  className="text-[0.95rem] leading-[1.55] opacity-80 flex items-start gap-2"
-                >
-                  <span className="mt-[3px] shrink-0 opacity-60">•</span>
-                  <span>{point}</span>
-                </li>
-              ))}
-            </ul>
+            {/* Points */}
+            <div className="flex-1">
+              <span className="text-[10px] font-bold tracking-[0.22em] uppercase text-white/30 mb-3.5 block">
+                Key Highlights
+              </span>
+
+              <ul className="space-y-2.5">
+                {project.points.map((point, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span
+                      className="w-1.5 h-1.5 rounded-full mt-[7px] shrink-0"
+                      style={{ backgroundColor: project.accent, opacity: 0.65 }}
+                    />
+                    <span className="text-[0.875rem] leading-[1.7] text-white/60 tracking-[-0.005em]">
+                      {point}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Footer */}
+            <div className="flex items-center justify-between mt-8 pt-4 border-t border-white/8">
+              <div className="flex gap-1.5 items-center">
+                {projects.map((_, i) => (
+                  <div
+                    key={i}
+                    className="h-[2px] rounded-full transition-all duration-500"
+                    style={{
+                      width: i === index ? "22px" : "7px",
+                      backgroundColor:
+                        i === index ? project.accent : "rgba(255,255,255,0.15)",
+                    }}
+                  />
+                ))}
+              </div>
+              <span className="text-[10.5px] font-bold tracking-widest text-white/25">
+                {String(index + 1).padStart(2, "0")} /{" "}
+                {String(total).padStart(2, "0")}
+              </span>
+            </div>
           </div>
         </div>
       </motion.div>
@@ -138,13 +194,13 @@ const StickyScrollAnimation = () => {
   });
 
   return (
-    <section ref={containerRef} className="py-20 bg-[#e2e8f0] relative">
+    <section ref={containerRef} className="pt-20 bg-[#e2e8f0] relative">
       {/* Header */}
-      <div className="px-4 text-center max-w-3xl mx-auto mb-4">
-        <h2 className="text-[3rem] font-bold mb-6 text-[#1d1d1f] leading-[1.1] max-md:text-[2rem]">
+      <div className="px-4 text-center max-w-3xl mx-auto pb-10">
+        <h2 className="text-[3rem] font-bold mb-6 text-[#1d1d1f] leading-[1.1] max-md:text-[2rem] tracking-[-0.03em]">
           Industry-Agnostic Performance Marketing Experience
         </h2>
-        <p className="text-[1.2rem] text-[#86868b] leading-[1.6]">
+        <p className="text-[1.05rem] text-[#86868b] leading-[1.75] tracking-[-0.01em]">
           We don't believe in one-size-fits-all advertising. Every industry
           behaves differently—buyer intent, seasonality, sales cycles, and
           platforms all change. Our strength lies in understanding these nuances
@@ -153,7 +209,7 @@ const StickyScrollAnimation = () => {
       </div>
 
       {/* Cards */}
-      <div className="flex flex-col w-full relative pb-[10vh]">
+      <div className="flex flex-col w-full relative">
         {projects.map((project, index) => (
           <Card
             key={index}

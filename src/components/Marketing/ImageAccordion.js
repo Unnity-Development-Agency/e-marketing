@@ -1,6 +1,11 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 
 const items = [
   {
@@ -50,75 +55,158 @@ const itemsTwo = [
   },
 ];
 
-/* ── Mobile: simple stacked cards ── */
+/* ─── Mobile Slider ─── */
 const MobileBlock = ({ items, title, subtitle, eyebrow }) => {
+  const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(1);
+
+  const goTo = (idx, dir) => {
+    setDirection(dir);
+    setCurrent(idx);
+  };
+  const prev = () => {
+    if (current > 0) goTo(current - 1, -1);
+  };
+  const next = () => {
+    if (current < items.length - 1) goTo(current + 1, 1);
+  };
+  const item = items[current];
+
   return (
-    <div className="px-5 py-12">
-      {/* Header */}
-      <div className="mb-8">
-        <span className="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-[0.2em] uppercase text-[#23234d] bg-[#23234d]/8 px-3 py-1.5 rounded-full mb-3">
+    <div className="px-4 pt-8 pb-10 relative z-10">
+      <div className="mb-5">
+        <span className="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-[0.2em] uppercase text-[#23234d] bg-[#23234d]/8 px-3 py-1.5 rounded-full mb-2.5">
           {eyebrow}
         </span>
-        <h2 className="text-[1.7rem] font-black tracking-tight leading-[1.1] text-[#111] mb-2">
+        <h2 className="text-[1.45rem] font-black tracking-tight leading-[1.12] text-[#111] mb-1.5">
           {title}
         </h2>
-        <p className="text-sm text-[#888] leading-relaxed">{subtitle}</p>
+        <p className="text-[12.5px] text-[#999] leading-relaxed">{subtitle}</p>
       </div>
 
-      {/* Cards */}
-      <div className="flex flex-col gap-8">
-        {items.map((item, i) => (
-          <div
-            key={item.id}
-            className="bg-white rounded-2xl overflow-hidden border border-[#ede9e3] shadow-sm"
+      <div className="relative overflow-hidden rounded-2xl mb-3.5">
+        <AnimatePresence mode="wait" custom={direction}>
+          <motion.div
+            key={current}
+            custom={direction}
+            variants={{
+              enter: (d) => ({ opacity: 0, x: d > 0 ? 55 : -55 }),
+              center: { opacity: 1, x: 0 },
+              exit: (d) => ({ opacity: 0, x: d > 0 ? -55 : 55 }),
+            }}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{ duration: 0.36, ease: [0.4, 0, 0.2, 1] }}
+            className="bg-white border border-[#ede9e3] rounded-2xl overflow-hidden shadow-sm"
           >
-            {/* Image */}
-            <div className="relative w-full h-48">
-              <img
+            <div className="relative w-full h-44 overflow-hidden">
+              <motion.img
+                key={`img-${current}`}
                 src={item.image}
                 alt={item.title}
                 className="w-full h-full object-cover"
+                initial={{ scale: 1.06 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
               />
-              <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
-              <div className="absolute bottom-3 left-3 flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                <span className="text-[11px] font-semibold text-[#111]">
-                  Active Campaign
-                </span>
-              </div>
-              <div className="absolute bottom-3 right-3 bg-black/60 rounded-full px-2.5 py-1">
-                <span className="text-[10px] font-bold text-white/80 tracking-wider">
-                  {String(i + 1).padStart(2, "0")} /{" "}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent" />
+              <div className="absolute top-3 left-3 bg-black/50 backdrop-blur-sm rounded-full px-2.5 py-1">
+                <span className="text-[9.5px] font-bold text-white/75 tracking-widest">
+                  {String(current + 1).padStart(2, "0")} /{" "}
                   {String(items.length).padStart(2, "0")}
                 </span>
               </div>
-            </div>
-
-            {/* Content */}
-            <div className="p-5">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="w-7 h-7 rounded-full bg-[#23234d] flex items-center justify-center text-white text-[11px] font-bold shrink-0">
-                  {String(i + 1).padStart(2, "0")}
+              <div className="absolute bottom-3 left-3 flex items-center gap-1.5 bg-white/90 backdrop-blur-sm rounded-full px-2.5 py-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="text-[10.5px] font-semibold text-[#111]">
+                  Active Campaign
                 </span>
-                <div className="h-px flex-1 bg-[#e8e4de]" />
               </div>
-              <h3 className="text-[1.1rem] font-extrabold tracking-tight leading-[1.2] text-[#111] mb-3">
+            </div>
+            <div className="px-4 pt-4 pb-5">
+              <div className="flex items-center gap-2.5 mb-3">
+                <span className="w-6 h-6 rounded-full bg-[#23234d] flex items-center justify-center text-white text-[10px] font-bold shrink-0">
+                  {String(current + 1).padStart(2, "0")}
+                </span>
+                <div className="h-px flex-1 bg-[#ede9e3]" />
+              </div>
+              <h3 className="text-[0.975rem] font-extrabold tracking-tight leading-[1.25] text-[#111] mb-2">
                 {item.title}
               </h3>
-              <div className="w-8 h-0.5 bg-[#23234d] mb-4 rounded-full" />
-              <p className="text-[14px] text-[#555] leading-[1.85] whitespace-pre-line">
+              <div className="w-6 h-0.5 bg-[#23234d] mb-3 rounded-full" />
+              <p className="text-[13px] text-[#666] leading-[1.8] whitespace-pre-line">
                 {item.description}
               </p>
             </div>
-          </div>
-        ))}
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      <div className="flex items-center justify-between px-0.5">
+        <div className="flex items-center gap-1.5">
+          {items.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => goTo(i, i > current ? 1 : -1)}
+              className={`rounded-full transition-all duration-300 ${
+                i === current
+                  ? "w-6 h-[7px] bg-[#23234d]"
+                  : "w-[7px] h-[7px] bg-[#23234d]/20"
+              }`}
+            />
+          ))}
+        </div>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={prev}
+            disabled={current === 0}
+            className="w-8 h-8 rounded-full border border-[#23234d]/20 flex items-center justify-center text-[#23234d]/50 disabled:opacity-20 active:scale-95 transition-all duration-200 hover:border-[#23234d]/40 hover:text-[#23234d]"
+          >
+            <svg
+              width="13"
+              height="13"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+            >
+              <path d="M19 12H5M12 5l-7 7 7 7" />
+            </svg>
+          </button>
+          <button
+            onClick={next}
+            disabled={current === items.length - 1}
+            className="w-8 h-8 rounded-full bg-[#23234d] flex items-center justify-center text-white disabled:opacity-25 active:scale-95 transition-all duration-200 shadow-[0_3px_10px_rgba(35,35,77,0.22)]"
+          >
+            <svg
+              width="13"
+              height="13"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   );
 };
 
-/* ── Desktop: sticky scroll block ── */
-const DesktopBlock = ({ items, title, subtitle, eyebrow, reverse }) => {
+/* ─── Desktop sticky block ─── */
+const DesktopBlock = ({
+  items,
+  title,
+  subtitle,
+  eyebrow,
+  reverse,
+  orbDirection,
+}) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [direction, setDirection] = useState(1);
   const wrapperRef = useRef(null);
@@ -145,6 +233,30 @@ const DesktopBlock = ({ items, title, subtitle, eyebrow, reverse }) => {
 
   const t = items[activeIndex];
 
+  const { scrollYProgress } = useScroll({
+    target: wrapperRef,
+    offset: ["start start", "end end"],
+  });
+
+  // orbDirection: "ltr" = left→right, "rtl" = right→left
+  const isLTR = orbDirection !== "rtl";
+
+  // Main orb: moves horizontally across screen
+  const orbX = useTransform(
+    scrollYProgress,
+    [0, 1],
+    isLTR ? ["-60vw", "60vw"] : ["60vw", "-60vw"],
+  );
+  const orbY = useTransform(scrollYProgress, [0, 1], ["10%", "70%"]);
+
+  // Second orb: opposite horizontal, slower
+  const orb2X = useTransform(
+    scrollYProgress,
+    [0, 1],
+    isLTR ? ["40vw", "-20vw"] : ["-40vw", "20vw"],
+  );
+  const orb2Y = useTransform(scrollYProgress, [0, 1], ["60%", "20%"]);
+
   return (
     <div
       ref={wrapperRef}
@@ -152,24 +264,66 @@ const DesktopBlock = ({ items, title, subtitle, eyebrow, reverse }) => {
       className="relative"
     >
       <div className="sticky top-0 h-screen w-full overflow-hidden bg-[#E2E8F0]">
-        <div className="h-full max-w-7xl mx-auto px-6 xl:px-8 grid grid-cols-2 gap-0">
+        {/* ── ORB 1 — main large orb, moves L→R or R→L ── */}
+        <motion.div
+          style={{
+            x: orbX,
+            y: orbY,
+            position: "absolute",
+            top: 0,
+            left: "50%",
+            translateX: "-50%",
+            width: "560px",
+            height: "560px",
+            borderRadius: "50%",
+            background: isLTR
+              ? "radial-gradient(circle, rgba(35,35,77,0.38) 0%, rgba(35,35,77,0.14) 45%, transparent 72%)"
+              : "radial-gradient(circle, rgba(238,217,196,0.70) 0%, rgba(238,217,196,0.25) 45%, transparent 72%)",
+            filter: "blur(70px)",
+            pointerEvents: "none",
+            zIndex: 0,
+          }}
+        />
+
+        {/* ── ORB 2 — secondary, opposite direction ── */}
+        <motion.div
+          style={{
+            x: orb2X,
+            y: orb2Y,
+            position: "absolute",
+            top: 0,
+            left: "50%",
+            translateX: "-50%",
+            width: "380px",
+            height: "380px",
+            borderRadius: "50%",
+            background: isLTR
+              ? "radial-gradient(circle, rgba(114,141,239,0.32) 0%, rgba(114,141,239,0.10) 50%, transparent 75%)"
+              : "radial-gradient(circle, rgba(35,35,77,0.28) 0%, rgba(35,35,77,0.08) 55%, transparent 75%)",
+            filter: "blur(56px)",
+            pointerEvents: "none",
+            zIndex: 0,
+          }}
+        />
+
+        {/* Content grid */}
+        <div className="relative z-10 h-full max-w-7xl mx-auto px-6 xl:px-10 grid grid-cols-2 gap-0">
           {/* IMAGE SIDE */}
           <div
-            className={`relative flex flex-col justify-center py-14
-            ${reverse ? "order-2 pl-12 xl:pl-16" : "pr-12 xl:pr-16"}`}
+            className={`relative flex flex-col justify-center py-10 ${reverse ? "order-2 pl-10 xl:pl-14" : "pr-10 xl:pr-14"}`}
           >
-            <div className="mb-6">
-              <span className="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-[0.2em] uppercase text-[#23234d] bg-[#23234d]/8 px-3 py-1.5 rounded-full mb-4">
+            <div className="mb-5">
+              <span className="inline-flex items-center gap-1.5 text-[10px] font-bold tracking-[0.2em] uppercase text-[#23234d] bg-[#23234d]/8 px-3 py-1.5 rounded-full mb-3">
                 {eyebrow}
               </span>
-              <h2 className="text-[clamp(1.5rem,2vw,2.1rem)] font-black tracking-tight leading-[1.1] text-[#111]">
+              <h2 className="text-[clamp(1.35rem,1.8vw,2rem)] font-black tracking-[-0.025em] leading-[1.1] text-[#111]">
                 {title}
               </h2>
             </div>
 
             <div
-              className="relative rounded-2xl overflow-hidden w-full"
-              style={{ height: "clamp(260px, 44vh, 420px)" }}
+              className="relative rounded-xl overflow-hidden w-full"
+              style={{ height: "clamp(240px, 42vh, 400px)" }}
             >
               <AnimatePresence mode="wait">
                 <motion.img
@@ -183,33 +337,32 @@ const DesktopBlock = ({ items, title, subtitle, eyebrow, reverse }) => {
                   transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
                 />
               </AnimatePresence>
-              <div className="absolute inset-0 bg-linear-to-t from-black/50 via-black/10 to-transparent" />
-              <div className="absolute bottom-5 left-5 flex items-center gap-2.5 bg-white/95 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span className="text-xs font-semibold text-[#111] tracking-wide">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 flex items-center gap-2 bg-white/95 backdrop-blur-sm rounded-full px-3.5 py-2 shadow-md">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="text-[11px] font-semibold text-[#111] tracking-wide">
                   Active Campaign
                 </span>
               </div>
-              <div className="absolute bottom-5 right-5 bg-black/60 backdrop-blur-sm rounded-full px-3 py-1.5">
-                <span className="text-[11px] font-bold text-white/80 tracking-widest">
+              <div className="absolute bottom-4 right-4 bg-black/55 backdrop-blur-sm rounded-full px-2.5 py-1.5">
+                <span className="text-[10.5px] font-bold text-white/75 tracking-widest">
                   {String(activeIndex + 1).padStart(2, "0")} /{" "}
                   {String(items.length).padStart(2, "0")}
                 </span>
               </div>
             </div>
 
-            <p className="text-sm text-[#888] leading-relaxed mt-4 max-w-sm">
+            <p className="text-[12.5px] text-[#999] leading-relaxed mt-3.5 max-w-xs">
               {subtitle}
             </p>
-
-            <div className="flex items-center gap-2 mt-5">
+            <div className="flex items-center gap-2 mt-4">
               {items.map((_, i) => (
                 <div
                   key={i}
                   className={`rounded-full transition-all duration-500 ${
                     i === activeIndex
-                      ? "w-7 h-2 bg-[#23234d]"
-                      : "w-2 h-2 bg-[#23234d]/20"
+                      ? "w-7 h-[7px] bg-[#23234d]"
+                      : "w-[7px] h-[7px] bg-[#23234d]/20"
                   }`}
                 />
               ))}
@@ -218,24 +371,19 @@ const DesktopBlock = ({ items, title, subtitle, eyebrow, reverse }) => {
 
           {/* CONTENT SIDE */}
           <div
-            className={`relative flex items-center py-14
-            ${reverse ? "order-1 pr-12 xl:pr-16" : "pl-12 xl:pl-16"}`}
+            className={`relative flex items-center py-10 ${reverse ? "order-1 pr-10 xl:pr-14" : "pl-10 xl:pl-14"}`}
           >
-            <div className="absolute left-0 top-1/2 -translate-y-1/2">
-              <div className="w-px h-24 bg-linear-to-b from-transparent via-[#23234d]/20 to-transparent" />
-            </div>
-
             <div className="w-full">
-              <div className="flex gap-1.5 mb-10">
+              <div className="flex gap-1.5 mb-9">
                 {items.map((_, i) => (
                   <div
                     key={i}
-                    className="h-px flex-1 rounded-full overflow-hidden bg-[#e8e4de]"
+                    className="h-px flex-1 rounded-full overflow-hidden bg-[#c8c4be]"
                   >
                     <motion.div
                       className="h-full bg-[#23234d] rounded-full"
                       animate={{ width: i <= activeIndex ? "100%" : "0%" }}
-                      transition={{ duration: i === activeIndex ? 0.6 : 0.15 }}
+                      transition={{ duration: i === activeIndex ? 0.55 : 0.12 }}
                     />
                   </div>
                 ))}
@@ -246,27 +394,27 @@ const DesktopBlock = ({ items, title, subtitle, eyebrow, reverse }) => {
                   key={activeIndex}
                   custom={direction}
                   variants={{
-                    enter: (d) => ({ opacity: 0, y: d > 0 ? 44 : -44 }),
+                    enter: (d) => ({ opacity: 0, y: d > 0 ? 40 : -40 }),
                     center: { opacity: 1, y: 0 },
-                    exit: (d) => ({ opacity: 0, y: d > 0 ? -32 : 32 }),
+                    exit: (d) => ({ opacity: 0, y: d > 0 ? -28 : 28 }),
                   }}
                   initial="enter"
                   animate="center"
                   exit="exit"
-                  transition={{ duration: 0.42, ease: [0.4, 0, 0.2, 1] }}
+                  transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
                 >
-                  <div className="flex items-center gap-3 mb-6">
+                  <div className="flex items-center gap-3 mb-5">
                     <span className="w-7 h-7 rounded-full bg-[#23234d] flex items-center justify-center text-white text-[11px] font-bold shrink-0">
                       {String(activeIndex + 1).padStart(2, "0")}
                     </span>
-                    <div className="h-px flex-1 bg-[#e8e4de]" />
+                    <div className="h-px flex-1 bg-[#ddd9d3]" />
                   </div>
 
-                  <h3 className="text-[clamp(1.5rem,2.2vw,2.3rem)] font-extrabold tracking-tight leading-[1.1] text-[#111] mb-5">
+                  <h3 className="text-[clamp(1.4rem,2vw,2.15rem)] font-extrabold tracking-[-0.025em] leading-[1.12] text-[#111] mb-4">
                     {t.title}
                   </h3>
-                  <div className="w-10 h-0.5 bg-[#23234d] mb-6 rounded-full" />
-                  <p className="text-[15px] text-[#555] leading-[1.95] whitespace-pre-line">
+                  <div className="w-9 h-[2px] bg-[#23234d] mb-5 rounded-full opacity-70" />
+                  <p className="text-[1.05rem] text-[#4a4a4a] leading-[1.88] whitespace-pre-line tracking-[-0.01em] font-normal">
                     {t.description}
                   </p>
 
@@ -274,12 +422,12 @@ const DesktopBlock = ({ items, title, subtitle, eyebrow, reverse }) => {
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      transition={{ delay: 0.4 }}
-                      className="flex items-center gap-2 mt-10 text-[#aaa]"
+                      transition={{ delay: 0.45 }}
+                      className="flex items-center gap-2 mt-9 text-[#bbb]"
                     >
                       <svg
-                        width="14"
-                        height="14"
+                        width="12"
+                        height="12"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -288,7 +436,7 @@ const DesktopBlock = ({ items, title, subtitle, eyebrow, reverse }) => {
                       >
                         <path d="M12 5v14M5 12l7 7 7-7" />
                       </svg>
-                      <span className="text-xs tracking-widest uppercase font-medium">
+                      <span className="text-[10.5px] tracking-[0.18em] uppercase font-semibold">
                         Scroll to continue
                       </span>
                     </motion.div>
@@ -303,55 +451,60 @@ const DesktopBlock = ({ items, title, subtitle, eyebrow, reverse }) => {
   );
 };
 
-/* ── Wrapper: mobile vs desktop ── */
-const StickyAccordionBlock = ({ items, title, subtitle, eyebrow, reverse }) => {
-  return (
-    <>
-      {/* Mobile */}
-      <div className="lg:hidden">
-        <MobileBlock
-          items={items}
-          title={title}
-          subtitle={subtitle}
-          eyebrow={eyebrow}
-        />
-      </div>
-      {/* Desktop */}
-      <div className="hidden lg:block">
-        <DesktopBlock
-          items={items}
-          title={title}
-          subtitle={subtitle}
-          eyebrow={eyebrow}
-          reverse={reverse}
-        />
-      </div>
-    </>
-  );
-};
-
-const ImageAccordion = () => {
-  return (
-    <section className="bg-[#fafaf8]">
-      <StickyAccordionBlock
+const StickyAccordionBlock = ({
+  items,
+  title,
+  subtitle,
+  eyebrow,
+  reverse,
+  orbDirection,
+}) => (
+  <>
+    <div className="lg:hidden">
+      <MobileBlock
         items={items}
-        eyebrow="Our Methodology"
-        title="Our Lead Generation"
-        subtitle="A holistic methodology designed to deliver results at every stage."
-        reverse={false}
+        title={title}
+        subtitle={subtitle}
+        eyebrow={eyebrow}
       />
-      <div className="max-w-7xl mx-auto px-6 xl:px-8">
-        <div className="w-full h-px bg-linear-to-r from-transparent via-[#e0ddd8] to-transparent" />
-      </div>
-      <StickyAccordionBlock
-        items={itemsTwo}
-        eyebrow="Our Approach"
-        title="Our eCommerce Approach"
-        subtitle="Precision execution ensuring timely delivery and highest quality standards."
-        reverse={true}
+    </div>
+    <div className="hidden lg:block">
+      <DesktopBlock
+        items={items}
+        title={title}
+        subtitle={subtitle}
+        eyebrow={eyebrow}
+        reverse={reverse}
+        orbDirection={orbDirection}
       />
-    </section>
-  );
-};
+    </div>
+  </>
+);
+
+const ImageAccordion = () => (
+  <section className="bg-[#fafaf8]">
+    {/* Section 1 — orb left → right */}
+    <StickyAccordionBlock
+      items={items}
+      eyebrow="Our Methodology"
+      title="Our Lead Generation"
+      subtitle="A holistic methodology designed to deliver results at every stage."
+      reverse={false}
+      orbDirection="ltr"
+    />
+    <div className="lg:hidden max-w-7xl mx-auto px-5">
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-[#e0ddd8] to-transparent" />
+    </div>
+    {/* Section 2 — orb right → left */}
+    <StickyAccordionBlock
+      items={itemsTwo}
+      eyebrow="Our Approach"
+      title="Our eCommerce Approach"
+      subtitle="Precision execution ensuring timely delivery and highest quality standards."
+      reverse={true}
+      orbDirection="rtl"
+    />
+  </section>
+);
 
 export default ImageAccordion;

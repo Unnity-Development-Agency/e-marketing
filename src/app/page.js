@@ -490,7 +490,7 @@ export default function Home() {
             }}
           />
 
-          {/* ── CURSOR GLOW (follows mouse) ── */}
+          {/* ── CURSOR GLOW ── */}
           <div
             className="absolute inset-0 z-10 pointer-events-none transition-opacity duration-300"
             style={{
