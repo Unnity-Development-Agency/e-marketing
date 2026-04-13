@@ -159,7 +159,7 @@ const members = [
   { name: "Sarthak", role: "Marketing Executive", photo: "/sarthak.jpeg" },
   { name: "Yalka", role: "Video Editor Intern", photo: "/yalka.jpg" },
   { name: "Himanshu", role: "Social Media Intern", photo: "/himanshu.jpg" },
-  { name: "Moksh Chauhan", role: "Marketing", photo: "/moksh.jpg" },
+  { name: "Punjal", role: "Human Resources", photo: "/punjal.jpeg" },
 ];
 
 const gallery = [

@@ -97,6 +97,9 @@ const Footer = () => {
                 <Link href="/snapshot-project">See Our Work</Link>
               </li>
               <li>
+                <Link href="/career">Careers</Link>
+              </li>
+              <li>
                 <Link href="/privacy">Privacy Policy</Link>
               </li>
               {/* <li>

@@ -6,12 +6,12 @@ import Image from "next/image";
 
 export default function CaseStudies() {
   const projects = [
-    {
-      id: 1,
-      title: "Adplusa",
-      image: "/adpl1.png",
-      href: "https://architect-sigma.vercel.app/",
-    },
+    // {
+    //   id: 1,
+    //   title: "Adplusa",
+    //   image: "/adpl1.png",
+    //   href: "https://architect-sigma.vercel.app/",
+    // },
     {
       id: 2,
       title: "Cupid Clothings",
@@ -36,12 +36,12 @@ export default function CaseStudies() {
       image: "/kryss.png",
       href: "https://www.kryysglobal.com/",
     },
-    {
-      id: 6,
-      title: "Aiva Jewellery",
-      image: "/aiva.png",
-      href: "https://aivajewellery.com/",
-    },
+    // {
+    //   id: 6,
+    //   title: "Aiva Jewellery",
+    //   image: "/aiva.png",
+    //   href: "https://aivajewellery.com/",
+    // },
     {
       id: 7,
       title: "Da Urban",
@@ -92,12 +92,12 @@ export default function CaseStudies() {
       href: "https://cozycabs.vercel.app/",
     },
 
-    {
-      id: 15,
-      title: "Evara Matrimony",
-      image: "/evara.png",
-      href: "https://evaramatrimony.com/",
-    },
+    // {
+    //   id: 15,
+    //   title: "Evara Matrimony",
+    //   image: "/evara.png",
+    //   href: "https://evaramatrimony.com/",
+    // },
     {
       id: 16,
       title: "The Craft Of Architecture",
