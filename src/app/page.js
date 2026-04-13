@@ -314,7 +314,6 @@ function TestimonialSlider() {
           ))}
         </div>
 
-        {/* Counter */}
         <p className="text-center text-xs text-[#bbb] mt-3 tracking-widest">
           {String(current + 1).padStart(2, "0")} /{" "}
           {String(total).padStart(2, "0")}
@@ -656,9 +655,6 @@ export default function Home() {
             <div className="absolute left-0 top-0 bottom-0 w-px bg-linear-to-b from-transparent via-white/[0.06] to-transparent" />
           </div>
 
-          {/* ══════════════════════════════════
-              CENTER HERO CONTENT
-          ══════════════════════════════════ */}
           <div className="relative top-8 z-10 flex-1 flex flex-col items-center justify-center text-center px-6 lg:px-20 pt-20 pb-8">
             {/* Pill label */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/[0.04] mb-6">
@@ -673,7 +669,7 @@ export default function Home() {
 
             {/* Headline */}
             <h1
-              className="max-w-[800px] w-full"
+              className="max-w-200 w-full"
               style={{
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontWeight: 700,
