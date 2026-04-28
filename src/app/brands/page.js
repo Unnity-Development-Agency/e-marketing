@@ -164,7 +164,7 @@ const Brands = () => {
             {B2BPartners.map((partner) => (
               <div
                 key={partner.id}
-                className="flex items-center justify-center bg-gray-100 border border-[#e8e0d0] rounded-2xl p-10 shadow-[0_8px_48px_rgba(17,24,39,0.07)] max-sm:p-6 hover:-translate-y-1 transition-all duration-300 ease-in-out"
+                className="flex items-center justify-center bg-gray-100 border border-[#e8e0d0] rounded-2xl p-2 sm:p-5 md:p-10 shadow-[0_8px_48px_rgba(17,24,39,0.07)]  hover:-translate-y-1 transition-all duration-300 ease-in-out"
               >
                 <img src={partner.logo} alt={partner.name} />
               </div>
