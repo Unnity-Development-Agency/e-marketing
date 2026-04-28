@@ -82,12 +82,12 @@ const Page = () => {
 
       {/* HERO SECTION */}
       <div className="">
-        <div className="relative w-full h-44 md:h-66 bg-[#23234d] flex items-center">
+        <div className="relative w-full h-44 md:h-60 bg-[#23234d] flex items-center">
           <div className="absolute bottom-6 md:left-24 max-w-7xl mx-auto w-full px-6">
             <p className="text-white text-sm mb-2">
               <Link href="/">Home</Link> / Careers
             </p>
-            <h1 className="text-white text-3xl md:text-5xl font-semibold">
+            <h1 className="text-white text-2xl md:text-5xl font-semibold">
               Careers
             </h1>
           </div>
@@ -113,7 +113,7 @@ const Page = () => {
                 href="mailto:Punjal@unnity.in"
                 className="text-indigo-600 font-medium"
               >
-                Punjal@unnity.in
+                punjal@unnity.in
               </a>
             </p>
           </div>

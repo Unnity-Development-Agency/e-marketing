@@ -126,6 +126,9 @@ const Header = () => {
               </Link>
             </ul>
           </div>
+          <Link href="/brands" className="cursor-pointer">
+            Brands
+          </Link>
         </nav>
 
         {/* RIGHT — CALL + CTA */}
@@ -246,6 +249,9 @@ const Header = () => {
                 </Link>
               </div>
             </div>
+            <Link href="/brands" className="cursor-pointer">
+              Brands
+            </Link>
           </div>
 
           <div className="flex-1" />
