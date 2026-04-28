@@ -150,7 +150,7 @@ const testimonials = [
 const members = [
   { name: "Sayam Jain", role: "Founder & CEO", photo: "/sayyam2.png" },
   { name: "Muskan", role: "Social Media", photo: "/muskan-2.jpg" },
-  { name: "Anjali", role: "Marketing", photo: "/anjali.jpeg" },
+  { name: "Diksha", role: "Marketing", photo: "/Diksha.jpg" },
   { name: "Naveen", role: "Web Developer", photo: "/naveen-01.jpeg" },
   { name: "Shubham", role: "Web Developer", photo: "/shubham.jpeg" },
   { name: "Manisha", role: "Creatives", photo: "/manisha-03.jpeg" },
