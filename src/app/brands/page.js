@@ -160,7 +160,7 @@ const Brands = () => {
         </div>
         {/* B2B Partners section */}
         <div className="max-w-7xl w-full mx-auto">
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 md:gap-10 px-5 py-12 ">
+          <div className="grid grid-cols-4 md:grid-cols-6 gap-6 md:gap-10 px-5 py-12 ">
             {B2BPartners.map((partner) => (
               <div
                 key={partner.id}
