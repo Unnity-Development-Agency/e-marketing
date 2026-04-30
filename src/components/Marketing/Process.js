@@ -61,7 +61,7 @@ const Process = () => {
   const [activeStep, setActiveStep] = useState(1);
 
   return (
-    <section className="py-12 `bg-(--background)` min-h-[80vh] flex flex-col justify-center">
+    <section className=" py-6 sm:py-12 `bg-(--background)` min-h-[80vh] flex flex-col sm:justify-center">
       <div className="max-w-[1300px] mx-auto px-5 w-full">
         {/* Header */}
         <div className="text-center mb-10">

@@ -1,13 +1,13 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import GridMotion from "@/components/reactBits/GridMotion";
 import Header from "@/components/Header/page";
 import creativeData from "../../data/creativeData.json";
 import spotlightData from "../../data/spotlightData.json";
 import { Playfair_Display } from "next/font/google";
 import Footer from "@/components/footer/page";
 import Link from "next/link";
+import BrandsHero from "@/components/reactBits/HeroSection";
 
 const font = Playfair_Display({ subsets: ["latin"], style: "italic" });
 
@@ -105,70 +105,26 @@ export default function Creative() {
   return (
     <section>
       <Header />
+      <div className="relative sm:mb-10 md:mb-16 w-full h-70 md:h-60  flex items-center">
+        <BrandsHero />
 
-      {/* HERO */}
-      <div className="relative w-full min-h-[520px] md:h-screen overflow-hidden">
-        <div className="absolute inset-0 bg-white/60 md:bg-white/70 z-10" />
-        <div className="max-w-full w-full hidden md:block">
-          <GridMotion items={items} gradientColor="black" />
-        </div>
-        <div className="max-w-full w-full md:hidden">
-          <GridMotion items={itemsOnSmscreen} gradientColor="black" />
-        </div>
-
-        <div className="relative md:absolute md:inset-0 z-20 flex flex-col items-center justify-center text-center px-6 md:px-10 py-24 md:py-0 gap-5">
-          <span className="uppercase tracking-[2px] text-[12px] text-neutral-700 font-bold">
-            Excellence in Design
-          </span>
-
-          <h1 className="text-6xl md:text-[7.5rem] font-black tracking-[-3px]">
-            Designed <br />
-            to be{" "}
-            <span className={font.className + " text-[#072266]"}>
-              looked at
-            </span>
-          </h1>
-
-          <p className="text-neutral-700 max-w-md text-[15px] leading-relaxed">
-            We craft visual stories that command attention and define brand
-            legacies.
+        <div className="absolute flex flex-col gap-1 sm:gap-4 justify-center pt-10 md:pt-24 md:left-24 max-w-7xl mx-auto w-full px-6 text-white">
+          <p className=" text-sm ">
+            <Link href="/">Home</Link> / Creative
           </p>
-
-          {/* SVG Arrow Button */}
-          <Link href="https://calendly.com/sayam-unnity/30min">
-            <button className="group flex items-center gap-3 bg-white text-[#0f032b] hover:bg-[#0f032b] hover:text-white hover:border hover:border-white px-6 py-2.5 rounded-full text-base font-medium overflow-hidden cursor-pointer transition-all duration-200 max-sm:w-full max-sm:justify-center">
-              Start Now
-              <span className="relative w-7 h-7 overflow-hidden rounded-full bg-[#0f032b] text-white flex-shrink-0">
-                <span className="absolute inset-0 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-8">
-                  <svg
-                    viewBox="0 0 24 24"
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                  </svg>
-                </span>
-                <span className="absolute inset-0 flex items-center justify-center -translate-x-8 transition-transform duration-300 group-hover:translate-x-0 group-hover:bg-white group-hover:text-[#0f032b]">
-                  <svg
-                    viewBox="0 0 24 24"
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                  </svg>
-                </span>
-              </span>
-            </button>
-          </Link>
+          <h1 className="text-white text-2xl md:text-5xl font-semibold">
+            Creative Works.
+          </h1>
+          <p className="text-sm sm:text-balance">
+            {" "}
+            From scroll-stopping ads to thumb-stopping content, our creatives
+            are designed to captivate, engage, and convert.{" "}
+          </p>
         </div>
       </div>
 
       {/* TABS */}
-      <section className="px-4 pt-24 pb-10 max-w-[1350px] w-full mx-auto">
+      <section className="px-4 pt-6 sm:pt-16 pb-10 max-w-[1350px] w-full mx-auto">
         <h2 className="text-center text-[clamp(1.8rem,3vw,3rem)] font-bold text-[#111] mb-12 tracking-tight">
           Meet the Brands We've Scaled
         </h2>
