@@ -678,7 +678,7 @@ export default function Home() {
                 letterSpacing: "-0.03em",
               }}
             >
-              <span className="block text-white">Crafting Digital Brands</span>
+              <h1 className="block text-white">Crafting Digital Brands</h1>
               <span className="block mt-1 bg-linear-to-r from-[#e0d7ff] via-[#a78bfa] to-[#7c3aed] bg-clip-text text-transparent">
                 That Stand Out.
               </span>
@@ -692,10 +692,10 @@ export default function Home() {
               className="text-balance leading-[1.85] text-white/45 max-w-[600px]"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
-              At <span className="text-white/70 font-medium">Unnity</span>, we
-              help brands grow in the digital world. Our tailored marketing
-              solutions boost your online presence, engage your audience, and
-              drive real results.
+              At <h1 className="text-white/70 font-medium">Unnity</h1>, we help
+              brands grow in the digital world. Our tailored marketing solutions
+              boost your online presence, engage your audience, and drive real
+              results.
             </p>
 
             {/* CTA Buttons */}

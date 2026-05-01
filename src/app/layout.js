@@ -13,11 +13,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Unnity — Digital Marketing & Development",
+  title: "Unnity | Digital Marketing & Web Development Agency",
   description:
-    "Performance marketing on Meta & Google, Shopify/Next.js builds, and brand identity. Let Unnity unlock your growth.",
+    "Unnity is a digital marketing and web development agency specializing in Meta Ads, Google Ads, Shopify and Next.js development to grow your business online.",
   verification: {
-    google: "vn1NyNfjfHshQLVwVfvgNQXQUCVzrHmKmNFja9489XE", // your verification code
+    google: "vn1NyNfjfHshQLVwVfvgNQXQUCVzrHmKmNFja9489XE",
+  },
+  openGraph: {
+    title: "Unnity | Digital Marketing & Web Development Agency",
+    description:
+      "Unnity helps brands grow with performance marketing, Shopify and Next.js development.",
+    url: "https://unnity.in",
+    siteName: "Unnity",
+    images: [
+      {
+        url: "https://unnity.in/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
   },
 };
 
@@ -25,6 +41,26 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <Script
+          id="schema-org"
+          type="application/ld+json"
+          strategy="afterInteractive"
+        >
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            name: "Unnity",
+            url: "https://unnity.in",
+            logo: "https://unnity.in/logo.png",
+            description:
+              "Digital marketing and web development agency offering Meta Ads, Google Ads, Shopify and Next.js services.",
+            areaServed: "India",
+            sameAs: [
+              "https://www.instagram.com/_unnity",
+              "https://www.linkedin.com/company/unnityglobal/",
+            ],
+          })}
+        </Script>
         {/* <!-- Google tag (gtag.js) --> */}
         <Script
           async
