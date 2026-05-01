@@ -113,12 +113,12 @@ export default function Creative() {
             <Link href="/">Home</Link> / Creative
           </p>
           <h1 className="text-white text-2xl md:text-5xl font-semibold">
-            Creative Works.
+            Creatives That Convert
           </h1>
           <p className="text-sm sm:text-balance">
             {" "}
-            From scroll-stopping ads to thumb-stopping content, our creatives
-            are designed to captivate, engage, and convert.{" "}
+            We blend design aesthetics with performance strategy. The result?
+            Creatives that captivate and campaigns that convert
           </p>
         </div>
       </div>

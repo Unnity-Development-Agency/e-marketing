@@ -112,7 +112,7 @@ const Header = () => {
               </Link>
 
               <Link
-                href="/snapshot-project"
+                href="/explore-project"
                 className="bg-[#0f032b] block px-6 py-3 hover:bg-white/10 cursor-pointer"
               >
                 Our Projects
@@ -236,7 +236,7 @@ const Header = () => {
                   Creative
                 </Link>
                 <Link
-                  href="/snapshot-project"
+                  href="/explore-project"
                   className="block py-2 pl-3 cursor-pointer"
                 >
                   Our Projects

@@ -148,12 +148,12 @@ const Brands = () => {
               <Link href="/">Home</Link> / Brands
             </p>
             <h1 className="text-white text-2xl md:text-5xl font-semibold">
-              Our Partners & Clients
+              Results in Every Build.
             </h1>
             <p className="text-sm sm:text-balance">
               {" "}
-              More than 100+ Brands we have worked with over the years. And we
-              are always looking for new ones{" "}
+              Websites, campaigns, and conversion machines built to turn traffic
+              into revenue. Meet our best work.
             </p>
           </div>
         </div>
@@ -193,7 +193,10 @@ const Brands = () => {
           {/* all partners */}
           <div className="grid grid-cols-4 md:grid-cols-6 gap-6 md:gap-10 px-5 py-6">
             {AllPartners.map((partner) => (
-              <div className="flex items-center justify-center bg-gray-100 border border-[#e8e0d0] rounded-2xl p-2 sm:p-5 md:p-10 shadow-[0_8px_48px_rgba(17,24,39,0.07)]  hover:-translate-y-1 transition-all duration-300 ease-in-out">
+              <div
+                key={partner.id}
+                className="flex items-center justify-center bg-gray-100 border border-[#e8e0d0] rounded-2xl p-2 sm:p-5 md:p-10 shadow-[0_8px_48px_rgba(17,24,39,0.07)]  hover:-translate-y-1 transition-all duration-300 ease-in-out"
+              >
                 <img
                   src={partner.logo}
                   alt={partner.name}

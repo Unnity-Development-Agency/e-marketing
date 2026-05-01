@@ -15,13 +15,12 @@ const Hero = () => {
             <Link href="/">Home</Link> / Marketing Services
           </p>
           <h1 className="text-white text-2xl md:text-5xl font-semibold">
-            Marketing Services.
+            Growth Built on Data.
           </h1>
           <p className="text-sm sm:text-balance">
             {" "}
-            From strategy to execution, our marketing services are designed to
-            elevate your brand, engage your audience, and drive measurable
-            results.
+            "End-to-end marketing services that blend strategy, creative, and
+            performance analytics to deliver real results
           </p>
         </div>
       </div>

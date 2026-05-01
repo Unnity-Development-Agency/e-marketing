@@ -46,29 +46,21 @@ export default function CaseStudiesPage() {
         <div className="relative sm:mb-10 md:mb-16 w-full h-70 md:h-60  flex items-center">
           <BrandsHero />
 
-          <div className="absolute flex flex-col gap-1 sm:gap-4 justify-center pt-10 md:pt-24 md:left-24 max-w-7xl mx-auto w-full px-6 text-white">
+          <header className="absolute flex flex-col gap-1 sm:gap-4 justify-center pt-10 md:pt-24 md:left-24 max-w-7xl mx-auto w-full px-6 text-white">
             <p className=" text-sm ">
               <Link href="/">Home</Link> / Case Studies
             </p>
             <h1 className="text-white text-2xl md:text-5xl font-semibold">
-              Case Studies of Brands.
+              Success Stories Across Industries.
             </h1>
             <p className="text-sm sm:text-balance">
               {" "}
-              Deep dives across industries - growth stories, channel mixes, and
-              learnings.
-            </p>
-          </div>
-        </div>
-        <div className="cs-container">
-          <header className="cs-header">
-            <h1>All Case Studies</h1>
-            <p className="cs-sub">
-              Deep dives across industries growth stories, channel mixes, and
-              learnings.
+              Meta Ads. Google Ads. Shopify optimization. See the strategies,
+              channels, and wins that define our work.
             </p>
           </header>
-
+        </div>
+        <div className="cs-container">
           <div className="cs-grid">
             {caseStudies.map((item) => (
               <article className="cs-card" key={item.id}>
