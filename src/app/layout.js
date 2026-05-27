@@ -21,7 +21,7 @@ export const metadata = {
   },
 
   description:
-    "Unnity is a digital marketing and web development agency specializing in Meta Ads, Google Ads, Shopify and Next.js development to grow businesses online.",
+    "Unnity is a performance marketing agency managing Meta Ads and Google Ads for D2C brands in Australia. Data-driven campaigns, full transparency, and measurable ROAS.",
 
   keywords: [
     "Digital Marketing Agency",

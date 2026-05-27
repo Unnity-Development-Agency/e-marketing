@@ -319,7 +319,7 @@ const page = () => {
     {
       id: 5,
       q: `What makes Unnity different from other agencies?`,
-      a: `Unnity delivers high-impact performance marketing services in India across a wide range of industries. Our expertise spans E-commerce, D2C Fashion, Hospitality, EdTech, Real Estate, SaaS, B2B, and several other sectors.
+      a: `Unnity delivers high-impact performance marketing services in Australia across a wide range of industries. Our expertise spans E-commerce, D2C Fashion, Hospitality, EdTech, Real Estate, SaaS, B2B, and several other sectors.
       What sets us apart is our ability to adapt strategies based on each industry's unique audience behavior and conversion goals. Whether it's driving product sales for a D2C brand, generating quality leads for a hospitality business, or scaling user acquisition for a SaaS platform — we tailor every campaign with precision.
       Our data-driven approach ensures measurable growth, regardless of the vertical. Every strategy we build is rooted in real numbers, clear KPIs, and a relentless focus on ROI.
       If you're in a competitive market and looking to scale smartly, Unnity is the performance marketing agency in India that delivers results across industries.`,
@@ -523,8 +523,7 @@ const page = () => {
                 letterSpacing: "-0.035em",
               }}
             >
-              Performance Marketing Built to
-            </h1>
+              Performance Marketing Agency in 
             <span
               className="block mt-1 bg-linear-to-r from-[#e0d7ff] via-[#a78bfa] to-[#7c3aed] bg-clip-text text-transparent"
               style={{
@@ -535,8 +534,9 @@ const page = () => {
                 letterSpacing: "-0.035em",
               }}
             >
-              Scale D2C Brands
+             Australia to Scale D2C Brands
             </span>
+            </h1>
           </div>
 
           {/* Divider */}
@@ -811,10 +811,10 @@ const page = () => {
                     label: "Monthly Marketing Budget",
                     options: [
                       "Monthly Marketing Budget",
-                      "Less Than ₹2L",
-                      "₹2L to ₹5L",
-                      "₹5L to ₹25L",
-                      "More Than ₹50L",
+                      "Less Than A$3,000",
+                      "A$3,000 to A$8,000",
+                      "A$8,000 to A$40,000",
+                      "More than A$80,000",
                       "Looking For Organic Services",
                     ],
                   },
@@ -825,9 +825,9 @@ const page = () => {
                       "Choose a Service",
                       "SEO",
                       "Paid Marketing (Google, Facebook & Amazon)",
-                      "UI/UX",
-                      "Website Development",
-                      "Shopify Migration",
+                      // "UI/UX",
+                      // "Website Development",
+                      // "Shopify Migration",
                     ],
                   },
                 ].map(({ id, label, options }) => (

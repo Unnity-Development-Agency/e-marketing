@@ -80,7 +80,7 @@ export default function App() {
     {
       tags: ["SHOPIFY", "GOOGLE ADS", "E-COMMERCE"],
       country: "AU AUSTRALIA",
-      title: "Power Mowers Australia",
+      title: "PowerMowers Australia",
       subtitle: "Nov 2025 – May 2026 · Outdoor Equipment · 6 months",
       stats: [
         { value: "A$1.55M",label: "GROSS SALES" },
