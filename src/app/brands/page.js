@@ -1,10 +1,15 @@
+"use client";
 import Footer from "@/components/footer/page";
 import Header from "@/components/Header/page";
 import BrandsHero from "@/components/reactBits/HeroSection";
 import Link from "next/link";
-import React from "react";
+// import React from "react";
+import React, { useEffect } from "react";
 
 const Brands = () => {
+  useEffect(() => {
+         document.title = "Brands That Trust Unnity";
+       }, []);
   const B2BPartners = [
     {
       id: 1,

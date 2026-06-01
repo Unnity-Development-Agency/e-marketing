@@ -21,6 +21,10 @@ const itemsOnSmscreen = Array.from(
 );
 
 export default function Creative() {
+
+  useEffect(() => {
+  document.title = "Performance Creatives for Meta & Google Ads";
+}, []);
   const [activeTab, setActiveTab] = useState("CUPID CLOTHING");
   const [isPaused, setIsPaused] = useState(false);
   const [underline, setUnderline] = useState({ left: 0, width: 0 });
