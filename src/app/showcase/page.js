@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+// import React from "react";
+import React, { useEffect } from "react";
 import Process from "../../components/Marketing/Process";
 import ProportionalServiceGrid from "@/components/Marketing/ProportionalServiceGrid";
 import SocialProof from "../../components/Marketing/SocialProof";
@@ -10,6 +12,9 @@ import Footer from "@/components/footer/page";
 import Hero from "@/components/Marketing/Hero";
 
 export default function Showcase() {
+   useEffect(() => {
+       document.title = "Meta Ads, Google Ads & Marketing Strategy";
+     }, []);
   return (
     <main style={{ minHeight: "100dvh" }}>
       {/* <Navbar /> */}

@@ -1,5 +1,6 @@
 "use client";
-import React, { useRef, useState } from "react";
+// import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Header from "@/components/Header/page";
 import FloatingLines from "@/components/reactBits/FloatingLines";
 import LightRays from "@/components/reactBits/LightRays";
@@ -7,7 +8,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Footer from "@/components/footer/page";
 import { useParams } from "next/navigation";
-import countryKeywords from "./../../../data/countryKeywords.json";
+import countryKeywords from "../../../data/countryKeywords.json";
 import Swiper from "../../../components/swiper/Swiper"
 
 const page = () => {
@@ -15,6 +16,10 @@ const page = () => {
   const sectionRef = useRef(null);
   const params = useParams();
   const country = params.slug.charAt(0).toUpperCase()+ params.slug.slice(1)
+
+  useEffect(() => {
+  document.title = `${country}'s performance marketing agency for D2C brands - Meta Ads and Google Ads`;
+}, [country]);
   const [sending, setSending] = useState(false);
   const [faqOpen, setFaqOpen] = useState(false);
   const [status, setStatus] = useState({ type: "", message: "" });

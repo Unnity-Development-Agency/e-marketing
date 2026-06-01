@@ -1,17 +1,21 @@
+"use client";
+
 import Head from "next/head";
 import "./snapshot-project.css";
+import React, { useEffect } from "react";
 import Header from "@/components/Header/page";
 import Footer from "@/components/footer/page";
 import Image from "next/image";
 import BrandsHero from "@/components/reactBits/HeroSection";
 import Link from "next/link";
 
+
 export default function CaseStudies() {
   const projects = [
     // {
-    //   id: 1,
-    //   title: "Adplusa",
-    //   image: "/adpl1.png",
+      //   id: 1,
+      //   title: "Adplusa",
+      //   image: "/adpl1.png",
     //   href: "https://architect-sigma.vercel.app/",
     // },
     {
@@ -86,19 +90,19 @@ export default function CaseStudies() {
       image: "/aqua-d.png",
       href: "https://aquaeasypurifier.com/",
     },
-
+    
     {
       id: 14,
       title: "CozyCabs",
       image: "/cozy.png",
       href: "https://cozycabs.vercel.app/",
     },
-
+    
     // {
-    //   id: 15,
-    //   title: "Evara Matrimony",
-    //   image: "/evara.png",
-    //   href: "https://evaramatrimony.com/",
+      //   id: 15,
+      //   title: "Evara Matrimony",
+      //   image: "/evara.png",
+      //   href: "https://evaramatrimony.com/",
     // },
     {
       id: 16,
@@ -106,7 +110,7 @@ export default function CaseStudies() {
       image: "/craft.png",
       href: "https://thecraftofarchitecture.net/",
     },
-
+    
     {
       id: 17,
       title: "Prateek Suri",
@@ -114,7 +118,10 @@ export default function CaseStudies() {
       href: "https://author-rose.vercel.app/",
     },
   ];
-
+  useEffect(() => {
+     document.title = "Our Projects | Websites, Funnels & Ad Campaign";
+   }, []);
+  
   return (
     <>
       {/* Title-Description */}
