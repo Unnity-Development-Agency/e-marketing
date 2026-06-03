@@ -42,7 +42,7 @@ const LOGO_IMAGES = [
   "/NUVOICE.png",
   "/hub1.png",
   "/nira.png",
-  "/brands/clove.png",
+  "/clove.png",
   "/COZYCABS1.jpg",
   "/e-travel.avif",
   "/isu1.png",
