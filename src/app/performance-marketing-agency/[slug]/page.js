@@ -555,19 +555,19 @@ const country = formatName(slug);
                 letterSpacing: "-0.035em",
               }}
             >
-              Performance Marketing Agency in
-              <span
-                className="block mt-1 bg-linear-to-r from-[#e0d7ff] via-[#a78bfa] to-[#7c3aed] bg-clip-text text-transparent"
-                style={{
-                  fontFamily: "'Plus Jakarta Sans',sans-serif",
-                  fontWeight: 800,
-                  fontSize: "clamp(2.2rem,5.1vw,4.5rem)",
-                  lineHeight: 1.06,
-                  letterSpacing: "-0.035em",
-                }}
-              >
-                Australia to Scale D2C Brands
-              </span>
+              Performance Marketing Agency in 
+            <span
+              className="block mt-1 bg-linear-to-r from-[#e0d7ff] via-[#a78bfa] to-[#7c3aed] bg-clip-text text-transparent"
+              style={{
+                fontFamily: "'Plus Jakarta Sans',sans-serif",
+                fontWeight: 800,
+                fontSize: "clamp(2.2rem,5.1vw,4.5rem)",
+                lineHeight: 1.06,
+                letterSpacing: "-0.035em",
+              }}
+            >
+             {displayPlace} to Scale D2C Brands
+            </span>
             </h1>
           </div>
 
@@ -583,7 +583,7 @@ const country = formatName(slug);
             marketing agency running Meta Ads and Google Ads for D2C brands
             {/* across <strong className="text-white/60">{country}</strong> - */}
             across <strong className="text-white/60">{displayPlace}</strong>
-            precision targeting, data-driven creative, and full transparency
+           {" "}precision targeting, data-driven creative, and full transparency
             from day one.
           </p>
 
@@ -1032,7 +1032,7 @@ const country = formatName(slug);
       <section className="py-20 bg-[#f7f8fc] px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-325 mx-auto items-start">
           {/* Left */}
-          <div className="flex flex-col gap-5 sticky top-10 self-start">
+          <div className="flex flex-col gap-5 relative md:sticky md:top-10 z-40 self-start bg-[#F7F8FC]">
             <h2
               className="text-[clamp(1.8rem,3vw,2.6rem)] font-extrabold leading-[1.1] tracking-tight text-[#0c0322]"
               style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
@@ -1114,7 +1114,13 @@ const country = formatName(slug);
             className={`text-[clamp(1.6rem,3vw,2.4rem)] font-extrabold tracking-tight leading-tight text-[#0c0322] mb-3 ${countryChild ? "hidden" : "block"} `}
             style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
           >
-            Why {country} Businesses Choose Unnity
+            Why {country} Businesses <br/> Choose Unnity
+          </h2>
+          <h2
+            className={`text-[clamp(1.6rem,3vw,2.4rem)] font-extrabold tracking-tight leading-tight text-[#0c0322] mb-3 ${country ? "block" : "hidden"} `}
+            style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
+          >
+            {/* Why {countryChild} Businesses Choose Unnity */}
           </h2>
           <h2
             className={`text-[clamp(1.6rem,3vw,2.4rem)] font-extrabold tracking-tight leading-tight text-[#0c0322] mb-3 ${country ? "block" : "hidden"} `}
