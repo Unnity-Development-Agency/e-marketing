@@ -19,7 +19,7 @@ const Brands = () => {
     {
       id: 2,
       name: "CLOVE.png",
-      logo: "/brands/CLOVE.png",
+      logo: "/brands/clove.png",
     },
     {
       id: 3,
@@ -102,7 +102,7 @@ const Brands = () => {
     {
       id: 10,
       name: "Maclap Itcare",
-      logo: "/brands/maclap_itcare.png",
+      logo: "/maclap.png",
     },
     {
       id: 11,
@@ -253,6 +253,11 @@ const Brands = () => {
       id: 40,
       name: "WOILA SILVER",
       logo: "/Woila-silver.jpeg",
+    },
+    {
+      id: 41,
+      name: "POWER MOWER",
+      logo: "/Powermowers.png",
     },
   ];
 
