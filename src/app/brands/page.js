@@ -162,7 +162,7 @@ const Brands = () => {
     {
       id: 22,
       name: "CLOVE",
-      logo: "/brands/clove.png",
+      logo: "/clove.png",
     },
     {
       id: 23,
