@@ -1,5 +1,6 @@
 "use client";
-import React from "react";
+// import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import "./case-studies.css";
 import Header from "@/components/Header/page";
@@ -39,6 +40,9 @@ const caseStudies = [
 ];
 
 export default function CaseStudiesPage() {
+    useEffect(() => {
+    document.title = "Digital Marketing Case Studies";
+  }, []);
   return (
     <>
       <Header />

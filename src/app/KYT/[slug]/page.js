@@ -1,5 +1,6 @@
 "use client";
-import React, { useRef, useState } from "react";
+// import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Header from "@/components/Header/page";
 import FloatingLines from "@/components/reactBits/FloatingLines";
 import LightRays from "@/components/reactBits/LightRays";
@@ -7,13 +8,18 @@ import Link from "next/link";
 import Image from "next/image";
 import Footer from "@/components/footer/page";
 import { useParams } from "next/navigation";
-import countryKeywords from "./../../../data/countryKeywords.json";
+import countryKeywords from "../../../data/countryKeywords.json";
+import Swiper from "../../../components/swiper/Swiper";
 
 const page = () => {
   const formRef = useRef(null);
   const sectionRef = useRef(null);
   const params = useParams();
-  const country = params.slug;
+  const country = params.slug.charAt(0).toUpperCase() + params.slug.slice(1);
+
+  useEffect(() => {
+    document.title = `${country}'s performance marketing agency for D2C brands - Meta Ads and Google Ads`;
+  }, [country]);
   const [sending, setSending] = useState(false);
   const [faqOpen, setFaqOpen] = useState(false);
   const [status, setStatus] = useState({ type: "", message: "" });
@@ -318,7 +324,7 @@ const page = () => {
     {
       id: 5,
       q: `What makes Unnity different from other agencies?`,
-      a: `Unnity delivers high-impact performance marketing services in India across a wide range of industries. Our expertise spans E-commerce, D2C Fashion, Hospitality, EdTech, Real Estate, SaaS, B2B, and several other sectors.
+      a: `Unnity delivers high-impact performance marketing services in Australia across a wide range of industries. Our expertise spans E-commerce, D2C Fashion, Hospitality, EdTech, Real Estate, SaaS, B2B, and several other sectors.
       What sets us apart is our ability to adapt strategies based on each industry's unique audience behavior and conversion goals. Whether it's driving product sales for a D2C brand, generating quality leads for a hospitality business, or scaling user acquisition for a SaaS platform — we tailor every campaign with precision.
       Our data-driven approach ensures measurable growth, regardless of the vertical. Every strategy we build is rooted in real numbers, clear KPIs, and a relentless focus on ROI.
       If you're in a competitive market and looking to scale smartly, Unnity is the performance marketing agency in India that delivers results across industries.`,
@@ -522,20 +528,20 @@ const page = () => {
                 letterSpacing: "-0.035em",
               }}
             >
-              Performance Marketing Built to
+              Performance Marketing Agency in
+              <span
+                className="block mt-1 bg-linear-to-r from-[#e0d7ff] via-[#a78bfa] to-[#7c3aed] bg-clip-text text-transparent"
+                style={{
+                  fontFamily: "'Plus Jakarta Sans',sans-serif",
+                  fontWeight: 800,
+                  fontSize: "clamp(2.2rem,5.1vw,4.5rem)",
+                  lineHeight: 1.06,
+                  letterSpacing: "-0.035em",
+                }}
+              >
+                Australia to Scale D2C Brands
+              </span>
             </h1>
-            <span
-              className="block mt-1 bg-linear-to-r from-[#e0d7ff] via-[#a78bfa] to-[#7c3aed] bg-clip-text text-transparent"
-              style={{
-                fontFamily: "'Plus Jakarta Sans',sans-serif",
-                fontWeight: 800,
-                fontSize: "clamp(2.2rem,5.1vw,4.5rem)",
-                lineHeight: 1.06,
-                letterSpacing: "-0.035em",
-              }}
-            >
-              Scale D2C Brands
-            </span>
           </div>
 
           {/* Divider */}
@@ -653,6 +659,34 @@ const page = () => {
           </div>
         </div>
       </section>
+
+      {/* ── partners section ── */}
+      <div className="flex flex-col items-center justify-center py-12 mx-auto bg-white">
+        <h2 className="text-base font-bold mb-8 tracking-widest">
+          OFFICIAL MARKETING PARTNERS
+        </h2>
+        <div className="flex justify-center items-center gap-10 px-5 max-sm:gap-6">
+          {[
+            {
+              src: "/Meta-bg.png",
+              label: "Business Partners",
+              alt: "Meta Business Partner",
+            },
+            {
+              src: "/Google-bg.png",
+              label: "Google Partners",
+              alt: "Google Partner",
+            },
+          ].map(({ src, label, alt }) => (
+            <div key={label} className="flex flex-col items-center gap-4">
+              <img src={src} alt={alt} className="w-28 h-16 object-contain" />
+              <span className="text-lg font-medium text-[#5f6368] text-center">
+                {label}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* Lead form */}
       <section className="bg-[#f7f8fc] py-12 px-4">
@@ -782,10 +816,10 @@ const page = () => {
                     label: "Monthly Marketing Budget",
                     options: [
                       "Monthly Marketing Budget",
-                      "Less Than ₹2L",
-                      "₹2L to ₹5L",
-                      "₹5L to ₹25L",
-                      "More Than ₹50L",
+                      "Less Than A$3,000",
+                      "A$3,000 to A$8,000",
+                      "A$8,000 to A$40,000",
+                      "More than A$80,000",
                       "Looking For Organic Services",
                     ],
                   },
@@ -796,9 +830,9 @@ const page = () => {
                       "Choose a Service",
                       "SEO",
                       "Paid Marketing (Google, Facebook & Amazon)",
-                      "UI/UX",
-                      "Website Development",
-                      "Shopify Migration",
+                      // "UI/UX",
+                      // "Website Development",
+                      // "Shopify Migration",
                     ],
                   },
                 ].map(({ id, label, options }) => (
@@ -1044,6 +1078,81 @@ const page = () => {
         </div>
       </section>
 
+      <section className="py-20 bg-white px-4">
+        <div className="max-w-3xl mx-auto text-center mb-14">
+          <h2
+            className="text-[clamp(1.6rem,3vw,2.4rem)] font-extrabold tracking-tight leading-tight text-[#0c0322] mb-3"
+            style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
+          >
+            Why {country} Businesses Choose Unnity
+          </h2>
+          <p className="text-[0.95rem] leading-[1.8] text-[#6b7280]">
+            We specialise exclusively in Meta and Google Ads. That focused
+            expertise is what consistently delivers stronger results for our
+            clients.
+          </p>
+          <Link href="https://calendly.com/sayam-unnity/30min">
+            <button className="group self-start flex items-center gap-3 bg-[#0c0322] text-white hover:bg-[#1a0550] px-6 py-2.5 rounded-full text-[0.9rem] font-semibold cursor-pointer transition-all duration-200 mx-auto mt-5">
+              Talk to our experts
+              <span className="relative w-7 h-7 overflow-hidden rounded-full bg-white text-[#0c0322] shrink-0">
+                <span className="absolute inset-0 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-8">
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                  >
+                    <path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                  </svg>
+                </span>
+                <span className="absolute inset-0 flex items-center justify-center -translate-x-8 transition-transform duration-300 group-hover:translate-x-0 group-hover:bg-[#0c0322] group-hover:text-white">
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                  >
+                    <path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                  </svg>
+                </span>
+              </span>
+            </button>
+          </Link>
+        </div>
+
+        {/* Clooums */}
+        <div className="max-w-325 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          {ChooseUs.map((card) => (
+            <div
+              key={card.id}
+              className="group relative flex flex-col p-6 rounded-md border border-[#16064f3f] bg-white hover:border-[#150a4062]  transition-all duration-300 cursor-default overflow-hidden"
+            >
+              <div className="absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-[#0F032B] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+              {/* Number */}
+              <span
+                className="text-[2.8rem] font-black leading-none text-[#0c0322]/20 select-none tabular-nums mb-4"
+                style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
+              >
+                {String(card.id).padStart(2, "0")}
+              </span>
+
+              <p
+                className="text-[0.95rem] font-bold text-[#0c0322] leading-snug mb-2"
+                style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
+              >
+                {card.title}
+              </p>
+              <p className="text-[0.85rem] leading-[1.75] text-[#6b7280] flex-1">
+                {card.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* What We Do Differently */}
       <section className="py-20 bg-white px-4">
         <div className="max-w-3xl mx-auto text-center mb-14">
@@ -1177,13 +1286,13 @@ const page = () => {
             className="text-[0.95rem] leading-[1.8] text-[#6b7280]"
             style={{ fontFamily: "'DM Sans',sans-serif" }}
           >
-            We have worked with brands from all over the world. Here are some of
-            the results we have delivered for them.
+            We have worked with brands from all over the world. <br /> Here are
+            some of the results we have delivered for them.
           </p>
         </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-325 mx-auto gap-5">
-          {/* first card */}
+        <Swiper />
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-325 mx-auto gap-5">
+        
           <div className="rounded-md border border-[#16064f3f] bg-white hover:border-[#150a4062]  transition-all duration-300 cursor-default overflow-hidden0 flex flex-col">
             <div className="bg-[#0f032be2] px-6 pt-6 pb-7 rounded-t-md backdrop-blur-sm">
               <span
@@ -1223,7 +1332,9 @@ const page = () => {
                 </div>
               </div>
             </div>
-            {/* BOTTOM - white */}
+
+
+          
             <div className="bg-white px-6 py-5 flex flex-col gap-2 flex-1">
               <p
                 className="text-[15px] font-bold text-[#0c0322] leading-snug"
@@ -1241,7 +1352,8 @@ const page = () => {
             </div>
           </div>
 
-          {/* second card */}
+        
+
           <div className="rounded-md border border-[#16064f3f] bg-white hover:border-[#150a4062]  transition-all duration-300 cursor-default overflow-hidden0 flex flex-col">
             <div className="bg-[#0f032be2] px-6 pt-6 pb-7 rounded-t-md backdrop-blur-sm">
               <span
@@ -1299,7 +1411,8 @@ const page = () => {
             </div>
           </div>
 
-          {/* third card */}
+  
+
           <div className="rounded-md border border-[#16064f3f] bg-white hover:border-[#150a4062]  transition-all duration-300 cursor-default overflow-hidden0 flex flex-col">
             <div className="bg-[#0f032be2] px-6 pt-6 pb-7 rounded-t-md backdrop-blur-sm">
               <span
@@ -1356,7 +1469,7 @@ const page = () => {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
       {/* Whtat our clients say */}
       <section className="w-full bg-white py-12 px-5">
@@ -1503,7 +1616,7 @@ const page = () => {
       </section>
 
       <section className="bg-[#0c0322] py-14 px-5">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-300 mx-auto">
           <h2
             className="text-[clamp(1.3rem,2vw,1.7rem)] font-extrabold tracking-tight text-white mb-10"
             style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}

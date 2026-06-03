@@ -1,10 +1,15 @@
+"use client";
 import Footer from "@/components/footer/page";
 import Header from "@/components/Header/page";
 import BrandsHero from "@/components/reactBits/HeroSection";
 import Link from "next/link";
-import React from "react";
+// import React from "react";
+import React, { useEffect } from "react";
 
 const Brands = () => {
+  useEffect(() => {
+    document.title = "Brands That Trust Unnity";
+  }, []);
   const B2BPartners = [
     {
       id: 1,
@@ -36,11 +41,11 @@ const Brands = () => {
       name: "LAWOCTPOUS",
       logo: "/brands/LAWOCTPOUS.png",
     },
-    {
-      id: 7,
-      name: "Mystara",
-      logo: "/brands/mystara_hotels.png",
-    },
+    // {
+    //   id: 7,
+    //   name: "Mystara",
+    //   logo: "/brands/mystara_hotels.png",
+    // },
     {
       id: 8,
       name: "The Binge Town",
@@ -133,6 +138,121 @@ const Brands = () => {
       id: 17,
       name: "WowHeads",
       logo: "/brands/wowheads.png",
+    },
+    {
+      id: 18,
+      name: "SMART SAVER",
+      logo: "/smart_saver.png",
+    },
+    {
+      id: 19,
+      name: "NUVOICE",
+      logo: "/NUVOICE.png",
+    },
+    {
+      id: 20,
+      name: "HUBHAWAKS",
+      logo: "/hub1.png",
+    },
+    {
+      id: 21,
+      name: "NIRA",
+      logo: "/nira.png",
+    },
+    {
+      id: 22,
+      name: "CLOVE",
+      logo: "/brands/clove.png",
+    },
+    {
+      id: 23,
+      name: "COZYCABS",
+      logo: "/COZYCABS1.jpg",
+    },
+    {
+      id: 24,
+      name: "E-TRAVEL",
+      logo: "/e-travel.avif",
+    },
+    {
+      id: 25,
+      name: "KAPURTHALA",
+      logo: "/kapur1.png",
+    },
+    {
+      id: 26,
+      name: "IS.U",
+      logo: "/isu1.png",
+    },
+    {
+      id: 27,
+      name: "HARDOLL",
+      logo: "/hardoll.png",
+    },
+    {
+      id: 28,
+      name: "MADVERSE",
+      logo: "/madverse.png",
+    },
+    {
+      id: 29,
+      name: "UBERLYFE",
+      logo: "/uberlyfe1.png",
+    },
+    {
+      id: 30,
+      name: "CUPID",
+      logo: "/cupid1.png",
+    },
+    {
+      id: 31,
+      name: "THE BINGE TOWN",
+      logo: "/the_binge_town.png",
+    },
+    {
+      id: 32,
+      name: "DRONACHARYA",
+      logo: "/DRONACHARYA1.png",
+    },
+    {
+      id: 33,
+      name: "WOOLEN HOUSE",
+      logo: "/woolen_house1.png",
+    },
+    {
+      id: 34,
+      name: "OPINE STORES",
+      logo: "/opine_stores1.png",
+    },
+    {
+      id: 35,
+      name: "EMPIRE",
+      logo: "/empire1.png",
+    },
+    {
+      id: 36,
+      name: "EVARA",
+      logo: "/the_core1.png",
+    },
+    {
+      id: 37,
+      name: "DON MILLER",
+      logo: "/donmiller1.png",
+    },
+    {
+      id: 38,
+      name: "POLKI",
+      logo: "/polki1.png",
+    },
+    {
+      id: 39,
+      name: "DIAN APPS",
+      logo: "/dianapps1.png",
+    },
+    {
+      id: 40,
+      name: "WOILA SILVER",
+      logo: "/Woila-silver.jpeg",
     },
   ];
 

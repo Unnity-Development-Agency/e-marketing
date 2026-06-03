@@ -23,30 +23,45 @@ const LightRays = dynamic(() => import("@/components/reactBits/LightRays"), {
 });
 
 const LOGO_IMAGES = [
-  "/empire1.png",
-  "/aqua1.png",
-  "/comforto.png",
-  "/da1.png",
-  "/adpl2.png",
-  "/edoofa.png",
-  "/hardoll.png",
+  // "/aqua1.png",
+  // "/comforto.png",
+  // "/da1.png",
+  // "/adpl2.png",
+  // "/edoofa.png",
+  // "/orchid-blue.png",
+  // "/wow-heads.png",
+  // "/sain.png",
+  // "/sky.png",
+  // "/aurave1.png",
+  // "/uk.png",
+  // "/mireads.avif",
+  // "/power-mower.webp",
+  // "/hub1.png",
+
+  "/smart_saver.png",
+  "/NUVOICE.png",
   "/hub1.png",
   "/nira.png",
-  "/orchid-blue.png",
-  "/wow-heads.png",
-  "/sain.png",
-  "/sky.png",
-  "/aurave1.png",
-  "/uk.png",
-  "/cupid1.png",
+  "/brands/clove.png",
+  "/COZYCABS1.jpg",
   "/e-travel.avif",
   "/isu1.png",
   "/kapur1.png",
-  "/madve.png",
-  "/mireads.avif",
-  "/power-mower.webp",
+  "/hardoll.png",
+  "/madverse.png",
   "/uberlyfe1.png",
-  "/hub1.png",
+  "/cupid1.png",
+  "/the_binge_town.png",
+  "/DRONACHARYA1.png",
+  "/woolen_house1.png",
+  "/opine_stores1.png",
+  // "/mystara_hotels.png",
+  "/empire1.png",
+  "/the_core1.png",
+  "/donmiller1.png",
+  "/polki1.png",
+  "/dianapps1.png",
+  "/Woila-silver.jpeg",
 ];
 
 const features = [
@@ -149,9 +164,9 @@ const testimonials = [
 
 const members = [
   { name: "Sayam Jain", role: "Founder & CEO", photo: "/sayyam2.png" },
-  { name: "Muskan", role: "Social Media", photo: "/muskan-2.jpg" },
+  { name: "Muskan", role: "Social Media", photo: "/muskan4.JPG" },
   { name: "Diksha", role: "Marketing", photo: "/Diksha.jpg" },
-  { name: "Naveen", role: "Web Developer", photo: "/naveen-01.jpeg" },
+  { name: "Suraj", role: "Web Developer", photo: "/suraj3.jpg" },
   { name: "Shubham", role: "Web Developer", photo: "/shubham.jpeg" },
   { name: "Manisha", role: "Creatives", photo: "/manisha-03.jpeg" },
   { name: "Rohit", role: "Head of Marketing", photo: "/rohit2.jpeg" },
@@ -160,6 +175,7 @@ const members = [
   { name: "Yalka", role: "Video Editor Intern", photo: "/yalka.jpg" },
   { name: "Himanshu", role: "Social Media Intern", photo: "/himanshu.jpg" },
   { name: "Punjal", role: "Human Resources", photo: "/punjal.jpeg" },
+  { name: "Shekar", role: "Marketing", photo: "/Shekhar.jpg" },
 ];
 
 const gallery = [
@@ -1442,7 +1458,7 @@ export default function Home() {
               </div>
             </header>
 
-            <div className="grid grid-cols-6 gap-5 max-[1100px]:grid-cols-4 max-[820px]:grid-cols-3 max-[520px]:grid-cols-2">
+            <div className="grid grid-cols-7 gap-5 max-[1100px]:grid-cols-4 max-[820px]:grid-cols-3 max-[520px]:grid-cols-2">
               {shown.map((m, i) => (
                 <article
                   key={i}
