@@ -4,6 +4,7 @@ import React, { useRef, useState, useEffect } from "react";
 import Header from "@/components/Header/page";
 import FloatingLines from "@/components/reactBits/FloatingLines";
 import LightRays from "@/components/reactBits/LightRays";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "@/components/footer/page";
@@ -15,13 +16,28 @@ const page = () => {
   const formRef = useRef(null);
   const sectionRef = useRef(null);
   const params = useParams();
-  const country = params.slug.charAt(0).toUpperCase() + params.slug.slice(1);
+  const router = useRouter();
+  // const country = params.slug.charAt(0).toUpperCase()+ params.slug.slice(1)
+  const slug = params.slug;
 
+const formatName = (text) =>
+  text
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+
+const country = formatName(slug);
+  const [countryChild , setCountryChild] = useState("");
+  const displayPlace = countryChild || country;
+  // meta-title for website
   useEffect(() => {
-    document.title = `${country}'s performance marketing agency for D2C brands - Meta Ads and Google Ads`;
-  }, [country]);
+  document.title = `${country}'s performance marketing agency for D2C brands - Meta Ads and Google Ads`;
+}, [country]);
+
+
   const [sending, setSending] = useState(false);
   const [faqOpen, setFaqOpen] = useState(false);
+  // const [countryChild , setCountryChild] = useState("");
   const [status, setStatus] = useState({ type: "", message: "" });
   const [formData, setFormData] = useState({
     companyName: "",
@@ -33,9 +49,19 @@ const page = () => {
     designation: "",
   });
 
-  const keywords = countryKeywords?.find(
-    (item) => item.country === country.toUpperCase(),
+  // const keywords = countryKeywords?.find(
+  //   (item) => item.country === country.toUpperCase(),
+  // );
+
+  const keywords = countryKeywords?.find((item) => {
+  const isCountry = item.country.toLowerCase() === slug.toLowerCase();
+
+  const isCity = Object.keys(item.cities || {}).some(
+    (city) => city.toLowerCase().replaceAll(" ", "-") === slug.toLowerCase()
   );
+
+  return isCountry || isCity;
+});
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -110,7 +136,8 @@ const page = () => {
     {
       id: 2,
       title: "Google Ads Management",
-      description: `Search, Shopping, Display, and Performance Max campaigns built to maximise ROAS and eliminate wasted spend - structured Google Ads management for ${country} businesses.`,
+      // description: `Search, Shopping, Display, and Performance Max campaigns built to maximise ROAS and eliminate wasted spend - structured Google Ads management for ${country} businesses.`,
+     description: `Search, Shopping, Display, and Performance Max campaigns built to maximise ROAS and eliminate wasted spend - structured Google Ads management for ${displayPlace} businesses.`,
     },
     {
       id: 3,
@@ -331,7 +358,7 @@ const page = () => {
     },
     {
       id: 6,
-      q: `What industries do you work with in ${country}?`,
+      q: `What industries do you work with in ${displayPlace}?`,
       a: `D2C, e-commerce, publishing, SaaS, real estate, healthcare, hospitality, and B2B services. We tailor our approach to each industry's buying cycle and audience behaviour - what works for a fashion brand won't work for a B2B company, and we know the difference.`,
     },
   ];
@@ -554,7 +581,8 @@ const page = () => {
           >
             <strong className="text-white/60">Unnity</strong> is a performance
             marketing agency running Meta Ads and Google Ads for D2C brands
-            across <strong className="text-white/60">{country}</strong> -
+            {/* across <strong className="text-white/60">{country}</strong> - */}
+            across <strong className="text-white/60">{displayPlace}</strong>
             precision targeting, data-driven creative, and full transparency
             from day one.
           </p>
@@ -905,7 +933,8 @@ const page = () => {
             <br className="hidden md:block" /> That Turns Ad Spend Into Revenue
           </h2>
           <p className=" max-w-3xl text-[0.95rem] leading-[1.8] text-[#6b7280]">
-            Full-funnel Meta Ads and Google Ads management for {country} brands
+            {/* Full-funnel Meta Ads and Google Ads management for {country} brands */}
+            Full-funnel Meta Ads and Google Ads management for {displayPlace} brands
             - every campaign built on data, every rupee accountable to a result.
           </p>
         </div>
@@ -1008,7 +1037,8 @@ const page = () => {
               className="text-[clamp(1.8rem,3vw,2.6rem)] font-extrabold leading-[1.1] tracking-tight text-[#0c0322]"
               style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
             >
-              Why {country} Businesses Choose Unnity
+              {/* Why {country} Businesses Choose Unnity */}
+              Why {displayPlace} Businesses Choose Unnity
             </h2>
             <p className="text-[0.95rem] leading-[1.8] text-[#6b7280]">
               We specialise exclusively in Meta and Google Ads. That focused
@@ -1081,10 +1111,16 @@ const page = () => {
       <section className="py-20 bg-white px-4">
         <div className="max-w-3xl mx-auto text-center mb-14">
           <h2
-            className="text-[clamp(1.6rem,3vw,2.4rem)] font-extrabold tracking-tight leading-tight text-[#0c0322] mb-3"
+            className={`text-[clamp(1.6rem,3vw,2.4rem)] font-extrabold tracking-tight leading-tight text-[#0c0322] mb-3 ${countryChild ? "hidden" : "block"} `}
             style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
           >
             Why {country} Businesses Choose Unnity
+          </h2>
+          <h2
+            className={`text-[clamp(1.6rem,3vw,2.4rem)] font-extrabold tracking-tight leading-tight text-[#0c0322] mb-3 ${country ? "block" : "hidden"} `}
+            style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
+          >
+            Why {countryChild} Businesses Choose Unnity
           </h2>
           <p className="text-[0.95rem] leading-[1.8] text-[#6b7280]">
             We specialise exclusively in Meta and Google Ads. That focused
@@ -1565,7 +1601,8 @@ const page = () => {
             className="text-[0.95rem] leading-[1.8] text-[#6b7280]"
             style={{ fontFamily: "'DM Sans',sans-serif" }}
           >
-            Common questions from {country} businesses exploring performance
+            {/* Common questions from {country} businesses exploring performance */}
+            Common questions from {displayPlace} businesses exploring performance 
             marketing with Unnity.
           </p>
         </div>
@@ -1615,83 +1652,92 @@ const page = () => {
         </div>
       </section>
 
-      <section className="bg-[#0c0322] py-14 px-5">
-        <div className="max-w-300 mx-auto">
-          <h2
-            className="text-[clamp(1.3rem,2vw,1.7rem)] font-extrabold tracking-tight text-white mb-10"
-            style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
+    <section className="bg-[#0c0322] py-14 px-5">
+  <div className="max-w-[1200px] mx-auto">
+    <h2
+      className="text-[clamp(1.3rem,2vw,1.7rem)] font-extrabold tracking-tight text-white mb-10"
+      style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
+    >
+      Cities We Serve in {country}
+    </h2>
+
+    <div className="flex flex-col">
+      {Object.entries(keywords?.cities || {}).map(([city, cityKeywords]) => {
+        const citySlug = city.toLowerCase().replaceAll(" ", "-");
+
+        return (
+          <div
+            key={city}
+            className="border-t border-white/10 py-5 last:border-b last:border-white/10"
           >
-            Cities We Serve in {country}
-          </h2>
+            {/* Mobile city label */}
+            <div className="flex items-center gap-2 mb-3 md:mb-0 md:hidden">
+              <span className="w-[5px] h-[5px] rounded-full bg-[#06d6a0] cursor-pointer flex-shrink-0" />
+              <p
+                onClick={() =>
+                  router.push(`/performance-marketing-agency/${citySlug}`)
+                }
+                className="text-[12px] font-bold text-white cursor-pointer"
+                style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
+              >
+                {city}
+              </p>
+            </div>
 
-          <div className="flex flex-col">
-            {Object.entries(keywords?.cities || {}).map(
-              ([city, cityKeywords]) => (
-                <div
-                  key={city}
-                  className="border-t border-white/06 py-5 last:border-b last:border-white/06"
-                >
-                  {/* City label — full width on mobile, inline on desktop */}
-                  <div className="flex items-center gap-2 mb-3 md:mb-0 md:hidden">
-                    <span className="w-[5px] h-[5px] rounded-full bg-[#06d6a0] flex-shrink-0" />
-                    <p
-                      className="text-[12px] font-bold text-white"
-                      style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
-                    >
-                      {city}
-                    </p>
-                  </div>
+            {/* Desktop: city + keywords */}
+            <div className="hidden md:grid md:grid-cols-[200px_1fr] gap-0">
+              <p
+                onClick={() =>
+                  router.push(`/performance-marketing-agency/${citySlug}`)
+                }
+                className="text-[13.5px] font-bold text-white pr-6 pt-px leading-snug flex items-start gap-2 cursor-pointer"
+                style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
+              >
+                <span className="w-[5px] h-1.25 rounded-full bg-[#06d6a0] flex-shrink-0 mt-1.5" />
+                {city}
+              </p>
 
-                  {/* Desktop: side-by-side label + keywords */}
-                  <div className="hidden md:grid md:grid-cols-[200px_1fr] gap-0">
-                    <p
-                      className="text-[13.5px] font-bold text-white pr-6 pt-px leading-snug flex items-start gap-2"
-                      style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
-                    >
-                      <span className="w-[5px] h-1.25 rounded-full bg-[#06d6a0] flex-shrink-0 mt-1.5" />
-                      {city}
-                    </p>
-                    <div className="grid grid-cols-4 gap-0">
-                      {[0, 1, 2, 3].map((ci) => (
-                        <div
-                          key={ci}
-                          className="flex flex-col gap-2.5 px-4 border-l border-white/05"
+              <div className="grid grid-cols-4 gap-0">
+                {[0, 1, 2, 3].map((ci) => (
+                  <div
+                    key={ci}
+                    className="flex flex-col gap-2.5 px-4 border-l border-white/10"
+                  >
+                    {cityKeywords
+                      .filter((_, i) => i % 4 === ci)
+                      .map((kw, idx) => (
+                        <span
+                          key={idx}
+                          className="text-[12.5px] text-white/45 leading-snug"
+                          style={{ fontFamily: "'DM Sans',sans-serif" }}
                         >
-                          {cityKeywords
-                            .filter((_, i) => i % 4 === ci)
-                            .map((kw, idx) => (
-                              <span
-                                key={idx}
-                                className="text-[12.5px] text-white/42 leading-snug"
-                                style={{ fontFamily: "'DM Sans',sans-serif" }}
-                              >
-                                {kw}
-                              </span>
-                            ))}
-                        </div>
+                          {kw}
+                        </span>
                       ))}
-                    </div>
                   </div>
+                ))}
+              </div>
+            </div>
 
-                  {/* Mobile: 2-col keyword grid */}
-                  <div className="md:hidden grid grid-cols-2 gap-x-3 gap-y-1.5">
-                    {cityKeywords.map((kw, idx) => (
-                      <span
-                        key={idx}
-                        className="text-[11.5px] text-white/42 leading-[1.5] pl-2 border-l border-[#a78bfa]/20"
-                        style={{ fontFamily: "'DM Sans',sans-serif" }}
-                      >
-                        {kw}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ),
-            )}
+            {/* Mobile keywords */}
+            <div className="md:hidden grid grid-cols-2 gap-x-3 gap-y-1.5">
+              {cityKeywords.map((kw, idx) => (
+                <span
+                  key={idx}
+                  className="text-[11.5px] text-white/45 leading-[1.5] pl-2 border-l border-[#a78bfa]/20"
+                  style={{ fontFamily: "'DM Sans',sans-serif" }}
+                >
+                  {kw}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-
+        );
+      })}
+    </div>
+  </div>
+</section>
+      
       {/* Footer */}
       <Footer />
     </>
