@@ -1029,86 +1029,6 @@ const country = formatName(slug);
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-[#f7f8fc] px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-325 mx-auto items-start">
-          {/* Left */}
-          <div className="flex flex-col gap-5 relative md:sticky md:top-10 z-40 self-start bg-[#F7F8FC]">
-            <h2
-              className="text-[clamp(1.8rem,3vw,2.6rem)] font-extrabold leading-[1.1] tracking-tight text-[#0c0322]"
-              style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
-            >
-              {/* Why {country} Businesses Choose Unnity */}
-              
-              Why {displayPlace} Businesses Choose Unnity
-            </h2>
-            <p className="text-[0.95rem] leading-[1.8] text-[#6b7280]">
-              We specialise exclusively in Meta and Google Ads. That focused
-              expertise is what consistently delivers stronger results for our
-              clients.
-            </p>
-            <Link href="https://calendly.com/sayam-unnity/30min">
-              <button className="group self-start flex items-center gap-3 bg-[#0c0322] text-white hover:bg-[#1a0550] px-6 py-2.5 rounded-full text-[0.9rem] font-semibold cursor-pointer transition-all duration-200">
-                Talk to our experts
-                <span className="relative w-7 h-7 overflow-hidden rounded-full bg-white text-[#0c0322] shrink-0">
-                  <span className="absolute inset-0 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-8">
-                    <svg
-                      viewBox="0 0 24 24"
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                    >
-                      <path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                    </svg>
-                  </span>
-                  <span className="absolute inset-0 flex items-center justify-center -translate-x-8 transition-transform duration-300 group-hover:translate-x-0 group-hover:bg-[#0c0322] group-hover:text-white">
-                    <svg
-                      viewBox="0 0 24 24"
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                    >
-                      <path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                    </svg>
-                  </span>
-                </span>
-              </button>
-            </Link>
-          </div>
-
-          {/* Right - cards */}
-          <div className="flex flex-col gap-3">
-            {ChooseUs.map((card) => (
-              <div
-                key={card.id}
-                className="group flex items-start gap-4 p-5 rounded-md border border-[#16064f3f] bg-white hover:border-[#150a4062]  transition-all duration-300 cursor-default overflow-hidden"
-              >
-                <div className="shrink-0 w-10 h-10 flex items-center justify-center transition-colors duration-200">
-                  <span
-                    className="text-[13px] font-black text-[#0F032B]"
-                    style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
-                  >
-                    {String(card.id).padStart(2, "0")}
-                  </span>
-                </div>
-                <div>
-                  <p
-                    className="text-[0.95rem] font-bold text-[#0c0322] mb-1"
-                    style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
-                  >
-                    {card.title}
-                  </p>
-                  <p className="text-[0.875rem] leading-[1.7] text-[#6b7280]">
-                    {card.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="py-20 bg-white px-4">
         <div className="max-w-3xl mx-auto text-center mb-14">
           <h2
@@ -1123,12 +1043,12 @@ const country = formatName(slug);
           >
             {/* Why {countryChild} Businesses Choose Unnity */}
           </h2>
-          <h2
+          {/* <h2
             className={`text-[clamp(1.6rem,3vw,2.4rem)] font-extrabold tracking-tight leading-tight text-[#0c0322] mb-3 ${country ? "block" : "hidden"} `}
             style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
           >
             Why {countryChild} Businesses Choose Unnity
-          </h2>
+          </h2> */}
           <p className="text-[0.95rem] leading-[1.8] text-[#6b7280]">
             We specialise exclusively in Meta and Google Ads. That focused
             expertise is what consistently delivers stronger results for our
