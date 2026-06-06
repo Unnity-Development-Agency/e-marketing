@@ -37,6 +37,7 @@ const country = formatName(slug);
 
   const [sending, setSending] = useState(false);
   const [faqOpen, setFaqOpen] = useState(false);
+  const [activeDifferentCard, setActiveDifferentCard] = useState(null);
   // const [countryChild , setCountryChild] = useState("");
   const [status, setStatus] = useState({ type: "", message: "" });
   const [formData, setFormData] = useState({
@@ -1135,34 +1136,76 @@ const country = formatName(slug);
           </p>
         </div>
 
-        <div className="max-w-325 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {WeDifferently.map((card) => (
-            <div
-              key={card.id}
-              className="group relative flex flex-col p-6 rounded-md border border-[#16064f3f] bg-white hover:border-[#150a4062]  transition-all duration-300 cursor-default overflow-hidden"
-            >
-              <div className="absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-[#0F032B] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+  <div className="max-w-325 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+  {WeDifferently.map((card) => {
+    const isActive = activeDifferentCard === card.id;
 
-              {/* Number */}
-              <span
-                className="text-[2.8rem] font-black leading-none text-[#0c0322]/20 select-none tabular-nums mb-4"
-                style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
-              >
-                {String(card.id).padStart(2, "0")}
-              </span>
+    return (
+      <div
+        key={card.id}
+        onClick={() => {
+          if (window.innerWidth < 768) {
+            setActiveDifferentCard(isActive ? null : card.id);
+          }
+        }}
+        className="group relative min-h-[210px] flex flex-col p-6 rounded-md border border-[#16064f3f] bg-white transition-all duration-300 cursor-pointer md:cursor-default overflow-hidden"
+      >
+        {/* Bottom to top color slide */}
+        <div
+          className={`absolute inset-0 bg-[#0c0322] transition-transform duration-500 ease-in-out z-0
+            ${isActive ? "translate-y-0" : "translate-y-full"}
+            md:translate-y-full md:group-hover:translate-y-0
+          `}
+        />
 
-              <p
-                className="text-[0.95rem] font-bold text-[#0c0322] leading-snug mb-2"
-                style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
-              >
-                {card.title}
-              </p>
-              <p className="text-[0.85rem] leading-[1.75] text-[#6b7280] flex-1">
-                {card.description}
-              </p>
-            </div>
-          ))}
+        {/* Top line */}
+        <div
+          className={`absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-[#6C5CE7] to-transparent transition-opacity duration-300 z-10
+            ${isActive ? "opacity-100" : "opacity-0"}
+            md:opacity-0 md:group-hover:opacity-100
+          `}
+        />
+
+        <div className="relative z-10 flex flex-col h-full">
+          {/* Number */}
+          <span
+            className={`text-[2.8rem] font-black leading-none select-none tabular-nums mb-4 transition-colors duration-300
+              ${isActive ? "text-white" : "text-[#6b7280]"}
+              md:text-[#6b7280] md:group-hover:text-white
+            `}
+            style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
+          >
+            {String(card.id).padStart(2, "0")}
+          </span>
+
+          {/* Title */}
+          <p
+            className={`text-[0.95rem] font-bold leading-snug mb-2 transition-all duration-300
+              ${isActive ? "opacity-0 -translate-y-6 text-white" : "opacity-100 translate-y-0 text-[#0c0322]"}
+              md:opacity-100 md:translate-y-0 md:text-[#0c0322]
+              md:group-hover:opacity-0 md:group-hover:-translate-y-6
+            `}
+            style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
+          >
+            {card.title}
+          </p>
+
+          {/* Description */}
+          <p
+            className={`absolute left-0 right-0 top-[78px] text-[0.85rem] leading-[1.75] text-white/80 transition-all duration-500 ease-in-out
+              ${isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
+              md:opacity-0 md:translate-y-10
+              md:group-hover:opacity-100 md:group-hover:translate-y-0
+            `}
+            style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
+          >
+            {card.description}
+          </p>
         </div>
+      </div>
+    );
+  })}
+</div>
       </section>
       {/* Industry We work with */}
       <section className="py-20 bg-white overflow-hidden">
@@ -1594,6 +1637,9 @@ const country = formatName(slug);
 
         return (
           <div
+          onClick={() =>
+                  router.push(`/performance-marketing-agency/${citySlug}`)
+                }
             key={city}
             className="border-t border-white/10 py-5 last:border-b last:border-white/10"
           >
@@ -1601,9 +1647,6 @@ const country = formatName(slug);
             <div className="flex items-center gap-2 mb-3 md:mb-0 md:hidden">
               <span className="w-[5px] h-[5px] rounded-full bg-[#06d6a0] cursor-pointer flex-shrink-0" />
               <p
-                onClick={() =>
-                  router.push(`/performance-marketing-agency/${citySlug}`)
-                }
                 className="text-[12px] font-bold text-white cursor-pointer"
                 style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
               >
