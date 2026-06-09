@@ -1186,13 +1186,13 @@ export default function Home() {
               {
                 prefix: "$",
                 to: 600,
-                suffix: "+",
+                suffix: "K+",
                 label: "Monthly Ad Revenue",
               },
               {
                 prefix: "$",
                 to: 300,
-                suffix: "+",
+                suffix: "K+",
                 label: "Max Monthly Budget",
               },
               {
