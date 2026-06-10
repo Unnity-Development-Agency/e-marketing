@@ -1641,7 +1641,7 @@ const country = formatName(slug);
                   router.push(`/performance-marketing-agency/${citySlug}`)
                 }
             key={city}
-            className="border-t border-white/10 py-5 last:border-b last:border-white/10"
+            className="border-t border-white/10 py-5 last:border-b last:border-white/10 cursor-pointer"
           >
             {/* Mobile city label */}
             <div className="flex items-center gap-2 mb-3 md:mb-0 md:hidden">
