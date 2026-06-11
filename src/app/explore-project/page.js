@@ -25,6 +25,18 @@ export default function CaseStudies() {
       href: "https://cupidclothings.com/",
     },
     {
+      id: 18,
+      title: "Don Miller",
+      image: "/don-millerr.jpeg",
+      href: "https://www.donmiller.in/",
+    },
+    {
+      id: 19,
+      title: "Polki Sarees",
+      image: "/polki-saree.jpeg",
+      href: "https://polkisarees.com/",
+    },
+    {
       id: 3,
       title: "Uberlyfe",
       image: "/uber.png",
@@ -117,18 +129,7 @@ export default function CaseStudies() {
       image: "/prateek-suri.png",
       href: "https://author-rose.vercel.app/",
     },
-    {
-      id: 18,
-      title: "Don Miller",
-      image: "/don-millerr.jpeg",
-      href: "https://www.donmiller.in/",
-    },
-    {
-      id: 19,
-      title: "Polki Sarees",
-      image: "/polki-saree.jpeg",
-      href: "https://polkisarees.com/",
-    },
+    
   ];
   useEffect(() => {
      document.title = "Our Projects | Websites, Funnels & Ad Campaign";
