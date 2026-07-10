@@ -51,6 +51,11 @@ const Brands = () => {
       name: "The Binge Town",
       logo: "/brands/the_binge_town.png",
     },
+    {
+      id: 46,
+      name: "EDOOFA",
+      logo: "/EDOOFA.avif",
+    }
   ];
 
   const AllPartners = [
@@ -258,6 +263,36 @@ const Brands = () => {
       id: 41,
       name: "POWER MOWER",
       logo: "/Powermowers.png",
+    },
+    {
+      id: 42,
+      name: "MYSTARA",
+      logo: "/mystara_hotels.png",
+    },
+    {
+      id: 43,
+      name: "LIFE KRAFTS",
+      logo: "/lifekrafts.avif",
+    },
+    {
+      id: 44,
+      name: "AURA DECOR",
+      logo: "/aura-decor.avif",
+    },
+    {
+      id: 45,
+      name: "ENTRELOGY",
+      logo: "/ENTRELOGY.png",
+    },
+    {
+      id: 46,
+      name: "EDOOFA",
+      logo: "/EDOOFA.avif",
+    },
+    {
+      id: 47,
+      name: "INSIDE-TAX",
+      logo: "/inside-tax.png",
     },
   ];
 

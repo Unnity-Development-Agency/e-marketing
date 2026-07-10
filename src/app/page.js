@@ -1186,13 +1186,13 @@ export default function Home() {
               {
                 prefix: "$",
                 to: 600,
-                suffix: "+",
+                suffix: "K+",
                 label: "Monthly Ad Revenue",
               },
               {
                 prefix: "$",
                 to: 300,
-                suffix: "+",
+                suffix: "K+",
                 label: "Max Monthly Budget",
               },
               {
@@ -1374,7 +1374,7 @@ export default function Home() {
                 A snapshot of the work we've delivered — websites, funnels, and
                 performance campaigns that moved the needle for our clients.
               </p>
-              <Link href="/snapshot-project">
+              <Link href="/explore-project">
                 <button className="group flex items-center gap-3 bg-white text-black px-6 py-3 rounded-full font-semibold cursor-pointer transition-all duration-300 w-fit">
                   Explore our work
                   <span className="relative w-7 h-7 overflow-hidden shrink-0">

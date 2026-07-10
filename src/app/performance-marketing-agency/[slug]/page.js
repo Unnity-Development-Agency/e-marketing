@@ -4,6 +4,7 @@ import React, { useRef, useState, useEffect } from "react";
 import Header from "@/components/Header/page";
 import FloatingLines from "@/components/reactBits/FloatingLines";
 import LightRays from "@/components/reactBits/LightRays";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "@/components/footer/page";
@@ -15,13 +16,29 @@ const page = () => {
   const formRef = useRef(null);
   const sectionRef = useRef(null);
   const params = useParams();
-  const country = params.slug.charAt(0).toUpperCase() + params.slug.slice(1);
+  const router = useRouter();
+  // const country = params.slug.charAt(0).toUpperCase()+ params.slug.slice(1)
+  const slug = params.slug;
 
+const formatName = (text) =>
+  text
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+
+const country = formatName(slug);
+  const [countryChild , setCountryChild] = useState("");
+  const displayPlace = countryChild || country;
+  // meta-title for website
   useEffect(() => {
-    document.title = `${country}'s performance marketing agency for D2C brands - Meta Ads and Google Ads`;
-  }, [country]);
+  document.title = `${country}'s performance marketing agency for D2C brands - Meta Ads and Google Ads`;
+}, [country]);
+
+
   const [sending, setSending] = useState(false);
   const [faqOpen, setFaqOpen] = useState(false);
+  const [activeDifferentCard, setActiveDifferentCard] = useState(null);
+  // const [countryChild , setCountryChild] = useState("");
   const [status, setStatus] = useState({ type: "", message: "" });
   const [formData, setFormData] = useState({
     companyName: "",
@@ -33,9 +50,19 @@ const page = () => {
     designation: "",
   });
 
-  const keywords = countryKeywords?.find(
-    (item) => item.country === country.toUpperCase(),
+  // const keywords = countryKeywords?.find(
+  //   (item) => item.country === country.toUpperCase(),
+  // );
+
+  const keywords = countryKeywords?.find((item) => {
+  const isCountry = item.country.toLowerCase() === slug.toLowerCase();
+
+  const isCity = Object.keys(item.cities || {}).some(
+    (city) => city.toLowerCase().replaceAll(" ", "-") === slug.toLowerCase()
   );
+
+  return isCountry || isCity;
+});
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -110,7 +137,8 @@ const page = () => {
     {
       id: 2,
       title: "Google Ads Management",
-      description: `Search, Shopping, Display, and Performance Max campaigns built to maximise ROAS and eliminate wasted spend - structured Google Ads management for ${country} businesses.`,
+      // description: `Search, Shopping, Display, and Performance Max campaigns built to maximise ROAS and eliminate wasted spend - structured Google Ads management for ${country} businesses.`,
+     description: `Search, Shopping, Display, and Performance Max campaigns built to maximise ROAS and eliminate wasted spend - structured Google Ads management for ${displayPlace} businesses.`,
     },
     {
       id: 3,
@@ -331,7 +359,7 @@ const page = () => {
     },
     {
       id: 6,
-      q: `What industries do you work with in ${country}?`,
+      q: `What industries do you work with in ${displayPlace}?`,
       a: `D2C, e-commerce, publishing, SaaS, real estate, healthcare, hospitality, and B2B services. We tailor our approach to each industry's buying cycle and audience behaviour - what works for a fashion brand won't work for a B2B company, and we know the difference.`,
     },
   ];
@@ -528,19 +556,19 @@ const page = () => {
                 letterSpacing: "-0.035em",
               }}
             >
-              Performance Marketing Agency in
-              <span
-                className="block mt-1 bg-linear-to-r from-[#e0d7ff] via-[#a78bfa] to-[#7c3aed] bg-clip-text text-transparent"
-                style={{
-                  fontFamily: "'Plus Jakarta Sans',sans-serif",
-                  fontWeight: 800,
-                  fontSize: "clamp(2.2rem,5.1vw,4.5rem)",
-                  lineHeight: 1.06,
-                  letterSpacing: "-0.035em",
-                }}
-              >
-                Australia to Scale D2C Brands
-              </span>
+              Performance Marketing Agency in 
+            <span
+              className="block mt-1 bg-linear-to-r from-[#e0d7ff] via-[#a78bfa] to-[#7c3aed] bg-clip-text text-transparent"
+              style={{
+                fontFamily: "'Plus Jakarta Sans',sans-serif",
+                fontWeight: 800,
+                fontSize: "clamp(2.2rem,5.1vw,4.5rem)",
+                lineHeight: 1.06,
+                letterSpacing: "-0.035em",
+              }}
+            >
+             {displayPlace} to Scale D2C Brands
+            </span>
             </h1>
           </div>
 
@@ -554,8 +582,9 @@ const page = () => {
           >
             <strong className="text-white/60">Unnity</strong> is a performance
             marketing agency running Meta Ads and Google Ads for D2C brands
-            across <strong className="text-white/60">{country}</strong> -
-            precision targeting, data-driven creative, and full transparency
+            {/* across <strong className="text-white/60">{country}</strong> - */}
+            across <strong className="text-white/60">{displayPlace}</strong>
+           {" "}precision targeting, data-driven creative, and full transparency
             from day one.
           </p>
 
@@ -905,7 +934,8 @@ const page = () => {
             <br className="hidden md:block" /> That Turns Ad Spend Into Revenue
           </h2>
           <p className=" max-w-3xl text-[0.95rem] leading-[1.8] text-[#6b7280]">
-            Full-funnel Meta Ads and Google Ads management for {country} brands
+            {/* Full-funnel Meta Ads and Google Ads management for {country} brands */}
+            Full-funnel Meta Ads and Google Ads management for {displayPlace} brands
             - every campaign built on data, every rupee accountable to a result.
           </p>
         </div>
@@ -1000,92 +1030,26 @@ const page = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-[#f7f8fc] px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-325 mx-auto items-start">
-          {/* Left */}
-          <div className="flex flex-col gap-5 sticky top-10 self-start">
-            <h2
-              className="text-[clamp(1.8rem,3vw,2.6rem)] font-extrabold leading-[1.1] tracking-tight text-[#0c0322]"
-              style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
-            >
-              Why {country} Businesses Choose Unnity
-            </h2>
-            <p className="text-[0.95rem] leading-[1.8] text-[#6b7280]">
-              We specialise exclusively in Meta and Google Ads. That focused
-              expertise is what consistently delivers stronger results for our
-              clients.
-            </p>
-            <Link href="https://calendly.com/sayam-unnity/30min">
-              <button className="group self-start flex items-center gap-3 bg-[#0c0322] text-white hover:bg-[#1a0550] px-6 py-2.5 rounded-full text-[0.9rem] font-semibold cursor-pointer transition-all duration-200">
-                Talk to our experts
-                <span className="relative w-7 h-7 overflow-hidden rounded-full bg-white text-[#0c0322] shrink-0">
-                  <span className="absolute inset-0 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-8">
-                    <svg
-                      viewBox="0 0 24 24"
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                    >
-                      <path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                    </svg>
-                  </span>
-                  <span className="absolute inset-0 flex items-center justify-center -translate-x-8 transition-transform duration-300 group-hover:translate-x-0 group-hover:bg-[#0c0322] group-hover:text-white">
-                    <svg
-                      viewBox="0 0 24 24"
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                    >
-                      <path d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                    </svg>
-                  </span>
-                </span>
-              </button>
-            </Link>
-          </div>
-
-          {/* Right - cards */}
-          <div className="flex flex-col gap-3">
-            {ChooseUs.map((card) => (
-              <div
-                key={card.id}
-                className="group flex items-start gap-4 p-5 rounded-md border border-[#16064f3f] bg-white hover:border-[#150a4062]  transition-all duration-300 cursor-default overflow-hidden"
-              >
-                <div className="shrink-0 w-10 h-10 flex items-center justify-center transition-colors duration-200">
-                  <span
-                    className="text-[13px] font-black text-[#0F032B]"
-                    style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
-                  >
-                    {String(card.id).padStart(2, "0")}
-                  </span>
-                </div>
-                <div>
-                  <p
-                    className="text-[0.95rem] font-bold text-[#0c0322] mb-1"
-                    style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
-                  >
-                    {card.title}
-                  </p>
-                  <p className="text-[0.875rem] leading-[1.7] text-[#6b7280]">
-                    {card.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="py-20 bg-white px-4">
         <div className="max-w-3xl mx-auto text-center mb-14">
           <h2
-            className="text-[clamp(1.6rem,3vw,2.4rem)] font-extrabold tracking-tight leading-tight text-[#0c0322] mb-3"
+            className={`text-[clamp(1.6rem,3vw,2.4rem)] font-extrabold tracking-tight leading-tight text-[#0c0322] mb-3 ${countryChild ? "hidden" : "block"} `}
             style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
           >
-            Why {country} Businesses Choose Unnity
+            Why {country} Businesses <br/> Choose Unnity
           </h2>
+          <h2
+            className={`text-[clamp(1.6rem,3vw,2.4rem)] font-extrabold tracking-tight leading-tight text-[#0c0322] mb-3 ${country ? "block" : "hidden"} `}
+            style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
+          >
+            {/* Why {countryChild} Businesses Choose Unnity */}
+          </h2>
+          {/* <h2
+            className={`text-[clamp(1.6rem,3vw,2.4rem)] font-extrabold tracking-tight leading-tight text-[#0c0322] mb-3 ${country ? "block" : "hidden"} `}
+            style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
+          >
+            Why {countryChild} Businesses Choose Unnity
+          </h2> */}
           <p className="text-[0.95rem] leading-[1.8] text-[#6b7280]">
             We specialise exclusively in Meta and Google Ads. That focused
             expertise is what consistently delivers stronger results for our
@@ -1172,34 +1136,76 @@ const page = () => {
           </p>
         </div>
 
-        <div className="max-w-325 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {WeDifferently.map((card) => (
-            <div
-              key={card.id}
-              className="group relative flex flex-col p-6 rounded-md border border-[#16064f3f] bg-white hover:border-[#150a4062]  transition-all duration-300 cursor-default overflow-hidden"
-            >
-              <div className="absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-[#0F032B] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+  <div className="max-w-325 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+  {WeDifferently.map((card) => {
+    const isActive = activeDifferentCard === card.id;
 
-              {/* Number */}
-              <span
-                className="text-[2.8rem] font-black leading-none text-[#0c0322]/20 select-none tabular-nums mb-4"
-                style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
-              >
-                {String(card.id).padStart(2, "0")}
-              </span>
+    return (
+      <div
+        key={card.id}
+        onClick={() => {
+          if (window.innerWidth < 768) {
+            setActiveDifferentCard(isActive ? null : card.id);
+          }
+        }}
+        className="group relative min-h-[210px] flex flex-col p-6 rounded-md border border-[#16064f3f] bg-white transition-all duration-300 cursor-pointer md:cursor-default overflow-hidden"
+      >
+        {/* Bottom to top color slide */}
+        <div
+          className={`absolute inset-0 bg-[#0c0322] transition-transform duration-500 ease-in-out z-0
+            ${isActive ? "translate-y-0" : "translate-y-full"}
+            md:translate-y-full md:group-hover:translate-y-0
+          `}
+        />
 
-              <p
-                className="text-[0.95rem] font-bold text-[#0c0322] leading-snug mb-2"
-                style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
-              >
-                {card.title}
-              </p>
-              <p className="text-[0.85rem] leading-[1.75] text-[#6b7280] flex-1">
-                {card.description}
-              </p>
-            </div>
-          ))}
+        {/* Top line */}
+        <div
+          className={`absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-[#6C5CE7] to-transparent transition-opacity duration-300 z-10
+            ${isActive ? "opacity-100" : "opacity-0"}
+            md:opacity-0 md:group-hover:opacity-100
+          `}
+        />
+
+        <div className="relative z-10 flex flex-col h-full">
+          {/* Number */}
+          <span
+            className={`text-[2.8rem] font-black leading-none select-none tabular-nums mb-4 transition-colors duration-300
+              ${isActive ? "text-white" : "text-[#6b7280]"}
+              md:text-[#6b7280] md:group-hover:text-white
+            `}
+            style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
+          >
+            {String(card.id).padStart(2, "0")}
+          </span>
+
+          {/* Title */}
+          <p
+            className={`text-[0.95rem] font-bold leading-snug mb-2 transition-all duration-300
+              ${isActive ? "opacity-0 -translate-y-6 text-white" : "opacity-100 translate-y-0 text-[#0c0322]"}
+              md:opacity-100 md:translate-y-0 md:text-[#0c0322]
+              md:group-hover:opacity-0 md:group-hover:-translate-y-6
+            `}
+            style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
+          >
+            {card.title}
+          </p>
+
+          {/* Description */}
+          <p
+            className={`absolute left-0 right-0 top-[78px] text-[0.85rem] leading-[1.75] text-white/80 transition-all duration-500 ease-in-out
+              ${isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
+              md:opacity-0 md:translate-y-10
+              md:group-hover:opacity-100 md:group-hover:translate-y-0
+            `}
+            style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
+          >
+            {card.description}
+          </p>
         </div>
+      </div>
+    );
+  })}
+</div>
       </section>
       {/* Industry We work with */}
       <section className="py-20 bg-white overflow-hidden">
@@ -1565,7 +1571,8 @@ const page = () => {
             className="text-[0.95rem] leading-[1.8] text-[#6b7280]"
             style={{ fontFamily: "'DM Sans',sans-serif" }}
           >
-            Common questions from {country} businesses exploring performance
+            {/* Common questions from {country} businesses exploring performance */}
+            Common questions from {displayPlace} businesses exploring performance 
             marketing with Unnity.
           </p>
         </div>
@@ -1615,83 +1622,92 @@ const page = () => {
         </div>
       </section>
 
-      <section className="bg-[#0c0322] py-14 px-5">
-        <div className="max-w-300 mx-auto">
-          <h2
-            className="text-[clamp(1.3rem,2vw,1.7rem)] font-extrabold tracking-tight text-white mb-10"
-            style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
+    <section className="bg-[#0c0322] py-14 px-5">
+  <div className="max-w-[1200px] mx-auto">
+    <h2
+      className="text-[clamp(1.3rem,2vw,1.7rem)] font-extrabold tracking-tight text-white mb-10"
+      style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
+    >
+      Cities We Serve in {country}
+    </h2>
+
+    <div className="flex flex-col">
+      {Object.entries(keywords?.cities || {}).map(([city, cityKeywords]) => {
+        const citySlug = city.toLowerCase().replaceAll(" ", "-");
+
+        return (
+          <div
+          onClick={() =>
+                  router.push(`/performance-marketing-agency/${citySlug}`)
+                }
+            key={city}
+            className="border-t border-white/10 py-5 last:border-b last:border-white/10 cursor-pointer"
           >
-            Cities We Serve in {country}
-          </h2>
+            {/* Mobile city label */}
+            <div className="flex items-center gap-2 mb-3 md:mb-0 md:hidden">
+              <span className="w-[5px] h-[5px] rounded-full bg-[#06d6a0] cursor-pointer flex-shrink-0" />
+              <p
+                className="text-[12px] font-bold text-white cursor-pointer"
+                style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
+              >
+                {city}
+              </p>
+            </div>
 
-          <div className="flex flex-col">
-            {Object.entries(keywords?.cities || {}).map(
-              ([city, cityKeywords]) => (
-                <div
-                  key={city}
-                  className="border-t border-white/06 py-5 last:border-b last:border-white/06"
-                >
-                  {/* City label — full width on mobile, inline on desktop */}
-                  <div className="flex items-center gap-2 mb-3 md:mb-0 md:hidden">
-                    <span className="w-[5px] h-[5px] rounded-full bg-[#06d6a0] flex-shrink-0" />
-                    <p
-                      className="text-[12px] font-bold text-white"
-                      style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
-                    >
-                      {city}
-                    </p>
-                  </div>
+            {/* Desktop: city + keywords */}
+            <div className="hidden md:grid md:grid-cols-[200px_1fr] gap-0">
+              <p
+                onClick={() =>
+                  router.push(`/performance-marketing-agency/${citySlug}`)
+                }
+                className="text-[13.5px] font-bold text-white pr-6 pt-px leading-snug flex items-start gap-2 cursor-pointer"
+                style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
+              >
+                <span className="w-[5px] h-1.25 rounded-full bg-[#06d6a0] flex-shrink-0 mt-1.5" />
+                {city}
+              </p>
 
-                  {/* Desktop: side-by-side label + keywords */}
-                  <div className="hidden md:grid md:grid-cols-[200px_1fr] gap-0">
-                    <p
-                      className="text-[13.5px] font-bold text-white pr-6 pt-px leading-snug flex items-start gap-2"
-                      style={{ fontFamily: "'Plus Jakarta Sans',sans-serif" }}
-                    >
-                      <span className="w-[5px] h-1.25 rounded-full bg-[#06d6a0] flex-shrink-0 mt-1.5" />
-                      {city}
-                    </p>
-                    <div className="grid grid-cols-4 gap-0">
-                      {[0, 1, 2, 3].map((ci) => (
-                        <div
-                          key={ci}
-                          className="flex flex-col gap-2.5 px-4 border-l border-white/05"
+              <div className="grid grid-cols-4 gap-0">
+                {[0, 1, 2, 3].map((ci) => (
+                  <div
+                    key={ci}
+                    className="flex flex-col gap-2.5 px-4 border-l border-white/10"
+                  >
+                    {cityKeywords
+                      .filter((_, i) => i % 4 === ci)
+                      .map((kw, idx) => (
+                        <span
+                          key={idx}
+                          className="text-[12.5px] text-white/45 leading-snug"
+                          style={{ fontFamily: "'DM Sans',sans-serif" }}
                         >
-                          {cityKeywords
-                            .filter((_, i) => i % 4 === ci)
-                            .map((kw, idx) => (
-                              <span
-                                key={idx}
-                                className="text-[12.5px] text-white/42 leading-snug"
-                                style={{ fontFamily: "'DM Sans',sans-serif" }}
-                              >
-                                {kw}
-                              </span>
-                            ))}
-                        </div>
+                          {kw}
+                        </span>
                       ))}
-                    </div>
                   </div>
+                ))}
+              </div>
+            </div>
 
-                  {/* Mobile: 2-col keyword grid */}
-                  <div className="md:hidden grid grid-cols-2 gap-x-3 gap-y-1.5">
-                    {cityKeywords.map((kw, idx) => (
-                      <span
-                        key={idx}
-                        className="text-[11.5px] text-white/42 leading-[1.5] pl-2 border-l border-[#a78bfa]/20"
-                        style={{ fontFamily: "'DM Sans',sans-serif" }}
-                      >
-                        {kw}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ),
-            )}
+            {/* Mobile keywords */}
+            <div className="md:hidden grid grid-cols-2 gap-x-3 gap-y-1.5">
+              {cityKeywords.map((kw, idx) => (
+                <span
+                  key={idx}
+                  className="text-[11.5px] text-white/45 leading-[1.5] pl-2 border-l border-[#a78bfa]/20"
+                  style={{ fontFamily: "'DM Sans',sans-serif" }}
+                >
+                  {kw}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-
+        );
+      })}
+    </div>
+  </div>
+</section>
+      
       {/* Footer */}
       <Footer />
     </>
