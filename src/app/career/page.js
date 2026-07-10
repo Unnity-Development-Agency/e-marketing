@@ -41,7 +41,7 @@ const Page = () => {
       };
 
       const res = await fetch(
-        "https://script.google.com/macros/s/AKfycbwN5ODtPvIJCCFnaLM8bnTDGAsDYlPMI2_YnGLHOZo0F9xw3NOxf91OPKs5oT7fyy2R/exec",
+        "https://script.google.com/macros/s/AKfycbxzJTJRGz28tkugVnBwXkcS2GZG5m17p9LWEq0IDsDtpfjDNtmSNlv3NUex0vu3KzwbNw/exec",
         {
           method: "POST",
           body: JSON.stringify(payload),
@@ -59,6 +59,7 @@ const Page = () => {
           email: "",
           phone: "",
           position: "",
+          message: "",
           resume: "",
         });
         fileInputRef.current.value = "";
