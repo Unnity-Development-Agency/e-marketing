@@ -4,8 +4,10 @@ import Header from "@/components/Header/page";
 import BrandsHero from "@/components/reactBits/HeroSection";
 import Link from "next/link";
 import React, { useState } from "react";
+import { useRef } from "react";
 
 const Page = () => {
+  const fileInputRef = useRef(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -59,6 +61,7 @@ const Page = () => {
           position: "",
           resume: "",
         });
+        fileInputRef.current.value = "";
       } else {
         alert("Error: " + result.message);
       }
@@ -223,9 +226,9 @@ const Page = () => {
                   Upload Resume
                 </label>
                 <input
+                  ref={fileInputRef}
                   type="file"
                   accept=".pdf,.doc,.docx"
-                  value={formData.resume}
                   name="resume"
                   onChange={handleOnChange}
                   className="mt-1 w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:border-0 file:rounded-md file:bg-[#23234D] file:text-white hover:file:bg-[#23234D] cursor-pointer"
