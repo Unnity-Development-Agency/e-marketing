@@ -120,10 +120,10 @@ const Page = () => {
             <p className="text-gray-600 mt-4 text-lg">
               Looking for an opportunity with us? Then mail your updated CV at{" "}
               <a
-                href="mailto:Punjal@unnity.in"
+                href="mailto:jagriti@unnity.in"
                 className="text-indigo-600 font-medium"
               >
-                punjal@unnity.in
+                jagriti@unnity.in
               </a>
             </p>
           </div>
