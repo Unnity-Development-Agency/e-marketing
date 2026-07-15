@@ -11,13 +11,27 @@ import Footer from "@/components/footer/page";
 import { useParams } from "next/navigation";
 import countryKeywords from "../../../data/countryKeywords.json";
 import Swiper from "../../../components/swiper/Swiper";
+import CityData from "@/components/CityData/page";
 
 const page = () => {
+    const [sending, setSending] = useState(false);
+    const [faqOpen, setFaqOpen] = useState(false);
+    const [activeDifferentCard, setActiveDifferentCard] = useState(null);
+    const [status, setStatus] = useState({ type: "", message: "" });
+    const [formData, setFormData] = useState({
+      companyName: "",
+      budget: "",
+      name: "",
+      phone: "",
+      email: "",
+      service: "",
+      designation: "",
+    });
+
   const formRef = useRef(null);
   const sectionRef = useRef(null);
   const params = useParams();
   const router = useRouter();
-  // const country = params.slug.charAt(0).toUpperCase()+ params.slug.slice(1)
   const slug = params.slug;
 
 const formatName = (text) =>
@@ -34,21 +48,6 @@ const country = formatName(slug);
   document.title = `${country}'s performance marketing agency for D2C brands - Meta Ads and Google Ads`;
 }, [country]);
 
-
-  const [sending, setSending] = useState(false);
-  const [faqOpen, setFaqOpen] = useState(false);
-  const [activeDifferentCard, setActiveDifferentCard] = useState(null);
-  // const [countryChild , setCountryChild] = useState("");
-  const [status, setStatus] = useState({ type: "", message: "" });
-  const [formData, setFormData] = useState({
-    companyName: "",
-    budget: "",
-    name: "",
-    phone: "",
-    email: "",
-    service: "",
-    designation: "",
-  });
 
   // const keywords = countryKeywords?.find(
   //   (item) => item.country === country.toUpperCase(),
@@ -1688,7 +1687,7 @@ const country = formatName(slug);
                 ))}
               </div>
             </div>
-
+          
             {/* Mobile keywords */}
             <div className="md:hidden grid grid-cols-2 gap-x-3 gap-y-1.5">
               {cityKeywords.map((kw, idx) => (
@@ -1707,7 +1706,8 @@ const country = formatName(slug);
     </div>
   </div>
 </section>
-      
+        {/* <CityData activeCity={displayPlace}/> */}
+
       {/* Footer */}
       <Footer />
     </>

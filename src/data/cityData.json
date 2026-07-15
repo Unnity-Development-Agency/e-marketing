@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Australia",
+    "description": "Australia demands performance marketing that cuts through one of the world's most competitive digital landscapes. With high CPCs, sophisticated consumers, and a vast geographic spread, generic campaigns waste budget at scale. We engineer Australia specific Google and Meta campaigns that capture high intent buyers from Perth to Sydney with precision targeting. We navigate Australia's unique seasonality, time zones, and regional search behaviour to deliver smarter bids and higher conversion windows. Our strategists audit your funnel, optimise for ROAS, and align every bid with local buyer behaviour. The result is lean acquisition costs and predictable revenue, not empty clicks.",
+    "image": "/images/cities/australia.webp"
+  },
+  {
+    "id": 2,
+    "title": "Sydney",
+    "description": "Sydney demands performance marketing at its sharpest. With Australia's highest CPCs and a digitally native audience, wasted ad spend here is unforgiving. We engineer Sydney specific Google and Meta campaigns that target high intent buyers across micro markets from the Eastern Suburbs to the CBD. We decode Sydney's unique search intent patterns to outmanoeuvre competitors in real time. Our strategists audit your funnel, optimise for ROAS, and align every bid with local buyer behaviour. The result is lean acquisition costs and predictable revenue, not empty clicks.",
+    "image": "/powermover-anls.jpeg"
+  },
+  {
+    "id": 3,
+    "title": "Melbourne",
+    "description": "Melbourne demands performance marketing at scale. With high search volumes and a diverse, trend driven consumer base, inefficient bidding erodes margins fast. We engineer Melbourne specific Google and Meta campaigns that capture high intent buyers across suburbs from South Yarra to the CBD. We time every bid around Melbourne's distinct seasonal buying cycles and major events to maximise conversion windows. Our strategists audit your funnel, optimise for ROAS, and align every bid with local buyer behaviour. The result is lean acquisition costs and predictable revenue, not empty clicks.",
+    "image": "/images/cities/melbourne.webp"
+  },
+  {
+    "id": 4,
+    "title": "Brisbane",
+    "description": "Brisbane demands performance marketing that capitalises on rapid growth.",
+    "image": "/images/cities/brisbane.webp"
+  },
+  {
+    "id": 5,
+    "title": "Adelaide",
+    "description": "Adelaide demands performance marketing that maximises every dollar in a cost conscious market.",
+    "image": "/images/cities/adelaide.webp"
+  },
+  {
+    "id": 6,
+    "title": "Gold Coast",
+    "description": "Gold Coast demands performance marketing that thrives in a lifestyle driven, tourism powered economy.",
+    "image": "/images/cities/gold-coast.webp"
+  },
+  {
+    "id": 7,
+    "title": "Canberra",
+    "description": "Canberra demands performance marketing that targets a high income, professional audience with surgical precision.",
+    "image": "/images/cities/canberra.webp"
+  },
+  {
+    "id": 8,
+    "title": "Newcastle",
+    "description": "Newcastle demands performance marketing that stands out in a tight knit, rapidly growing regional hub.",
+    "image": "/images/cities/newcastle.webp"
+  },
+  {
+    "id": 9,
+    "title": "Sunshine Coast",
+    "description": "Sunshine Coast demands performance marketing that captures a booming population of lifestyle driven consumers.",
+    "image": "/images/cities/sunshine-coast.webp"
+  },
+  {
+    "id": 10,
+    "title": "Geelong",
+    "description": "Geelong demands performance marketing that connects with a proud, community driven regional economy.",
+    "image": "/images/cities/geelong.webp"
+  }
+]
