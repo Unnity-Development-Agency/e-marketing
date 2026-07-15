@@ -32,8 +32,8 @@ export default function Creative() {
   const tabs = [
     "CUPID CLOTHING",
     "UBERLYFE",
-    "EDUWORLD",
-    "HUBHAWAKS",
+    "BS EDUWORLD",
+    "HUBHAWKS",
     "DRONACHARYA",
   ];
 

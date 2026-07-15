@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Cupid Clothings",
+    "title": "CupidClothings",
     "sale": "324,788.05",
     "purchase": 242,
     "CAC": 317.14,
@@ -10,7 +10,7 @@
   },
   {
     "id": 2,
-    "title": "Cupid Clothings",
+    "title": "CupidClothings",
     "sale": "121,405.50",
     "purchase": 105,
     "CAC": 340.19,
@@ -55,7 +55,7 @@
   },
   {
     "id": 7,
-    "title": "WoolenHouse",
+    "title": "Woollen House",
     "sale": "30,181.40",
     "purchase": 55,
     "CAC": 130,
@@ -64,7 +64,7 @@
   },
   {
     "id": 8,
-    "title": "WoolenHouse",
+    "title": "Woollen House",
     "sale": "27,255.90",
     "purchase": 38,
     "CAC": 162.89,
