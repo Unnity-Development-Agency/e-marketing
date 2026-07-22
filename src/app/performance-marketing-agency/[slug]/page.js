@@ -922,6 +922,7 @@ const country = formatName(slug);
         </div>
       </section>
 
+       <CityData activeCity={displayPlace}/>
       {/* Services */}
       <section className="py-20 bg-white px-4">
         <div className="max-w-4xl mx-auto text-center px-4 mb-14">
@@ -1706,7 +1707,6 @@ const country = formatName(slug);
     </div>
   </div>
 </section>
-        {/* <CityData activeCity={displayPlace}/> */}
 
       {/* Footer */}
       <Footer />

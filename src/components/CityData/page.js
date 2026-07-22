@@ -28,13 +28,13 @@ export default function CityData({ activeCity }) {
       <div className="why-city-card">
         {/* LEFT */}
         <div className="why-city-left">
-          <span className="city-badge">{selectedCity.badge}</span>
+          {/* <span className="city-badge">{selectedCity.badge}</span> */}
 
           <h2 className="city-heading">Why {selectedCity.title}?</h2>
 
           <p className="city-description">{selectedCity.description}</p>
 
-          <button className="city-btn">Book A Discovery Call</button>
+          <button  className="city-btn"> <a href="https://calendly.com/sayam-unnity/30min">Book A Discovery Call</a> </button>
         </div>
 
         {/* RIGHT */}
