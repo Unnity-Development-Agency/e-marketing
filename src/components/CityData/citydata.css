@@ -19,7 +19,7 @@
   background: #f8f8f8;
   border-radius: 30px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+ box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 /* ==========================
@@ -71,8 +71,9 @@
   font-weight: 600;
   background: linear-gradient(
     90deg,
-    #6f00ff,
-    #8a2be2
+    
+    #8a2be2,
+    #1a0550
   );
   transition: .3s;
 }
