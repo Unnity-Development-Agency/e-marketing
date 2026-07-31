@@ -92,3 +92,8 @@ h1 {
   font-weight: 900;
   font-style: normal;
 } */
+
+
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
