@@ -1,0 +1,249 @@
+[
+  {
+    "id": 1,
+    "title": "Cupid Clothings",
+    "username": "@Cupid clothings",
+    "platform": "Instagram",
+    "industry": "Activewear & Fitness",
+    "logo": "/cupid.webp",
+
+    "posts": [
+      {
+        "id": 1,
+        "image": "/cupidso-1.webp"
+      },
+       {
+        "id": 2,
+        "image": "/cupidso-2.webp"
+      },
+       {
+        "id": 3,
+        "image": "/cupidso-3.webp"
+      },
+       {
+        "id": 4,
+        "image": "/cupidso-4.webp"
+      },
+       {
+        "id": 5,
+        "image": "/cupidso-5.webp"
+      },
+       {
+        "id": 6,
+        "image": "/cupidso-6.webp"
+      },
+       {
+        "id": 7,
+        "image": "/cupidso-7.webp"
+      },
+       {
+        "id": 8,
+        "image": "/cupidso-8.webp"
+      }
+      
+    ],
+
+    "reels": [
+      {
+        "id": 1,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/videos/apex-1.mp4",
+        "likes": "45K",
+        "comments": "3.1K"
+      },
+      {
+        "id": 2,
+        "thumbnail": "/social/apex/reel-2.jpg",
+        "video": "/videos/apex-2.mp4",
+        "likes": "38K",
+        "comments": "2.5K"
+      }
+    ]
+  },
+
+  {
+    "id": 2,
+    "title": "COZYCABS",
+    "username": "@kapurthalajewelers",
+    "platform": "Instagram",
+    "industry": "Jewelry & Watches Store",
+    "logo": "/kapurthala-logo.png",
+
+   "posts": [
+      {
+        "id": 1,
+        "image": "/cozyso-1.webp"
+      },
+       {
+        "id": 2,
+        "image": "/cozyso-2.jpg"
+      },
+       {
+        "id": 3,
+        "image": "/cozyso-3.jpg"
+      },
+       {
+        "id": 4,
+        "image": "/cozyso-4.webp"
+      },
+       {
+        "id": 5,
+        "image": "/cozyso-5.webp"
+      },
+       {
+        "id": 6,
+        "image": "/cozyso-6.jpg"
+      },
+       {
+        "id": 7,
+        "image": "/cozyso-7.webp"
+      },
+       {
+        "id": 8,
+        "image": "/cozyso-8.webp"
+      },
+       {
+        "id": 9,
+        "image": "/cozyso-9.webp"
+      },
+       {
+        "id": 10,
+        "image": "/cozyso-10.webp"
+      }
+      
+    ],
+    "reels": [
+      {
+        "id": 1,
+        "thumbnail": "/social-1.jpg",
+        "video": "/kapur-reel1.mp4",
+        "likes": "51K",
+        "comments": "4.2K"
+      },
+      {
+        "id": 2,
+        "thumbnail": "/social-1.jpg",
+        "video": "/kapur-reel1.mp4",
+        "likes": "51K",
+        "comments": "4.2K"
+      },
+      {
+        "id": 3,
+        "thumbnail": "/social-1.jpg",
+        "video": "/kapur-reel1.mp4",
+        "likes": "51K",
+        "comments": "4.2K"
+      },
+      {
+        "id": 4,
+        "thumbnail": "/social-1.jpg",
+        "video": "/kapur-reel1.mp4",
+        "likes": "51K",
+        "comments": "4.2K"
+      }
+    ]
+  },
+
+  {
+    "id": 3,
+    "title": "MYSTARA",
+    "username": "@bytetech.solutions",
+    "platform": "LinkedIn",
+    "industry": "B2B Software",
+    "logo": "/brands/bytetech.png",
+
+    "posts": [
+      {
+        "id": 1,
+        "image": "/mystara-1.webp"
+      },
+       {
+        "id": 2,
+        "image": "/mystara-2.webp"
+      },
+       {
+        "id": 3,
+        "image": "/mystara-3.webp"
+      },
+       {
+        "id": 4,
+        "image": "/mystara-4.webp"
+      },
+       {
+        "id": 5,
+        "image": "/mystara-5.webp"
+      },
+       {
+        "id": 6,
+        "image": "/mystara-6.jpg"
+      },
+       {
+        "id": 7,
+        "image": "/mystara-7.webp"
+      },
+       {
+        "id": 8,
+        "image": "/mystara-8.webp"
+      },
+       {
+        "id": 9,
+        "image": "/mystara-9.webp"
+      },
+       {
+        "id": 10,
+        "image": "/mystara-10.webp"
+      }
+      
+    ],
+    "reels": []
+  },
+
+  {
+    "id": 4,
+    "title": "HYCROSS",
+    "username": "@verdantbites",
+    "platform": "Twitter",
+    "industry": "Organic Food",
+    "logo": "/brands/verdant.png",
+
+   "posts": [
+      {
+        "id": 1,
+        "image": "/hycross-1.webp"
+      },
+       {
+        "id": 2,
+        "image": "/hycross-2.jpg"
+      },
+       {
+        "id": 3,
+        "image": "/hycross-3.webp"
+      },
+       {
+        "id": 4,
+        "image": "/hycross-4.webp"
+      },
+       {
+        "id": 5,
+        "image": "/hycross-5.webp"
+      },
+       {
+        "id": 6,
+        "image": "/hycross-6.webp"
+      },
+       {
+        "id": 7,
+        "image": "/hycross-7.jpg"
+      },
+       {
+        "id": 8,
+        "image": "/hycross-8.webp"
+      },
+       {
+        "id": 9,
+        "image": "/hycross-9.webp"
+      }
+    ],
+    "reels": []
+  }
+]
