@@ -2,10 +2,10 @@
   {
     "id": 1,
     "title": "Cupid Clothings",
-    "username": "@Cupid clothings",
+    "username": "Cupid clothings",
     "platform": "Instagram",
-    "industry": "Activewear & Fitness",
-    "logo": "/cupid.webp",
+     "logo": "5.png",
+    
 
     "posts": [
       {
@@ -47,16 +47,47 @@
       {
         "id": 1,
         "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/videos/apex-1.mp4",
-        "likes": "45K",
-        "comments": "3.1K"
+        "video": "/cupidso-1.mp4"
       },
       {
         "id": 2,
-        "thumbnail": "/social/apex/reel-2.jpg",
-        "video": "/videos/apex-2.mp4",
-        "likes": "38K",
-        "comments": "2.5K"
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cupidso-2.mp4"
+      },
+      {
+        "id": 3,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cupidso-3.mp4"
+      },
+      {
+        "id": 4,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cupidso-4.mp4"
+      },
+      {
+        "id": 5,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cupidso-5.mp4"
+      },
+      {
+        "id": 6,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cupidso-6.mp4"
+      },
+      {
+        "id": 7,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cupidso-7.mp4"
+      },
+      {
+        "id": 8,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cupidso-8.mp4"
+      },
+      {
+        "id": 9,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cupidso-9.mp4"
       }
     ]
   },
@@ -64,11 +95,8 @@
   {
     "id": 2,
     "title": "COZYCABS",
-    "username": "@kapurthalajewelers",
-    "platform": "Instagram",
-    "industry": "Jewelry & Watches Store",
-    "logo": "/kapurthala-logo.png",
-
+    "username": "cozycabs",
+     "logo": "1co.png",
    "posts": [
       {
         "id": 1,
@@ -115,31 +143,33 @@
     "reels": [
       {
         "id": 1,
-        "thumbnail": "/social-1.jpg",
-        "video": "/kapur-reel1.mp4",
-        "likes": "51K",
-        "comments": "4.2K"
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cozyv-1.mp4"
       },
       {
         "id": 2,
-        "thumbnail": "/social-1.jpg",
-        "video": "/kapur-reel1.mp4",
-        "likes": "51K",
-        "comments": "4.2K"
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cozyv-2.mp4"
       },
       {
         "id": 3,
-        "thumbnail": "/social-1.jpg",
-        "video": "/kapur-reel1.mp4",
-        "likes": "51K",
-        "comments": "4.2K"
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cozyv-3.mp4"
       },
       {
         "id": 4,
-        "thumbnail": "/social-1.jpg",
-        "video": "/kapur-reel1.mp4",
-        "likes": "51K",
-        "comments": "4.2K"
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cozyv-4.mp4"
+      },
+      {
+        "id": 5,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cozyv-5.mp4"
+      },
+      {
+        "id": 6,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cozyv-6.mp4"
       }
     ]
   },
@@ -147,10 +177,10 @@
   {
     "id": 3,
     "title": "MYSTARA",
-    "username": "@bytetech.solutions",
+    "username": "Mystara",
     "platform": "LinkedIn",
     "industry": "B2B Software",
-    "logo": "/brands/bytetech.png",
+    "logo": "3.png",
 
     "posts": [
       {
@@ -175,7 +205,7 @@
       },
        {
         "id": 6,
-        "image": "/mystara-6.jpg"
+        "image": "/mystara-6.webp"
       },
        {
         "id": 7,
@@ -195,16 +225,58 @@
       }
       
     ],
-    "reels": []
+   
+    "reels": [
+      {
+        "id": 1,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/mystara-1.mp4"
+      },
+      {
+        "id": 2,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/mystara-2.mp4"
+      },
+      {
+        "id": 3,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/mystara-3.mp4"
+      },
+      {
+        "id": 4,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/mystara-4.mp4"
+      },
+      {
+        "id": 5,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/mystara-5.mp4"
+      },
+      {
+        "id": 6,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/mystara-6.mp4"
+      },
+      {
+        "id": 7,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/mystara-7.mp4"
+      },
+      {
+        "id": 8,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/mystara-8.mp4"
+      }
+    ]
   },
 
   {
     "id": 4,
     "title": "HYCROSS",
-    "username": "@verdantbites",
+    "username": "Hycross",
     "platform": "Twitter",
     "industry": "Organic Food",
-    "logo": "/brands/verdant.png",
+     "logo": "4.png",
 
    "posts": [
       {
@@ -244,6 +316,42 @@
         "image": "/hycross-9.webp"
       }
     ],
-    "reels": []
+    "reels": [
+      {
+        "id": 1,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/hycross-1.mp4"
+      },
+      {
+        "id": 2,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/hycross-2.mp4"
+      },
+      {
+        "id": 3,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/hycross-3.mp4"
+      },
+      {
+        "id": 4,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/hycross-4.mp4"
+      },
+      {
+        "id": 5,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/hycross-5.mp4"
+      },
+      {
+        "id": 6,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/hycross-6.mp4"
+      },
+      {
+        "id": 7,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/hycross-7.mp4"
+      }
+    ]
   }
 ]

@@ -254,6 +254,12 @@ const Header = () => {
                 >
                   Marketing
                 </Link>
+                <Link
+                  href="/social-media"
+                  className="block py-2 pl-3 cursor-pointer"
+                >
+                  Social Media
+                </Link>
               </div>
             </div>
             <Link href="/brands" className="cursor-pointer">
