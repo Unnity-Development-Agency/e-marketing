@@ -33,7 +33,7 @@ export default function Creative() {
     "CUPID CLOTHING",
     "UBERLYFE",
     "BS EDUWORLD",
-    "HUBHAWKS",
+    "HUBHAWAKS",
     "DRONACHARYA",
   ];
 
