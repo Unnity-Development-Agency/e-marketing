@@ -125,12 +125,12 @@ const Header = () => {
                 Marketing
               </Link>
 
-                {/* <Link
+                <Link
                 href="/social-media"
                 className="bg-[#0f032b] block px-6 py-3 hover:bg-white/10 cursor-pointer"
               >
                 Social Media
-              </Link> */}
+              </Link>
             </ul>
           </div>
           <Link href="/brands" className="cursor-pointer">
