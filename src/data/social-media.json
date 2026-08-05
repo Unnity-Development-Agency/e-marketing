@@ -94,8 +94,8 @@
 
   {
     "id": 2,
-    "title": "COZYCABS",
-    "username": "cozycabs",
+    "title": "COZYCABZ",
+    "username": "cozycabz",
      "logo": "1co.png",
    "posts": [
       {
@@ -274,8 +274,6 @@
     "id": 4,
     "title": "HYCROSS",
     "username": "Hycross",
-    "platform": "Twitter",
-    "industry": "Organic Food",
      "logo": "4.png",
 
    "posts": [
@@ -351,6 +349,240 @@
         "id": 7,
         "thumbnail": "/social/apex/reel-1.jpg",
         "video": "/hycross-7.mp4"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "SKYPACKERS",
+    "username": "SKYPACKERS",
+     "logo": "91.png",
+
+   "posts": [
+      {
+        "id": 1,
+        "image": "/sky-1.webp"
+      },
+       {
+        "id": 2,
+        "image": "/sky-2.webp"
+      },
+       {
+        "id": 3,
+        "image": "/sky-3.webp"
+      },
+       {
+        "id": 4,
+        "image": "/sky-4.webp"
+      },
+       {
+        "id": 5,
+        "image": "/sky-5.jpg"
+      },
+       {
+        "id": 6,
+        "image": "/sky-6.webp"
+      },
+       {
+        "id": 7,
+        "image": "/sky-7.webp"
+      }
+    ],
+     "reels": [
+    
+    ]
+  },
+  {
+    "id": 6,
+    "title": "SMART SAVER",
+    "username": "SMART SAVER",
+     "logo": "smart_saver.png",
+
+   "posts": [
+      {
+        "id": 1,
+        "image": "/smsv-1.jpg"
+      },
+       {
+        "id": 2,
+        "image": "/smsv-2.webp"
+      },
+       {
+        "id": 3,
+        "image": "/smsv3.webp"
+      },
+       {
+        "id": 4,
+        "image": "/smsv-4.webp"
+      },
+       {
+        "id": 5,
+        "image": "/smsv-5.jpg"
+      },
+       {
+        "id": 6,
+        "image": "/smsv-6.webp"
+      },
+       {
+        "id": 7,
+        "image": "/smsv-7.jpg"
+      },
+       {
+        "id": 8,
+        "image": "/smsv-8.webp"
+      }
+    ],
+    "reels": [
+      {
+        "id": 1,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/smsv-1.mp4"
+      },
+      {
+        "id": 2,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/smsv-2.mp4"
+      },
+      {
+        "id": 3,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/smsv-3.mp4"
+      },
+      {
+        "id": 4,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/smsv-4.mp4"
+      },
+      {
+        "id": 5,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/smsv-5.mp4"
+      },
+      {
+        "id": 6,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/smsv-6.mp4"
+      },
+      {
+        "id": 7,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/smsv-7.mp4"
+      },
+      {
+        "id": 8,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/smsv-8.mp4"
+      },
+      {
+        "id": 9,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/smsv-9.mp4"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "KAPURTHALA",
+    "username": "KAPURTHALA",
+     "logo": "kp-logo.png",
+
+   "posts": [
+      {
+        "id": 1,
+        "image": "/kp-1.jpg"
+      },
+       {
+        "id": 2,
+        "image": "/kp-2.jpg"
+      },
+       {
+        "id": 3,
+        "image": "/kp-3.jpg"
+      },
+       {
+        "id": 4,
+        "image": "/kp-4.jpg"
+      },
+       {
+        "id": 5,
+        "image": "/kp-5.jpg"
+      },
+       {
+        "id": 6,
+        "image": "/kp-6.jpg"
+      },
+       {
+        "id": 7,
+        "image": "/kp-7.jpg"
+      },
+       {
+        "id": 8,
+        "image": "/kp-8.jpg"
+      },
+       {
+        "id": 9,
+        "image": "/kp-9.jpg"
+      },
+       {
+        "id": 10,
+        "image": "/kp-10.jpg"
+      }
+    ],
+    "reels": [
+      {
+        "id": 1,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/kp-1.mp4"
+      },
+      {
+        "id": 2,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/kp-2.mp4"
+      },
+      {
+        "id": 3,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/kp-3.mp4"
+      },
+      {
+        "id": 4,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/kp-4.mp4"
+      },
+      {
+        "id": 5,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/kp-5.mp4"
+      },
+      {
+        "id": 6,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/kp-6.mp4"
+      },
+      {
+        "id": 7,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/kp-7.mp4"
+      },
+      {
+        "id": 8,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/kp-8.mp4"
+      },
+      {
+        "id": 9,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/kp-9.mp4"
+      },
+      {
+        "id": 10,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/kp-10.mp4"
+      },
+      {
+        "id": 11,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/kp-11.mp4"
       }
     ]
   }

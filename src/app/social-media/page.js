@@ -38,8 +38,7 @@ const Social = () => {
           </h1>
 
           <p className="text-sm md:text-base max-w-2xl">
-            We blend design aesthetics with performance strategy.
-            The result? Creatives that captivate and campaigns that convert.
+            Everything your social media needs, under one roof - creative posts, high-performing reels, grid planning, content creation, script writing, and influencer marketing designed to elevate your brand.
           </p>
         </div>
       </div>
@@ -61,7 +60,7 @@ const Social = () => {
   <div
     className="
       flex items-center
-      gap-6 md:gap-12
+      gap-6 md:gap-9
       overflow-x-auto
       scroll-smooth
       snap-x snap-mandatory
@@ -361,213 +360,88 @@ const Social = () => {
   </div>
 
 </div>
-{/* ===========================================
-      NEXT PART
-
-      TOP PERFORMING REELS
-
-=========================================== */}
 
 
-{/* ================= TOP PERFORMING REELS ================= */}
-{/* ================= TOP PERFORMING REELS ================= */}
+{selectedBrand.reels?.length > 0 && (
+  <div className="max-w-[1350px] mx-auto px-6 py-16">
 
-{/* <div className="max-w-7xl mx-auto px-6 py-16">
+    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10">
 
-  <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10">
+      <div>
+        <h2 className="text-3xl md:text-5xl font-bold text-[#1e1b4b]">
+          Top Performing Reels
+        </h2>
 
-    <div>
-      <h2 className="text-3xl md:text-5xl font-bold text-[#1e1b4b]">
-        Top Performing Reels
-      </h2>
+        <p className="text-gray-400 mt-2">
+          Watch our best-performing Instagram reels.
+        </p>
+      </div>
 
-      <p className="text-gray-400 mt-2">
-        Watch our best-performing Instagram reels.
-      </p>
+      <div className="px-5 py-2 rounded-[10px] bg-indigo-600 text-white font-medium w-fit">
+        {selectedBrand.reels.length} Reels
+      </div>
+
     </div>
 
-    <div className="px-5 py-2 rounded-full bg-indigo-600 text-white font-medium w-fit">
-      {selectedBrand.reels.length} Reels
-    </div>
+    <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5">
 
-  </div>
+      {selectedBrand.reels.map((reel) => {
 
-  <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5">
+        const isMuted = mutedReels[reel.id] !== false;
 
-    {selectedBrand.reels.map((reel) => (
+        return (
+          <div
+            key={reel.id}
+            className="overflow-hidden rounded-2xl hover:shadow-2xl transition-all duration-300"
+          >
+            <div className="relative">
 
-      <div
-        key={reel.id}
-        className="overflow-hidden rounded-3xl  hover:shadow-2xl transition-all duration-300"
-      >
-
-        <div
-          className="relative cursor-pointer"
-          onClick={() =>
-            setPlayingReel(
-              playingReel === reel.id ? null : reel.id
-            )
-          }
-        >
-
-          {playingReel === reel.id ? (
-
-            <video
-              src={reel.video}
-              controls
-              autoPlay
-              playsInline
-              className="w-full aspect-[9/16] object-cover"
-            />
-
-          ) : (
-
-            <>
-              <img
-                src={reel.thumbnail}
-                alt={reel.title}
-                className="w-full aspect-[9/16] object-cover transition duration-500 hover:scale-105"
+              <video
+                src={reel.video}
+                autoPlay
+                loop
+                muted={isMuted}
+                playsInline
+                preload="metadata"
+                className="w-full aspect-[9/16] object-cover"
               />
 
-              <div className="absolute inset-0 bg-black/20 hover:bg-black/40 transition flex items-center justify-center">
-
-                <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-xl">
-
+              <button
+                type="button"
+                onClick={() => toggleMute(reel.id)}
+                className="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-black/50 hover:bg-black/70 transition flex items-center justify-center"
+              >
+                {isMuted ? (
                   <svg
-                    width="30"
-                    height="30"
-                    fill="#4F46E5"
+                    width="18"
+                    height="18"
                     viewBox="0 0 24 24"
+                    fill="white"
                   >
-                    <path d="M8 5v14l11-7z" />
+                    <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.42.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
                   </svg>
-
-                </div>
-
-              </div>
-
-            </>
-
-          )}
-
-        </div>
-
-
-      </div>
-
-    ))}
-
-  </div>
-
-</div> */}
-
-
-
-<div className="max-w-[1350px] mx-auto px-6 py-16">
-
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10">
-
-        <div>
-
-          <h2 className="text-3xl md:text-5xl font-bold text-[#1e1b4b]">
-
-            Top Performing Reels
-
-          </h2>
-
-          <p className="text-gray-400 mt-2">
-
-            Watch our best-performing Instagram reels.
-
-          </p>
-
-        </div>
-
-        <div className="px-5 py-2 rounded-[10px] bg-indigo-600 text-white font-medium w-fit">
-
-          {selectedBrand.reels.length} Reels
-
-        </div>
-
-      </div>
-
-      <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5">
-
-        {selectedBrand.reels.map((reel) => {
-
-          const isMuted = mutedReels[reel.id] !== false;
-
-          return (
-
-            <div
-
-              key={reel.id}
-
-              className="overflow-hidden rounded-2xl hover:shadow-2xl transition-all duration-300"
-
-            >
-
-              <div className="relative">
-
-                <video
-
-                  src={reel.video}
-
-                  autoPlay
-
-                  loop
-
-                  muted={isMuted}
-
-                  playsInline
-
-                  preload="metadata"
-
-                  className="w-full aspect-[9/16] object-cover"
-
-                />
-
-                <button
-
-                  type="button"
-
-                  onClick={() => toggleMute(reel.id)}
-
-                  className="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-black/50 hover:bg-black/70 transition flex items-center justify-center"
-
-                >
-
-                  {isMuted ? (
-
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
-
-                      <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.42.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
-
-                    </svg>
-
-                  ) : (
-
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
-
-                      <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-
-                    </svg>
-
-                  )}
-
-                </button>
-
-              </div>
+                ) : (
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="white"
+                  >
+                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                  </svg>
+                )}
+              </button>
 
             </div>
+          </div>
+        );
 
-          );
-
-        })}
-
-      </div>
+      })}
 
     </div>
+
+  </div>
+)}
 
 {/* ================= CTA ================= */}
 
