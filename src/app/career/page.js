@@ -16,6 +16,10 @@ const Page = () => {
     resume: "",
   });
 
+
+   // Controls the "Thank you" popup visibility
+  const [showPopup, setShowPopup] = useState(false);
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -53,7 +57,7 @@ const Page = () => {
       console.log(result);
 
       if (result.status === "success") {
-        alert("Application Submitted Successfully");
+      setShowPopup(true);
         setFormData({
           name: "",
           email: "",
@@ -84,6 +88,27 @@ const Page = () => {
   return (
     <section className="w-full">
       <Header />
+
+            {/* Thank You Popup — shows after successful submission */}
+      {showPopup && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center px-4">
+          <div className="bg-white rounded-lg shadow-xl max-w-sm w-full p-8 text-center">
+            <h3 className="text-2xl font-semibold text-[#23234D] mb-3">
+              Thank You!
+            </h3>
+            <p className="text-gray-600 mb-6">
+              Your form is submitted successfully.
+            </p>
+            <button
+              onClick={() => setShowPopup(false)}
+              className="bg-[#23234D] text-white px-6 py-2 rounded-md font-medium hover:bg-[#1c1c3e] transition cursor-pointer"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
 
       {/* HERO SECTION */}
       <div className="">
