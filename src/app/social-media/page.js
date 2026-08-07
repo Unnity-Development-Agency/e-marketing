@@ -299,7 +299,7 @@ const Social = () => {
 
   </div>
 
-  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
 
     {[
       {
@@ -327,11 +327,11 @@ const Social = () => {
         title: "Real-time Feedback",
         desc: "Know instantly what's working and what's not.",
       },
-      // {
-      //   image: "/5.png",
-      //   title: "Vernacular Content",
-      //   desc: "Speak your audience's language, literally.",
-      // },
+      {
+        image: "/v-c.png",
+        title: "Vernacular Content",
+        desc: "Speak your audience's language, literally.",
+      },
     ].map((item, index) => (
 
       <div

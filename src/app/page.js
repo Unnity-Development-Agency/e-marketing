@@ -718,7 +718,7 @@ export default function Home() {
               {[
                 {
                   href: "https://calendly.com/sayam-unnity/30min",
-                  label: "Start Your Free Trial",
+                  label: "Work with us",
                   primary: false,
                 },
                 {
@@ -765,10 +765,10 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center gap-3 md:gap-5 py-6">
               <div className="flex -space-x-2.5">
                 {[
-                  "/cupid1.png",
-                  "/hub1.png",
-                  "/empire1.png",
-                  "/wow-heads.png",
+                  "/kpp.png",
+                  "/cd.png",
+                  "/hubss.png",
+                  "/peng.png",
                   // "/plusss.png",
                 ].map((img, i) => (
                   <div
@@ -797,7 +797,7 @@ export default function Home() {
                   className="text-[11px] text-white/30"
                   style={{ fontFamily: "'DM Sans', sans-serif" }}
                 >
-                  Trusted by 50+ brands
+                  Trusted by 100+ brands
                 </span>
               </div>
             </div>
@@ -938,44 +938,45 @@ export default function Home() {
         {/* ═══════════════════════════════
             FEATURES CAROUSEL
         ═══════════════════════════════ */}
-        <div className="px-5 text-center py-12 overflow-hidden bg-white">
-          <h1 className="text-[clamp(1.5rem,5vw,3rem)] font-bold text-center mb-10">
-            Elevate Your Brand with Our Marketing Expertise
-          </h1>
-          <div className="relative w-full">
-            <div className="absolute left-0 top-0 bottom-0 w-24 bg-linear-to-r from-white/10 to-transparent pointer-events-none z-10" />
-            <div className="absolute right-0 top-0 bottom-0 w-24 bg-linear-to-l from-white/10 to-transparent pointer-events-none z-10" />
-            <div
-              className="flex justify-center gap-5 overflow-x-auto scroll-smooth snap-x snap-mandatory max-sm:flex-col max-sm:items-center max-sm:overflow-x-visible"
-              style={{
-                scrollbarWidth: "thin",
-                scrollbarColor: "rgba(0,0,0,0.2) rgba(0,0,0,0.05)",
-              }}
-            >
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="relative snap-start rounded-[18px] overflow-hidden shrink-0 w-60 h-96 transition-all duration-500 cursor-pointer hover:w-80 group max-sm:w-full max-sm:max-w-sm max-sm:h-36 max-sm:hover:h-96 max-sm:hover:w-full"
-                >
-                  <img
-                    src={feature.image}
-                    alt={feature.alt}
-                    className="w-full h-full object-cover transition-all duration-500"
-                  />
-                  <div className="absolute inset-0 bg-[rgba(14,14,24,0.75)] transition-opacity duration-400 group-hover:opacity-0" />
-                  <div className="absolute bottom-0 left-0 right-0 p-5 bg-linear-to-t from-black/90 via-black/70 to-transparent text-white transition-all duration-700 group-hover:p-8">
-                    <h3 className="text-xl font-bold mb-2 group-hover:text-2xl transition-all duration-500">
-                      {feature.title}
-                    </h3>
-                    <p className="text-sm opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-28 transition-all duration-700 delay-200 leading-relaxed">
-                      {feature.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+      <div className="px-5 text-center py-12 overflow-hidden bg-white">
+  <h1 className="text-[clamp(1.5rem,5vw,3rem)] font-bold text-center mb-10">
+    Elevate Your Brand with Our Marketing Expertise
+  </h1>
+  <div className="relative w-full">
+    <div className="absolute left-0 top-0 bottom-0 w-24 bg-linear-to-r from-white/10 to-transparent pointer-events-none z-10" />
+    <div className="absolute right-0 top-0 bottom-0 w-24 bg-linear-to-l from-white/10 to-transparent pointer-events-none z-10" />
+    <div
+      className="flex justify-center gap-5 overflow-x-auto scroll-smooth snap-x snap-mandatory max-sm:flex-col max-sm:items-center max-sm:overflow-x-visible"
+      style={{
+        scrollbarWidth: "thin",
+        scrollbarColor: "rgba(0,0,0,0.2) rgba(0,0,0,0.05)",
+      }}
+    >
+      {features.map((feature, index) => (
+        <div
+          key={index}
+          tabIndex={0}
+          className="relative snap-start rounded-[18px] overflow-hidden shrink-0 w-60 h-96 transition-all duration-500 cursor-pointer hover:w-80 focus:w-80 group max-sm:w-full max-sm:max-w-sm max-sm:h-36 max-sm:hover:h-96 max-sm:focus:h-96 max-sm:hover:w-full max-sm:focus:w-full outline-none"
+        >
+          <img
+            src={feature.image}
+            alt={feature.alt}
+            className="w-full h-full object-cover transition-all duration-500"
+          />
+          <div className="absolute inset-0 bg-[rgba(14,14,24,0.75)] transition-opacity duration-400 group-hover:opacity-0 group-focus:opacity-0" />
+          <div className="absolute bottom-0 left-0 right-0 p-5 bg-linear-to-t from-black/90 via-black/70 to-transparent text-white transition-all duration-700 group-hover:p-8 group-focus:p-8">
+            <h3 className="text-xl font-bold mb-2 group-hover:text-2xl group-focus:text-2xl transition-all duration-500">
+              {feature.title}
+            </h3>
+            <p className="text-sm opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-focus:opacity-100 group-hover:max-h-28 group-focus:max-h-28 transition-all duration-700 delay-200 leading-relaxed">
+              {feature.description}
+            </p>
           </div>
         </div>
+      ))}
+    </div>
+  </div>
+</div>
 
         {/* ═══════════════════════════════
             LOGO SLIDER

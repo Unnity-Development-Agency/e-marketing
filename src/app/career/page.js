@@ -4,8 +4,10 @@ import Header from "@/components/Header/page";
 import BrandsHero from "@/components/reactBits/HeroSection";
 import Link from "next/link";
 import React, { useState } from "react";
+import { useRef } from "react";
 
 const Page = () => {
+  const fileInputRef = useRef(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -14,6 +16,10 @@ const Page = () => {
     resume: "",
   });
 
+
+   // Controls the "Thank you" popup visibility
+  const [showPopup, setShowPopup] = useState(false);
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -39,7 +45,7 @@ const Page = () => {
       };
 
       const res = await fetch(
-        "https://script.google.com/macros/s/AKfycbwN5ODtPvIJCCFnaLM8bnTDGAsDYlPMI2_YnGLHOZo0F9xw3NOxf91OPKs5oT7fyy2R/exec",
+        "https://script.google.com/macros/s/AKfycbxzJTJRGz28tkugVnBwXkcS2GZG5m17p9LWEq0IDsDtpfjDNtmSNlv3NUex0vu3KzwbNw/exec",
         {
           method: "POST",
           body: JSON.stringify(payload),
@@ -51,14 +57,16 @@ const Page = () => {
       console.log(result);
 
       if (result.status === "success") {
-        alert("Application Submitted Successfully");
+      setShowPopup(true);
         setFormData({
           name: "",
           email: "",
           phone: "",
           position: "",
+          message: "",
           resume: "",
         });
+        fileInputRef.current.value = "";
       } else {
         alert("Error: " + result.message);
       }
@@ -80,6 +88,27 @@ const Page = () => {
   return (
     <section className="w-full">
       <Header />
+
+            {/* Thank You Popup — shows after successful submission */}
+      {showPopup && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center px-4">
+          <div className="bg-white rounded-lg shadow-xl max-w-sm w-full p-8 text-center">
+            <h3 className="text-2xl font-semibold text-[#23234D] mb-3">
+              Thank You!
+            </h3>
+            <p className="text-gray-600 mb-6">
+              Your form is submitted successfully.
+            </p>
+            <button
+              onClick={() => setShowPopup(false)}
+              className="bg-[#23234D] text-white px-6 py-2 rounded-md font-medium hover:bg-[#1c1c3e] transition cursor-pointer"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
 
       {/* HERO SECTION */}
       <div className="">
@@ -117,10 +146,10 @@ const Page = () => {
             <p className="text-gray-600 mt-4 text-lg">
               Looking for an opportunity with us? Then mail your updated CV at{" "}
               <a
-                href="mailto:Punjal@unnity.in"
+                href="mailto:jagriti@unnity.in"
                 className="text-indigo-600 font-medium"
               >
-                punjal@unnity.in
+                jagriti@unnity.in
               </a>
             </p>
           </div>
@@ -223,9 +252,9 @@ const Page = () => {
                   Upload Resume
                 </label>
                 <input
+                  ref={fileInputRef}
                   type="file"
                   accept=".pdf,.doc,.docx"
-                  value={formData.resume}
                   name="resume"
                   onChange={handleOnChange}
                   className="mt-1 w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:border-0 file:rounded-md file:bg-[#23234D] file:text-white hover:file:bg-[#23234D] cursor-pointer"
