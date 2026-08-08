@@ -286,55 +286,70 @@ function TestimonialSlider() {
         }
       `}</style>
 
-      <div className="max-w-3xl mx-auto">
-        {/* Header */}
-        <div className="mb-10 text-center">
-          <h2 className="text-[clamp(1.8rem,3vw,3rem)] font-bold text-[#111] leading-tight tracking-tight">
-            What our customers are saying
-          </h2>
-        </div>
+    {/* Card */}
+<div
+  className="relative max-w-4xl  m-auto"
+  onTouchStart={(e) => {
+    e.currentTarget.dataset.touchStartX = e.touches[0].clientX;
+  }}
+  onTouchEnd={(e) => {
+    if (isAnimating) return;
 
-        {/* Card */}
-        <div className="relative">
-          {/* Outgoing */}
-          {isAnimating && prev !== null && (
-            <div className="slide-out absolute inset-0 pointer-events-none">
-              <TestimonialCard t={testimonials[prev]} />
-            </div>
-          )}
+    const startX = Number(e.currentTarget.dataset.touchStartX);
+    const endX = e.changedTouches[0].clientX;
+    const diff = startX - endX;
 
-          {/* Incoming */}
-          <div className={isAnimating ? "slide-in" : ""}>
-            <TestimonialCard t={t} />
-          </div>
-        </div>
+    if (Math.abs(diff) < 50) return;
 
-        {/* Dots */}
-        <div className="flex justify-center gap-2 mt-8">
-          {testimonials.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => {
-                startTimer();
-                goTo(i);
-              }}
-              disabled={isAnimating}
-              aria-label={`Go to ${i + 1}`}
-              className={`rounded-full transition-all duration-300 disabled:cursor-not-allowed
-                ${
-                  i === current
-                    ? "w-7 h-2 bg-[#111]"
-                    : "w-2 h-2 bg-[#ccc] hover:bg-[#999]"
-                }`}
-            />
-          ))}
-        </div>
+    startTimer();
 
-        <p className="text-center text-xs text-[#bbb] mt-3 tracking-widest">
-          {String(current + 1).padStart(2, "0")} /{" "}
-          {String(total).padStart(2, "0")}
-        </p>
-      </div>
+    if (diff > 0) {
+      // Left swipe → Next
+      goTo((current + 1) % total);
+    } else {
+      // Right swipe → Previous
+      goTo((current - 1 + total) % total);
+    }
+  }}
+>
+  {/* Outgoing */}
+  {isAnimating && prev !== null && (
+    <div className="slide-out absolute inset-0 pointer-events-none">
+      <TestimonialCard t={testimonials[prev]} />
+    </div>
+  )}
+
+  {/* Incoming */}
+  <div className={isAnimating ? "slide-in" : ""}>
+    <TestimonialCard t={t} />
+  </div>
+</div>
+
+{/* Dots */}
+<div className="flex justify-center gap-2 mt-8">
+  {testimonials.map((_, i) => (
+    <button
+      key={i}
+      onClick={() => {
+        startTimer();
+        goTo(i);
+      }}
+      disabled={isAnimating}
+      aria-label={`Go to ${i + 1}`}
+      className={`rounded-full transition-all duration-300 disabled:cursor-not-allowed
+        ${
+          i === current
+            ? "w-7 h-2 bg-[#111]"
+            : "w-2 h-2 bg-[#ccc] hover:bg-[#999]"
+        }`}
+    />
+  ))}
+</div>
+
+<p className="text-center text-xs text-[#bbb] mt-3 tracking-widest">
+  {String(current + 1).padStart(2, "0")} /{" "}
+  {String(total).padStart(2, "0")}
+</p>
     </section>
   );
 }
@@ -765,10 +780,10 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center gap-3 md:gap-5 py-6">
               <div className="flex -space-x-2.5">
                 {[
-                  "/kpp.png",
-                  "/cd.png",
-                  "/hubss.png",
-                  "/peng.png",
+                  "/13.png",
+                  "/14.png",
+                  "/15.png",
+                  "/16.png",
                   // "/plusss.png",
                 ].map((img, i) => (
                   <div
@@ -909,7 +924,7 @@ export default function Home() {
             PARTNERS
       =================================== */}
         <div className="flex flex-col items-center justify-center py-12 mx-auto bg-white">
-          <h2 className="text-base font-bold mb-8 tracking-widest">
+          <h2 className="text-base font-bold mb-5 tracking-widest">
             OFFICIAL MARKETING PARTNERS
           </h2>
           <div className="flex justify-center items-center gap-10 px-5 max-sm:gap-6">
@@ -938,7 +953,7 @@ export default function Home() {
         {/* ═══════════════════════════════
             FEATURES CAROUSEL
         ═══════════════════════════════ */}
-      <div className="px-5 text-center py-12 overflow-hidden bg-white">
+      <div className="px-5 text-center py-3 overflow-hidden bg-white">
   <h1 className="text-[clamp(1.5rem,5vw,3rem)] font-bold text-center mb-10">
     Elevate Your Brand with Our Marketing Expertise
   </h1>
@@ -981,24 +996,31 @@ export default function Home() {
         {/* ═══════════════════════════════
             LOGO SLIDER
         ═══════════════════════════════ */}
-        <div className="overflow-hidden bg-white py-12 border-t border-black/5">
-          <h1 className="text-center text-[clamp(1.8rem,3vw,3rem)] font-bold text-[#111] mb-12 tracking-tight">
-            Trusted by Leading Brands
-          </h1>
-          <div className="flex w-max gap-16 items-center animate-[scroll_40s_linear_infinite]">
-            {[...LOGO_IMAGES, ...LOGO_IMAGES].map((src, index) => (
-              <Image
-                key={index}
-                src={src}
-                width={0}
-                height={0}
-                sizes="200px"
-                alt="Brand Logo"
-                className="h-14 w-auto object-contain py-1.5 transition-all duration-300 hover:scale-105"
-              />
-            ))}
-          </div>
+
+<div className="overflow-hidden bg-white py-12 border-t border-black/5">
+  <h1 className="text-center text-[clamp(1.8rem,3vw,3rem)] font-bold text-[#111] mb-12 tracking-tight">
+    Trusted by Leading Brands
+  </h1>
+
+  <div className="logo-marquee">
+    <div className="logo-marquee-track">
+      {[...LOGO_IMAGES, ...LOGO_IMAGES].map((src, index) => (
+        <div key={index} className="logo-marquee-item">
+          <Image
+            src={src}
+            alt="Brand Logo"
+            width={180}
+            height={80}
+            sizes="180px"
+            className="h-14 w-[180px] object-contain py-1.5 transition-all duration-300 hover:scale-105"
+          />
         </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+
 
         {/*----------------------------
             LEAD FORM
@@ -1526,6 +1548,72 @@ export default function Home() {
         h2 {
           font-family: "Urbanist", sans-serif;
         }
+
+
+
+
+
+
+      
+.logo-marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-marquee-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 20px;
+  animation: logoScroll 40s linear infinite;
+  will-change: transform;
+}
+
+.logo-marquee-item {
+  flex: 0 0 auto;
+  width: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-marquee-item img {
+  display: block;
+  width: 130px;
+  height: 55px;
+  object-fit: contain;
+}
+
+/* Infinite Scroll */
+@keyframes logoScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 10px));
+  }
+}
+
+
+@media (max-width: 768px) {
+  .logo-marquee-track {
+    gap: 12px;
+    animation-duration: 35s;
+  }
+
+  .logo-marquee-item {
+    width: 100px;
+  }
+
+  .logo-marquee-item img {
+    width: 100px;
+    height: 42px;
+  }
+}
+
+
       `}</style>
     </>
   );
