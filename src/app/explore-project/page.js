@@ -105,7 +105,7 @@ export default function CaseStudies() {
     
     {
       id: 14,
-      title: "CozyCabs",
+      title: "CozyCabz",
       image: "/cozy.png",
       href: "https://cozycabs.vercel.app/",
     },
@@ -128,6 +128,24 @@ export default function CaseStudies() {
       title: "Prateek Suri",
       image: "/prateek-suri.png",
       href: "https://author-rose.vercel.app/",
+    },
+    {
+      id: 18,
+      title: "Arihant",
+      image: "/Arihant.png",
+      href: "https://www.arihant-packaging.com/",
+    },
+    {
+      id: 19,
+      title: "Kurja Law",
+      image: "/kurja-law.png",
+      href: "https://www.kurjalaw.com/",
+    },
+    {
+      id: 20,
+      title: "Wow Heads",
+      image: "/wow-headss.png",
+      href: "https://wowheads.in/",
     },
     
   ];

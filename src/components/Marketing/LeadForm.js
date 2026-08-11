@@ -73,7 +73,7 @@ const LeadForm = () => {
   const perks = [
     {
       icon: <IoCallOutline />,
-      title: "+91 931 500 3754",
+      title: "+91 9910187451",
       sub: "Call us directly",
     },
     {
