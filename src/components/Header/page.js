@@ -67,7 +67,7 @@ const Header = () => {
         </div>
 
         {/* CENTER — NAV */}
-        <nav className="hidden text-lg md:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
+        <nav className="hidden text-lg md:flex items-center gap-10 absolute left-1/2 -translate-x-1/2 pr-6.5">
           <Link href="/" className="cursor-pointer">
             Home
           </Link>
@@ -136,14 +136,17 @@ const Header = () => {
           <Link href="/brands" className="cursor-pointer">
             Brands
           </Link>
+          <Link href="/career" className="cursor-pointer">
+            Career
+          </Link>
         </nav>
 
         {/* RIGHT — CALL + CTA */}
         <div className="hidden md:flex items-center gap-6">
-          <Link href="tel:+919315003754">
+          <Link href="tel:+919910187451">
             <div className="flex items-center gap-2 font-medium cursor-pointer">
               <FaPhone className="text-sm" />
-              +91 931 500 3754
+              +91 9910187451
             </div>
           </Link>
 
@@ -234,7 +237,7 @@ const Header = () => {
               </button>
 
               <div
-                className={`overflow-hidden transition-all duration-300 ${dropOpen ? "max-h-40 mt-4" : "max-h-0"}`}
+                className={`overflow-hidden transition-all duration-300 ${dropOpen ? "max-h-52 mt-4" : "max-h-0"}`}
               >
                 <Link
                   href="/creative"
@@ -260,6 +263,7 @@ const Header = () => {
                 >
                   Social Media
                 </Link>
+            
               </div>
             </div>
             <Link href="/brands" className="cursor-pointer">
@@ -272,10 +276,10 @@ const Header = () => {
           <div className="border-t pt-6 flex flex-col gap-4">
             <div className="flex gap-4 items-center">
               <FaPhoneFlip className="rotate-110" />
-              <Link href="tel:+919315003754">+91 931 500 3754</Link>
+              <Link href="tel:+919910187451">+91 9910187451</Link>
             </div>
 
-            <Link href="tel:+919315003754">
+            <Link href="tel:+919910187451">
               <button className="w-full bg-[#0f032b] text-white py-3 rounded-full font-medium">
                 Start Call →
               </button>
