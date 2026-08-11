@@ -269,6 +269,9 @@ const Header = () => {
             <Link href="/brands" className="cursor-pointer">
               Brands
             </Link>
+             <Link href="/career" className="cursor-pointer">
+            Career
+          </Link>
           </div>
 
           <div className="flex-1" />
