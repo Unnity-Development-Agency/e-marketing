@@ -175,7 +175,7 @@ const members = [
   { name: "Paesha", role: "Video Editor Intern", photo: "/paesha.jpeg" },
   { name: "Himanshu", role: "Social Media Intern", photo: "/himanshu.jpg" },
   { name: "Jagriti", role: "Human Resources", photo: "/jagritii.jpg" },
-  { name: "Shekar", role: "Marketing Intern", photo: "/Shekhar.jpg" },
+  { name: "Shekar", role: "Marketing", photo: "/Shekhar.jpg" },
 ];
 
 const gallery = [
@@ -783,7 +783,7 @@ export default function Home() {
                   "/13.png",
                   "/14.png",
                   "/15.png",
-                  "/16.png",
+                  "/17.png",
                   // "/plusss.png",
                 ].map((img, i) => (
                   <div
