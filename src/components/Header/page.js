@@ -144,12 +144,12 @@ const Header = () => {
 
         {/* RIGHT — CALL + CTA */}
         <div className="hidden md:flex items-center gap-6">
-          <Link href="tel:+919910187451">
+          {/* <Link href="tel:+919910187451">
             <div className="flex items-center gap-2 font-medium cursor-pointer">
               <FaPhone className="text-sm" />
               +91 9910187451
             </div>
-          </Link>
+          </Link> */}
 
           <Link href="https://calendly.com/sayam-unnity/30min">
             <button className="group flex items-center gap-3 bg-white text-[#0f032b] hover:bg-[#0f032b] hover:text-white hover:border hover:border-white px-6 py-2.5 rounded-full text-base font-medium overflow-hidden cursor-pointer transition-all duration-200 max-sm:w-full max-sm:justify-center">
@@ -270,15 +270,18 @@ const Header = () => {
             <Link href="/brands" className="cursor-pointer">
               Brands
             </Link>
+             <Link href="/career" className="cursor-pointer">
+            Career
+          </Link>
           </div>
 
           <div className="flex-1" />
 
           <div className="border-t pt-6 flex flex-col gap-4">
-            <div className="flex gap-4 items-center">
+            {/* <div className="flex gap-4 items-center">
               <FaPhoneFlip className="rotate-110" />
               <Link href="tel:+919910187451">+91 9910187451</Link>
-            </div>
+            </div> */}
 
             <Link href="tel:+919910187451">
               <button className="w-full bg-[#0f032b] text-white py-3 rounded-full font-medium">

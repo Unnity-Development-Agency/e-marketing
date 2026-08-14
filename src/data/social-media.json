@@ -1,487 +1,6 @@
 [
-  {
+    {
     "id": 1,
-    "title": "Cupid Clothings",
-    "username": "Cupid clothings",
-    "platform": "Instagram",
-     "logo": "5.png",
-    
-
-    "posts": [
-      {
-        "id": 1,
-        "image": "/cupidso-1.webp"
-      },
-       {
-        "id": 2,
-        "image": "/cupidso-2.webp"
-      },
-       {
-        "id": 3,
-        "image": "/cupidso-3.webp"
-      },
-       {
-        "id": 4,
-        "image": "/cupidso-4.webp"
-      },
-       {
-        "id": 5,
-        "image": "/cupidso-5.webp"
-      },
-       {
-        "id": 6,
-        "image": "/cupidso-6.webp"
-      },
-       {
-        "id": 7,
-        "image": "/cupidso-7.webp"
-      },
-       {
-        "id": 8,
-        "image": "/cupidso-8.webp"
-      }
-      
-    ],
-
-    "reels": [
-      {
-        "id": 1,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/cupidso-1.mp4"
-      },
-      {
-        "id": 2,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/cupidso-2.mp4"
-      },
-      {
-        "id": 3,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/cupidso-3.mp4"
-      },
-      {
-        "id": 4,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/cupidso-4.mp4"
-      },
-      {
-        "id": 5,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/cupidso-5.mp4"
-      },
-      {
-        "id": 6,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/cupidso-6.mp4"
-      },
-      {
-        "id": 7,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/cupidso-7.mp4"
-      },
-      {
-        "id": 8,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/cupidso-8.mp4"
-      },
-      {
-        "id": 9,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/cupidso-9.mp4"
-      }
-    ]
-  },
-
-  {
-    "id": 2,
-    "title": "COZYCABZ",
-    "username": "cozycabz",
-     "logo": "1co.png",
-   "posts": [
-      {
-        "id": 1,
-        "image": "/cozyso-1.webp"
-      },
-       {
-        "id": 2,
-        "image": "/cozyso-2.jpg"
-      },
-       {
-        "id": 3,
-        "image": "/cozyso-3.jpg"
-      },
-       {
-        "id": 4,
-        "image": "/cozyso-4.webp"
-      },
-       {
-        "id": 5,
-        "image": "/cozyso-5.webp"
-      },
-       {
-        "id": 6,
-        "image": "/cozyso-6.jpg"
-      },
-       {
-        "id": 7,
-        "image": "/cozyso-7.webp"
-      },
-       {
-        "id": 8,
-        "image": "/cozyso-8.webp"
-      },
-       {
-        "id": 9,
-        "image": "/cozyso-9.webp"
-      },
-       {
-        "id": 10,
-        "image": "/cozyso-10.webp"
-      }
-      
-    ],
-    "reels": [
-      {
-        "id": 1,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/cozyv-1.mp4"
-      },
-      {
-        "id": 2,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/cozyv-2.mp4"
-      },
-      {
-        "id": 3,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/cozyv-3.mp4"
-      },
-      {
-        "id": 4,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/cozyv-4.mp4"
-      },
-      {
-        "id": 5,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/cozyv-5.mp4"
-      },
-      {
-        "id": 6,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/cozyv-6.mp4"
-      }
-    ]
-  },
-
-  {
-    "id": 3,
-    "title": "MYSTARA",
-    "username": "Mystara",
-    "platform": "LinkedIn",
-    "industry": "B2B Software",
-    "logo": "3.png",
-
-    "posts": [
-      {
-        "id": 1,
-        "image": "/mystara-1.webp"
-      },
-       {
-        "id": 2,
-        "image": "/mystara-2.webp"
-      },
-       {
-        "id": 3,
-        "image": "/mystara-3.webp"
-      },
-       {
-        "id": 4,
-        "image": "/mystara-4.webp"
-      },
-       {
-        "id": 5,
-        "image": "/mystara-5.webp"
-      },
-       {
-        "id": 6,
-        "image": "/mystara-6.webp"
-      },
-       {
-        "id": 7,
-        "image": "/mystara-7.webp"
-      },
-       {
-        "id": 8,
-        "image": "/mystara-8.webp"
-      },
-       {
-        "id": 9,
-        "image": "/mystara-9.webp"
-      },
-       {
-        "id": 10,
-        "image": "/mystara-10.webp"
-      }
-      
-    ],
-   
-    "reels": [
-      {
-        "id": 1,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/mystara-1.mp4"
-      },
-      {
-        "id": 2,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/mystara-2.mp4"
-      },
-      {
-        "id": 3,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/mystara-3.mp4"
-      },
-      {
-        "id": 4,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/mystara-4.mp4"
-      },
-      {
-        "id": 5,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/mystara-5.mp4"
-      },
-      {
-        "id": 6,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/mystara-6.mp4"
-      },
-      {
-        "id": 7,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/mystara-7.mp4"
-      },
-      {
-        "id": 8,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/mystara-8.mp4"
-      }
-    ]
-  },
-
-  {
-    "id": 4,
-    "title": "HYCROSS",
-    "username": "Hycross",
-     "logo": "4.png",
-
-   "posts": [
-      {
-        "id": 1,
-        "image": "/hycross-1.webp"
-      },
-       {
-        "id": 2,
-        "image": "/hycross-2.jpg"
-      },
-       {
-        "id": 3,
-        "image": "/hycross-3.webp"
-      },
-       {
-        "id": 4,
-        "image": "/hycross-4.webp"
-      },
-       {
-        "id": 5,
-        "image": "/hycross-5.webp"
-      },
-       {
-        "id": 6,
-        "image": "/hycross-6.webp"
-      },
-       {
-        "id": 7,
-        "image": "/hycross-7.jpg"
-      },
-       {
-        "id": 8,
-        "image": "/hycross-8.webp"
-      },
-       {
-        "id": 9,
-        "image": "/hycross-9.webp"
-      }
-    ],
-    "reels": [
-      {
-        "id": 1,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/hycross-1.mp4"
-      },
-      {
-        "id": 2,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/hycross-2.mp4"
-      },
-      {
-        "id": 3,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/hycross-3.mp4"
-      },
-      {
-        "id": 4,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/hycross-4.mp4"
-      },
-      {
-        "id": 5,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/hycross-5.mp4"
-      },
-      {
-        "id": 6,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/hycross-6.mp4"
-      },
-      {
-        "id": 7,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/hycross-7.mp4"
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "title": "SKYPACKERS",
-    "username": "SKYPACKERS",
-     "logo": "91.png",
-
-   "posts": [
-      {
-        "id": 1,
-        "image": "/sky-1.webp"
-      },
-       {
-        "id": 2,
-        "image": "/sky-2.webp"
-      },
-       {
-        "id": 3,
-        "image": "/sky-3.webp"
-      },
-       {
-        "id": 4,
-        "image": "/sky-4.webp"
-      },
-       {
-        "id": 5,
-        "image": "/sky-5.jpg"
-      },
-       {
-        "id": 6,
-        "image": "/sky-6.webp"
-      },
-       {
-        "id": 7,
-        "image": "/sky-7.webp"
-      }
-    ],
-     "reels": [
-    
-    ]
-  },
-  {
-    "id": 6,
-    "title": "SMART SAVER",
-    "username": "SMART SAVER",
-     "logo": "smart_saver.png",
-
-   "posts": [
-      {
-        "id": 1,
-        "image": "/smsv-1.jpg"
-      },
-       {
-        "id": 2,
-        "image": "/smsv-2.webp"
-      },
-       {
-        "id": 3,
-        "image": "/smsv3.webp"
-      },
-       {
-        "id": 4,
-        "image": "/smsv-4.webp"
-      },
-       {
-        "id": 5,
-        "image": "/smsv-5.jpg"
-      },
-       {
-        "id": 6,
-        "image": "/smsv-6.webp"
-      },
-       {
-        "id": 7,
-        "image": "/smsv-7.jpg"
-      },
-       {
-        "id": 8,
-        "image": "/smsv-8.webp"
-      }
-    ],
-    "reels": [
-      {
-        "id": 1,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/smsv-1.mp4"
-      },
-      {
-        "id": 2,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/smsv-2.mp4"
-      },
-      {
-        "id": 3,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/smsv-3.mp4"
-      },
-      {
-        "id": 4,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/smsv-4.mp4"
-      },
-      {
-        "id": 5,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/smsv-5.mp4"
-      },
-      {
-        "id": 6,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/smsv-6.mp4"
-      },
-      {
-        "id": 7,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/smsv-7.mp4"
-      },
-      {
-        "id": 8,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/smsv-8.mp4"
-      },
-      {
-        "id": 9,
-        "thumbnail": "/social/apex/reel-1.jpg",
-        "video": "/smsv-9.mp4"
-      }
-    ]
-  },
-  {
-    "id": 7,
     "title": "KAPURTHALA",
     "username": "KAPURTHALA",
      "logo": "kp-logo.png",
@@ -585,5 +104,484 @@
         "video": "/kp-11.mp4"
       }
     ]
+  },
+  {
+    "id": 2,
+    "title": "Cupid Clothings",
+    "username": "Cupid clothings",
+    "platform": "Instagram",
+     "logo": "5.png",
+    
+
+    "posts": [
+      {
+        "id": 1,
+        "image": "/cupidso-1.webp"
+      },
+       {
+        "id": 2,
+        "image": "/cupidso-2.webp"
+      },
+       {
+        "id": 3,
+        "image": "/cupidso-3.webp"
+      },
+       {
+        "id": 4,
+        "image": "/cupidso-4.webp"
+      },
+       {
+        "id": 5,
+        "image": "/cupidso-5.webp"
+      },
+       {
+        "id": 6,
+        "image": "/cupidso-6.webp"
+      },
+       {
+        "id": 7,
+        "image": "/cupidso-7.webp"
+      },
+       {
+        "id": 8,
+        "image": "/cupidso-8.webp"
+      }
+      
+    ],
+
+    "reels": [
+      {
+        "id": 1,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cupidso-1.mp4"
+      },
+      {
+        "id": 2,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cupidso-2.mp4"
+      },
+      {
+        "id": 3,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cupidso-3.mp4"
+      },
+      {
+        "id": 4,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cupidso-4.mp4"
+      },
+      {
+        "id": 5,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cupidso-5.mp4"
+      },
+      {
+        "id": 6,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cupidso-6.mp4"
+      },
+      {
+        "id": 7,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cupidso-7.mp4"
+      },
+      {
+        "id": 8,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cupidso-8.mp4"
+      },
+      {
+        "id": 9,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cupidso-9.mp4"
+      }
+    ]
+  },
+ {
+    "id": 3,
+    "title": "MYSTARA",
+    "username": "Mystara",
+    "platform": "LinkedIn",
+    "industry": "B2B Software",
+    "logo": "3.png",
+
+    "posts": [
+      {
+        "id": 1,
+        "image": "/mystara-1.webp"
+      },
+       {
+        "id": 2,
+        "image": "/mystara-2.webp"
+      },
+       {
+        "id": 3,
+        "image": "/mystara-3.webp"
+      },
+       {
+        "id": 4,
+        "image": "/mystara-4.webp"
+      },
+       {
+        "id": 5,
+        "image": "/mystara-5.webp"
+      },
+       {
+        "id": 6,
+        "image": "/mystara-6.webp"
+      },
+       {
+        "id": 7,
+        "image": "/mystara-7.webp"
+      },
+       {
+        "id": 8,
+        "image": "/mystara-8.webp"
+      },
+       {
+        "id": 9,
+        "image": "/mystara-9.webp"
+      },
+       {
+        "id": 10,
+        "image": "/mystara-10.webp"
+      }
+      
+    ],
+   
+    "reels": [
+      {
+        "id": 1,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/mystara-1.mp4"
+      },
+      {
+        "id": 2,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/mystara-2.mp4"
+      },
+      {
+        "id": 3,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/mystara-3.mp4"
+      },
+      {
+        "id": 4,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/mystara-4.mp4"
+      },
+      {
+        "id": 5,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/mystara-5.mp4"
+      },
+      {
+        "id": 6,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/mystara-6.mp4"
+      },
+      {
+        "id": 7,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/mystara-7.mp4"
+      },
+      {
+        "id": 8,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/mystara-8.mp4"
+      }
+    ]
+  },
+   {
+    "id": 4,
+    "title": "HYCROSS",
+    "username": "Hycross",
+     "logo": "4.png",
+
+   "posts": [
+      {
+        "id": 1,
+        "image": "/hycross-1.webp"
+      },
+       {
+        "id": 2,
+        "image": "/hycross-2.jpg"
+      },
+       {
+        "id": 3,
+        "image": "/hycross-3.webp"
+      },
+       {
+        "id": 4,
+        "image": "/hycross-4.webp"
+      },
+       {
+        "id": 5,
+        "image": "/hycross-5.webp"
+      },
+       {
+        "id": 6,
+        "image": "/hycross-6.webp"
+      },
+       {
+        "id": 7,
+        "image": "/hycross-7.jpg"
+      },
+       {
+        "id": 8,
+        "image": "/hycross-8.webp"
+      },
+       {
+        "id": 9,
+        "image": "/hycross-9.webp"
+      }
+    ],
+    "reels": [
+      {
+        "id": 1,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/hycross-1.mp4"
+      },
+      {
+        "id": 2,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/hycross-2.mp4"
+      },
+      {
+        "id": 3,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/hycross-3.mp4"
+      },
+      {
+        "id": 4,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/hycross-4.mp4"
+      },
+      {
+        "id": 5,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/hycross-5.mp4"
+      },
+      {
+        "id": 6,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/hycross-6.mp4"
+      },
+      {
+        "id": 7,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/hycross-7.mp4"
+      }
+    ]
+  },
+   {
+    "id": 5,
+    "title": "SKYPACKERS",
+    "username": "SKYPACKERS",
+     "logo": "91.png",
+
+   "posts": [
+      {
+        "id": 1,
+        "image": "/sky-1.webp"
+      },
+       {
+        "id": 2,
+        "image": "/sky-2.webp"
+      },
+       {
+        "id": 3,
+        "image": "/sky-3.webp"
+      },
+       {
+        "id": 4,
+        "image": "/sky-4.webp"
+      },
+       {
+        "id": 5,
+        "image": "/sky-5.jpg"
+      },
+       {
+        "id": 6,
+        "image": "/sky-6.webp"
+      },
+       {
+        "id": 7,
+        "image": "/sky-7.webp"
+      }
+    ],
+     "reels": [
+    
+    ]
+  },
+   {
+    "id": 6,
+    "title": "SMART SAVER",
+    "username": "SMART SAVER",
+     "logo": "smart_saver.png",
+
+   "posts": [
+      {
+        "id": 1,
+        "image": "/smsv-1.jpg"
+      },
+       {
+        "id": 2,
+        "image": "/smsv-2.webp"
+      },
+       {
+        "id": 3,
+        "image": "/smsv3.webp"
+      },
+       {
+        "id": 4,
+        "image": "/smsv-4.webp"
+      },
+       {
+        "id": 5,
+        "image": "/smsv-5.jpg"
+      },
+       {
+        "id": 6,
+        "image": "/smsv-6.webp"
+      },
+       {
+        "id": 7,
+        "image": "/smsv-7.jpg"
+      },
+       {
+        "id": 8,
+        "image": "/smsv-8.webp"
+      }
+    ],
+    "reels": [
+      {
+        "id": 1,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/smsv-1.mp4"
+      },
+      {
+        "id": 2,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/smsv-2.mp4"
+      },
+      {
+        "id": 3,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/smsv-3.mp4"
+      },
+      {
+        "id": 4,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/smsv-4.mp4"
+      },
+      {
+        "id": 5,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/smsv-5.mp4"
+      },
+      {
+        "id": 6,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/smsv-6.mp4"
+      },
+      {
+        "id": 7,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/smsv-7.mp4"
+      },
+      {
+        "id": 8,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/smsv-8.mp4"
+      },
+      {
+        "id": 9,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/smsv-9.mp4"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "COZYCABZ",
+    "username": "cozycabz",
+     "logo": "1co.png",
+   "posts": [
+      {
+        "id": 1,
+        "image": "/cozyso-1.webp"
+      },
+       {
+        "id": 2,
+        "image": "/cozyso-2.jpg"
+      },
+       {
+        "id": 3,
+        "image": "/cozyso-3.jpg"
+      },
+       {
+        "id": 4,
+        "image": "/cozyso-4.webp"
+      },
+       {
+        "id": 5,
+        "image": "/cozyso-5.webp"
+      },
+       {
+        "id": 6,
+        "image": "/cozyso-6.jpg"
+      },
+       {
+        "id": 7,
+        "image": "/cozyso-7.webp"
+      },
+       {
+        "id": 8,
+        "image": "/cozyso-8.webp"
+      },
+       {
+        "id": 9,
+        "image": "/cozyso-9.webp"
+      },
+       {
+        "id": 10,
+        "image": "/cozyso-10.webp"
+      }
+      
+    ],
+    "reels": [
+      {
+        "id": 1,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cozyv-1.mp4"
+      },
+      {
+        "id": 2,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cozyv-2.mp4"
+      },
+      {
+        "id": 3,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cozyv-3.mp4"
+      },
+      {
+        "id": 4,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cozyv-4.mp4"
+      },
+      {
+        "id": 5,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cozyv-5.mp4"
+      },
+      {
+        "id": 6,
+        "thumbnail": "/social/apex/reel-1.jpg",
+        "video": "/cozyv-6.mp4"
+      }
+    ]
   }
+
 ]
