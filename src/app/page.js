@@ -1448,73 +1448,74 @@ export default function Home() {
         {/* ═══════════════════════════════
             TEAM
         ═══════════════════════════════ */}
-        <section className="py-12 px-4">
-          <div className="max-w-6xl mx-auto">
-            <header className="flex justify-between items-end gap-5 mb-7 flex-wrap">
-              <div>
-                <h2 className="text-[clamp(28px,3.2vw,42px)] leading-tight text-[#111] font-bold mb-2">
-                  Meet The Team
-                </h2>
-                <p className="text-[#555] text-base">
-                  The people behind your performance wins.
-                </p>
-              </div>
-              <div className="flex gap-3 items-center overflow-hidden max-w-sm w-full">
-                <input
-                  type="text"
-                  placeholder="Search by name or role"
-                  value={q}
-                  onChange={(e) => setQ(e.target.value)}
-                  className="h-10 min-w-52 px-3 rounded-xl border border-[#b9b9b9] bg-white text-[#111] outline-none transition-all focus:border-blue-700 focus:shadow-[0_0_0_3px_rgba(30,64,175,0.12)]"
-                />
-                <select
-                  value={role}
-                  onChange={(e) => setRole(e.target.value)}
-                  className="h-10 border border-[#b9b9b9] rounded-xl min-w-20 bg-white text-[#111] px-3 outline-none cursor-pointer"
-                >
-                  {roles.map((r) => (
-                    <option key={r} value={r} className="-ml-10">
-                      {r}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </header>
+       <section className="py-12 px-4">
+  <div className="max-w-6xl mx-auto">
+    <header className="flex justify-between items-end gap-5 mb-7 flex-wrap">
+      <div>
+        <h2 className="text-[clamp(28px,3.2vw,42px)] leading-tight text-[#111] font-bold mb-2">
+          Meet The Team
+        </h2>
+        <p className="text-[#555] text-base">
+          The people behind your performance wins.
+        </p>
+      </div>
+      <div className="flex gap-3 items-center overflow-hidden max-w-sm w-full">
+        <input
+          type="text"
+          placeholder="Search by name or role"
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+          className="h-10 min-w-52 px-3 rounded-xl border border-[#b9b9b9] bg-white text-[#111] outline-none transition-all focus:border-blue-700 focus:shadow-[0_0_0_3px_rgba(30,64,175,0.12)]"
+        />
+        <select
+          value={role}
+          onChange={(e) => setRole(e.target.value)}
+          className="h-10 border border-[#b9b9b9] rounded-xl min-w-20 bg-white text-[#111] px-3 outline-none cursor-pointer"
+        >
+          {roles.map((r) => (
+            <option key={r} value={r} className="-ml-10">
+              {r}
+            </option>
+          ))}
+        </select>
+      </div>
+    </header>
 
-            <div className="grid grid-cols-7 gap-5 max-[1100px]:grid-cols-4 max-[820px]:grid-cols-3 max-[520px]:grid-cols-2">
-              {shown.map((m, i) => (
-                <article
-                  key={i}
-                  className="group relative flex flex-col bg-white rounded-2xl overflow-hidden border border-black/5 shadow-[0_2px_8px_rgba(0,0,0,0.06)] cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_24px_rgba(0,0,0,0.15)]"
-                >
-                  <div className="relative aspect-3/4 w-full overflow-hidden">
-                    <Image
-                      src={m.photo}
-                      width={0}
-                      height={0}
-                      sizes="100vw"
-                      alt={m.name}
-                      loading="lazy"
-                      className="w-full h-full object-cover block transition-transform duration-500 group-hover:scale-[1.08]"
-                    />
-                    <div className="absolute inset-0 z-10 bg-linear-to-b from-transparent via-black/40 to-black/80 pointer-events-none" />
-                    <div className="absolute bottom-0 left-0 right-0 p-5 z-10 transition-transform duration-300 translate-y-1 group-hover:-translate-y-2 max-sm:p-4">
-                      <h3 className="text-xl text-white font-extrabold tracking-wide mb-1.5 max-sm:text-base">
-                        {m.name}
-                      </h3>
-                      <div className="text-white/90 font-semibold text-sm tracking-wide opacity-0 transition-all duration-300 group-hover:opacity-100 max-sm:text-xs">
-                        {m.role}
-                      </div>
-                    </div>
-                    <div className="absolute inset-0 z-0 bg-black/0 group-hover:bg-black/40">
-                      {" "}
-                    </div>
-                  </div>
-                </article>
-              ))}
+    <div className="grid grid-cols-7 gap-5 max-[1100px]:grid-cols-4 max-[820px]:grid-cols-3 max-[520px]:grid-cols-2">
+      {shown.map((m, i) => (
+        <article
+          key={i}
+          tabIndex={0}
+          className="group relative flex flex-col bg-white rounded-2xl overflow-hidden border border-black/5 shadow-[0_2px_8px_rgba(0,0,0,0.06)] cursor-pointer outline-none transition-all duration-300 hover:-translate-y-2 focus:-translate-y-2 hover:shadow-[0_12px_24px_rgba(0,0,0,0.15)] focus:shadow-[0_12px_24px_rgba(0,0,0,0.15)]"
+        >
+          <div className="relative aspect-3/4 w-full overflow-hidden">
+            <Image
+              src={m.photo}
+              width={0}
+              height={0}
+              sizes="100vw"
+              alt={m.name}
+              loading="lazy"
+              className="w-full h-full object-cover block transition-transform duration-500 group-hover:scale-[1.08] group-focus:scale-[1.08]"
+            />
+            <div className="absolute inset-0 z-10 bg-linear-to-b from-transparent via-black/40 to-black/80 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 right-0 p-5 z-10 transition-transform duration-300 translate-y-1 group-hover:-translate-y-2 group-focus:-translate-y-2 max-sm:p-4">
+              <h3 className="text-xl text-white font-extrabold tracking-wide mb-1.5 max-sm:text-base">
+                {m.name}
+              </h3>
+              <div className="text-white/90 font-semibold text-sm tracking-wide opacity-0 transition-all duration-300 group-hover:opacity-100 group-focus:opacity-100 max-sm:text-xs">
+                {m.role}
+              </div>
+            </div>
+            <div className="absolute inset-0 z-0 bg-black/0 group-hover:bg-black/40 group-focus:bg-black/40">
+              {" "}
             </div>
           </div>
-        </section>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
 
         <Footer />
       </main>
