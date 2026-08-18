@@ -173,7 +173,7 @@ const members = [
   { name: "Muskan", role: "Project Coordinator", photo: "/muskanT.jpg" },
   { name: "Palak", role: "Marketing Intern", photo: "/palak.jpg" },
   { name: "Paesha", role: "Video Editor Intern", photo: "/paesha.jpeg" },
-  { name: "Himanshu", role: "Social Media Intern", photo: "/himanshu.jpg" },
+  { name: "Sidharth", role: "Social Media", photo: "/sidharth.jpg" },
   { name: "Jagriti", role: "Human Resources", photo: "/jagritii.jpg" },
   { name: "Shekar", role: "Marketing", photo: "/Shekhar.jpg" },
 ];
@@ -312,6 +312,10 @@ function TestimonialSlider() {
     }
   }}
 >
+
+    <h1 className="text-center text-[clamp(1.8rem,3vw,3rem)] font-bold text-[#111] mb-4 tracking-tight">
+    Hear From Our Clients
+  </h1>
   {/* Outgoing */}
   {isAnimating && prev !== null && (
     <div className="slide-out absolute inset-0 pointer-events-none">
@@ -923,7 +927,7 @@ export default function Home() {
         {/* ===========================
             PARTNERS
       =================================== */}
-        <div className="flex flex-col items-center justify-center py-12 mx-auto bg-white">
+        <div className="flex flex-col items-center justify-center py-8 mx-auto bg-white">
           <h2 className="text-base font-bold mb-5 tracking-widest">
             OFFICIAL MARKETING PARTNERS
           </h2>
@@ -955,7 +959,7 @@ export default function Home() {
         ═══════════════════════════════ */}
       <div className="px-5 text-center py-3 overflow-hidden bg-white">
   <h1 className="text-[clamp(1.5rem,5vw,3rem)] font-bold text-center mb-10">
-    Elevate Your Brand with Our Marketing Expertise
+    Everything Your Brand Needs to Grow Online
   </h1>
   <div className="relative w-full">
     <div className="absolute left-0 top-0 bottom-0 w-24 bg-linear-to-r from-white/10 to-transparent pointer-events-none z-10" />
@@ -1255,7 +1259,7 @@ export default function Home() {
         ----------------------------*/}
         <section className="bg-[#f9fafb] py-12 md:py-20">
           <h1 className="text-center text-[clamp(1.8rem,3vw,3rem)] font-bold text-[#111] mb-12 tracking-tight px-4">
-            Client Success Through Smart Digital Strategy
+            Data-Backed Results From Our Digital Marketing Campaigns
           </h1>
           <div className="px-5 pb-10">
             <div className="hidden max-w-5xl mx-auto md:grid grid-cols-3 gap-7 mb-7 max-[1100px]:grid-cols-2 max-[680px]:grid-cols-1">
