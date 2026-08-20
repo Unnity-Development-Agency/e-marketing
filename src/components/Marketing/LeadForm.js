@@ -13,7 +13,7 @@ const Field = ({ label, children, full }) => (
   </div>
 );
 
-const LeadForm = () => {
+const LeadFormContact = () => {
   const [sending, setSending] = useState(false);
   const [status, setStatus] = useState({ type: "", message: "" });
   const [formData, setFormData] = useState({
@@ -441,4 +441,4 @@ const LeadForm = () => {
   );
 };
 
-export default LeadForm;
+export default LeadFormContact;

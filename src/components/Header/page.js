@@ -11,6 +11,9 @@ const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   const closeTimer = useRef(null);
+  const closeTimer2 = useRef(null);
+
+  const [dropOpen2, setDropOpen2] = useState(false); 
 
   /* -------- CHECK MOBILE -------- */
   useEffect(() => {
@@ -37,6 +40,21 @@ const Header = () => {
       setDropOpen(false);
     }, 180);
   };
+
+  /* ===== CONTACT US DROPDOWN (DESKTOP HOVER) ===== */
+const openDropdownSafe2 = () => {
+  if (isMobile) return;
+  if (closeTimer2.current) clearTimeout(closeTimer2.current);
+  setDropOpen2(true);
+};
+
+const closeDropdownSafe2 = () => {
+  if (isMobile) return;
+  closeTimer2.current = setTimeout(() => {
+    setDropOpen2(false);
+  }, 180);
+};
+
 
   return (
     <>
@@ -137,9 +155,41 @@ const Header = () => {
           <Link href="/brands" className="cursor-pointer">
             Brands
           </Link>
-          <Link href="/career" className="cursor-pointer">
-            Career
-          </Link>
+         <div
+  className="relative"
+  onMouseEnter={openDropdownSafe2}
+  onMouseLeave={closeDropdownSafe2}
+>
+  <button className="flex cursor-pointer items-center gap-2">
+    Contact Us
+    <span className={`transition ${dropOpen2 ? "rotate-180" : ""}`}>
+      ▾
+    </span>
+  </button>
+
+  <ul
+    onMouseEnter={openDropdownSafe2}
+    onMouseLeave={closeDropdownSafe2}
+    className={`
+      absolute left-1/2 -translate-x-1/2 top-full
+      bg-[#0f032b] text-white rounded-lg mt-4
+      shadow-xl min-w-55
+      transform transition-all duration-300 origin-top
+      ${
+        dropOpen2
+          ? "opacity-100 scale-100 translate-y-0"
+          : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
+      }
+    `}
+  >
+    <Link href="/work-with-us" className="bg-[#0f032b] block px-6 py-3 hover:bg-white/10 cursor-pointer">
+      Work With Us
+    </Link>
+    <Link href="/career" className="bg-[#0f032b] block px-6 py-3 hover:bg-white/10 cursor-pointer">
+      Career
+    </Link>
+  </ul>
+</div>
         </nav>
 
         {/* RIGHT — CALL + CTA */}
@@ -270,9 +320,36 @@ const Header = () => {
             <Link href="/brands" className="cursor-pointer">
               Brands
             </Link>
-             <Link href="/career" className="cursor-pointer">
-            Career
-          </Link>
+           <div>
+  <button
+    className="flex items-center gap-2 cursor-pointer"
+    onClick={() => setDropOpen2(!dropOpen2)}
+  >
+    Contact Us
+    <span className={`transition ${dropOpen2 ? "rotate-180" : ""}`}>
+      ▾
+    </span>
+  </button>
+
+  <div
+    className={`overflow-hidden transition-all duration-300 ${dropOpen2 ? "max-h-52 mt-4" : "max-h-0"}`}
+  >
+    <Link
+      href="/work-with-us"
+      className="block py-2 pl-3 cursor-pointer"
+      onClick={() => setMenuOpen(false)}
+    >
+      Work With Us
+    </Link>
+      <Link
+      href="/career"
+      className="block py-2 pl-3 cursor-pointer"
+      onClick={() => setMenuOpen(false)}
+    >
+      Career
+    </Link>
+  </div>
+</div>
           </div>
 
           <div className="flex-1" />

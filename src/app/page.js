@@ -1211,7 +1211,7 @@ export default function Home() {
         <section className="py-12 px-5 bg-[#0f032b] text-white text-center max-md:px-8 max-sm:px-5">
           <div className="max-w-3xl mx-auto mb-16 max-md:mb-10">
             <h1 className="text-5xl font-bold leading-tight mb-5 max-md:text-4xl max-sm:text-3xl">
-              Why brands choose Unnity
+              Why brands choose Unnity?
             </h1>
             <p className="md:text-lg leading-normal text-white/45 max-w-2xl mx-auto">
               Unnity helps thousands of brands grow through smart data, proven

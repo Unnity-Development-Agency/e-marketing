@@ -222,11 +222,13 @@ const Page = () => {
                 >
                   <option>Select position</option>
                   <option>Web Developer</option>
-                  <option>App Developer</option>
+                  <option>Mobile App Developer</option>
                   <option>Shopify Developer</option>
                   <option>Social Media Marketing</option>
                   <option>Performance Marketing</option>
-                  <option>Video Editor</option>
+                  <option>Performance Marketing</option>
+                  <option>Business Development</option>
+                  <option>Graphic designer</option>
                   <option>Other</option>
                 </select>
               </div>
