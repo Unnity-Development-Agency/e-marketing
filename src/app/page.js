@@ -50,7 +50,7 @@ const LOGO_IMAGES = [
   "/hardoll.png",
   "/madverse.png",
   "/uberlyfe1.png",
-  "/cupid1.png",
+  "/cupid.webp",
   "/the_binge_town.png",
   "/DRONACHARYA1.png",
   "/woolen_house1.png",
