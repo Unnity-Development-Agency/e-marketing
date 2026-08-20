@@ -467,15 +467,23 @@ export default function Home() {
   const submitHandler = async (e) => {
     e.preventDefault();
     setSending(true);
-    try {
-      const res = await fetch("/api/send-mail", {
+ try {
+    const response = await fetch(
+      "https://script.google.com/macros/s/AKfycbzGvjdcGxwSeaz_2jJErGaeM2qrgBoLmZ6b9S69geyKqC5obyaXAC5UoS7SvAsngdr-/exec",
+      {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8",
+        },
         body: JSON.stringify(formData),
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Failed");
-      alert("Thanks! Your enquiry has been sent.");
+      }
+    );
+
+    const result = await response.json();
+
+    if (result.success) {
+      console.log("Form submitted successfully");
+
       setFormData({
         companyName: "",
         budget: "",
@@ -485,11 +493,14 @@ export default function Home() {
         service: "",
         designation: "",
       });
-    } catch {
-      alert("Something went wrong. Please try again.");
-    } finally {
-      setSending(false);
+    } else {
+      console.error(result.message);
     }
+  } catch (error) {
+    console.error("Submission error:", error);
+  } finally{
+    setSending(false)
+  }
   };
   const handleMouseMove = (e) => {
     const section = sectionRef.current;
