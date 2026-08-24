@@ -16,6 +16,11 @@ const nextConfig = {
         destination: "/performance-marketing-agency-in-:country",
         permanent: true,
       },
+      {
+      source: "/showcase",
+      destination: "/marketing",
+      permanent: true,
+    },
     ];
   },
 };
