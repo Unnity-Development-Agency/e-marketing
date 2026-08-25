@@ -102,9 +102,9 @@ const Footer = () => {
               <li>
                 <Link href="/privacy">Privacy Policy</Link>
               </li>
-              {/* <li>
-                <Link href="/terms">Terms Of Service</Link>
-              </li> */}
+              <li>
+                <Link href="/performance-marketing-agency-in-australia">Australia</Link>
+              </li>
             </ul>
           </div>
 
