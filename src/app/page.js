@@ -13,6 +13,7 @@ import { IoDiamondOutline } from "react-icons/io5";
 import Loading from "./loading";
 import CountUp from "@/components/reactBits/CountUp";
 import dynamic from "next/dynamic";
+import AustraliaHero from "@/components/Australia-Hm/page";
 
 const FloatingLines = dynamic(
   () => import("@/components/reactBits/FloatingLines"),
@@ -176,6 +177,7 @@ const members = [
   { name: "Sidharth", role: "Social Media", photo: "/sidharth.jpg" },
   { name: "Jagriti", role: "Human Resources", photo: "/jagritii.jpg" },
   { name: "Shekar", role: "Marketing", photo: "/Shekhar.jpg" },
+  { name: "Mukund", role: "Marketing", photo: "/mukund.jpg" },
 ];
 
 const gallery = [
@@ -1531,7 +1533,7 @@ export default function Home() {
     </div>
   </div>
 </section>
-
+<AustraliaHero/>
         <Footer />
       </main>
 
