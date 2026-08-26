@@ -140,7 +140,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className={styles.footerBottom}>
           <p className={styles.copyright}>
-            © 2025 Unnity. All rights reserved. | Designed by Unnity Team
+            © 2025 Unnity. All rights reserved.
           </p>
           <div className={styles.watermark}>UNNITY</div>
         </div>

@@ -8,7 +8,7 @@ export default function AustraliaHero() {
   const tasmania = [[146.4,127.2],[146.4,124.8],[149.2,129.6],[149.2,127.2],[149.2,124.8],[151.9,132.0],[151.9,129.6],[151.9,127.2],[151.9,124.8],[154.7,132.0],[154.7,129.6],[154.7,127.2],[154.7,124.8],[157.4,132.0],[157.4,129.6],[157.4,127.2]];
 
   return (
-    <section className="relative mx-auto max-w-6xl overflow-hidden rounded-[10px] border-0 border-[#0F032B] bg-white shadow-sm mb-3.5">
+    <section className="relative mx-auto max-w-6xl overflow-hidden mt-9 rounded-[10px] border-0 border-[#0F032B] bg-white shadow-sm mb-3.5">
       <div className="relative flex flex-col sm:px-0 px-4 sm:flex-row h-auto sm:h-96">
         {/* Left content panel */}
         <div className="relative z-10 flex w-full flex-col justify-center gap-4 px-8 py-10 md:w-[58%] md:px-12">
