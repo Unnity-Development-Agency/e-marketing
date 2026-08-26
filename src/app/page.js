@@ -1461,11 +1461,11 @@ export default function Home() {
             TESTIMONIALS SLIDER
         ═══════════════════════════════ */}
         <TestimonialSlider testimonials={testimonials} />
-
+        <AustraliaHero/>
         {/* ═══════════════════════════════
             TEAM
         ═══════════════════════════════ */}
-       <section className="py-12 px-4">
+       <section className="py-10 px-4">
   <div className="max-w-6xl mx-auto">
     <header className="flex justify-between items-end gap-5 mb-7 flex-wrap">
       <div>
@@ -1533,7 +1533,7 @@ export default function Home() {
     </div>
   </div>
 </section>
-<AustraliaHero/>
+
         <Footer />
       </main>
 
