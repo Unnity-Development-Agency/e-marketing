@@ -12,6 +12,7 @@ import { useParams } from "next/navigation";
 import countryKeywords from "../../../data/countryKeywords.json";
 import Swiper from "../../../components/swiper/Swiper";
 import CityData from "@/components/CityData/page";
+import AustraliaCoverageSection from "@/components/Australia-service-section/page";
 
 const page = () => {
     const [sending, setSending] = useState(false);
@@ -1487,6 +1488,9 @@ const country = formatName(slug);
             </div>
           </div>
         </div> */}
+
+ <AustraliaCoverageSection/>
+
       </section>
       {/* Whtat our clients say */}
       <section className="w-full bg-white py-12 px-5">
@@ -1720,6 +1724,7 @@ const country = formatName(slug);
 </section>
 
       {/* Footer */}
+     
       <Footer />
     </>
   );
