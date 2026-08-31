@@ -27,7 +27,7 @@ const LeadFormContact = () => {
   });
 
   const handlePhoneChange = (e) => {
-    const value = e.target.value.replace(/\D/g, "").slice(0, 10);
+    const value = e.target.value.replace(/\D/g, "").slice(0, 15);
     setFormData((s) => ({ ...s, phone: value }));
   };
 
@@ -141,7 +141,7 @@ const LeadFormContact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
           {/* LEFT */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 justify-center">
             {perks.map((p, i) => (
               <div
                 key={i}
@@ -161,7 +161,7 @@ const LeadFormContact = () => {
               </div>
             ))}
 
-            <div className="flex-1 px-5 py-5 rounded-xl bg-white/[0.03] border border-white/[0.06] flex flex-col justify-between">
+            {/* <div className="flex-1 px-5 py-5 rounded-xl bg-white/[0.03] border border-white/[0.06] flex flex-col justify-between">
               <div>
                 <div className="flex gap-0.5 mb-3">
                   {[...Array(5)].map((_, i) => (
@@ -194,7 +194,7 @@ const LeadFormContact = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* RIGHT — Form */}
