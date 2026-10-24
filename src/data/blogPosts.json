@@ -1,0 +1,594 @@
+[
+  {
+    "slug": "scale-google-ads",
+    "cat": "Google Ads",
+    "catKey": "google-ads",
+    "cover": "chart",
+    "title": "How to Scale Google Ads Without Wasting Your Budget",
+    "dek": "A practical framework for growing spend while keeping every extra rupee accountable, from tracking and campaign structure to bidding and budgets.",
+    "date": "Oct 12, 2024",
+    "iso": "2024-10-12",
+    "minutes": 8,
+    "tags": ["Google Ads", "PPC", "ROAS", "Budgeting"],
+    "lead": "Every growing brand hits the same wall with Google Ads: the campaigns that worked at a small budget start to wobble the moment you push more money into them. Cost per lead creeps up, ROAS dips, and every extra rupee seems to buy less than the last one.",
+    "sections": [
+      {
+        "id": "why",
+        "title": "Why most accounts stall when they scale",
+        "blocks": [
+          { "t": "p", "text": "This is rarely a “Google Ads doesn’t work for us” problem. It’s usually a **foundation** problem: tracking, structure and budget habits that were fine at ₹20,000 a month but break at ₹2,00,000." },
+          { "t": "ul", "items": [
+            "**Weak conversion data.** The algorithm optimises for whatever you call a conversion. If that’s a page view, it will find you a lot of page views.",
+            "**Fragmented structure.** Dozens of tiny campaigns, each with too little data to learn from.",
+            "**Sudden budget jumps.** Doubling spend overnight resets learning and pushes the system into unfamiliar auctions."
+          ] },
+          { "t": "quote", "text": "You can’t scale what you can’t measure. Fix the data before you touch the budget." }
+        ]
+      },
+      {
+        "id": "tracking",
+        "title": "Fix your tracking before you spend more",
+        "blocks": [
+          { "t": "ol", "items": [
+            "**Track real outcomes.** Purchases, qualified leads or booked calls, not “visited contact page”.",
+            "**Set up enhanced conversions** so Google can match more conversions back to clicks.",
+            "**Pass values where you can.** If one service is worth more than another, tell Google.",
+            "**Import offline conversions** from your CRM so the system learns which leads actually closed."
+          ] },
+          { "t": "callout", "kind": "tip", "title": "Pro tip", "text": "Mark only one or two actions as Primary conversions. Keep clicks, scroll depth and page views as Secondary for reporting." }
+        ]
+      },
+      {
+        "id": "budget",
+        "title": "Scale budgets gradually",
+        "blocks": [
+          { "t": "p", "text": "Big jumps feel decisive but usually backfire. Raise budgets in steady steps and give each change time to settle before judging it." },
+          { "t": "table", "head": ["Situation", "What to do", "Verdict"], "rows": [
+            ["Hitting target, budget-limited", "Raise budget in small steps, then wait several days", "ok:Scale"],
+            ["Hitting target, not budget-limited", "Expand keywords, audiences or geos first", "ok:Expand"],
+            ["Just above target CPA", "Hold budget, fix landing page and search terms", "no:Hold"],
+            ["Far above target CPA", "Pull back, audit tracking and structure", "no:Fix first"]
+          ] },
+          { "t": "callout", "kind": "warn", "title": "Watch out", "text": "Don’t judge a change on one or two days of data. Weekday patterns and conversion delays can make a good change look bad." }
+        ]
+      },
+      {
+        "id": "bidding",
+        "title": "Let smart bidding do the heavy lifting",
+        "blocks": [
+          { "t": "ul", "items": [
+            "**Getting started:** Maximise Conversions to collect data quickly.",
+            "**Stable volume:** add a Target CPA close to what you already achieve.",
+            "**Value tracking in place:** move to Maximise Conversion Value or Target ROAS."
+          ] },
+          { "t": "cta", "title": "Not sure your account is ready to scale?", "text": "We’ll review your tracking, structure and search terms and tell you what to fix first.", "label": "Get a free audit" }
+        ]
+      },
+      {
+        "id": "waste",
+        "title": "Cut waste every single week",
+        "blocks": [
+          { "t": "p", "text": "Scaling adds new search terms and audiences, some good and some useless. Tick these off weekly:" },
+          { "t": "checklist", "items": [
+            "Review the search terms report and add negatives",
+            "Check for conversion tracking errors or sudden drops",
+            "Compare cost per conversion against target, by campaign",
+            "Pause ads and assets rated “Low” with enough impressions",
+            "Look at device, location and time-of-day performance"
+          ] }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Fix tracking first. Google can only optimise for what you measure.",
+      "Consolidate campaigns so each has enough data to learn.",
+      "Raise budgets in steady steps and give changes time to settle.",
+      "Use smart bidding with realistic targets, then tighten slowly.",
+      "Keep a weekly routine to cut wasted spend as you grow."
+    ],
+    "faqs": [
+      { "q": "How fast can I increase my Google Ads budget?", "a": "Small, steady increases with a few days between them are safer than one big jump. Accounts with more conversion data can usually move faster." },
+      { "q": "Why did my cost per lead go up when I scaled?", "a": "Some increase is normal because you’re reaching colder audiences. A sharp rise usually points to weak tracking, irrelevant search terms or a budget change that was too large." },
+      { "q": "How many conversions does smart bidding need?", "a": "More is better. Campaigns with steady weekly conversions learn faster, which is why consolidating beats splitting into many small campaigns." }
+    ]
+  },
+
+  {
+    "slug": "improve-google-ads-roi",
+    "cat": "Google Ads",
+    "catKey": "google-ads",
+    "cover": "chart",
+    "title": "Google Ads Audit Services: Find and Fix Campaign Issues",
+    "dek": "See what a Google Ads audit covers, when you need one, and how to find wasted spend and opportunities to improve your returns.",
+    "date": "Oct 12, 2024",
+    "iso": "2024-10-12",
+    "minutes": 6,
+    "tags": ["Google Ads", "PPC", "Audit", "ROAS"],
+    "lead": "By generating quality leads, boosting website traffic and driving sales, Google Ads is a valuable asset for businesses. But ineffective campaign setups, mismatched keywords, improper conversion tracking and poor bidding strategies can quietly waste your ad budget. By analysing campaign performance, businesses can identify issues, optimise their strategies and make data-driven decisions.",
+    "sections": [
+      {
+        "id": "what-is",
+        "title": "What is a Google Ads audit?",
+        "blocks": [
+          { "t": "p", "text": "Professional Google Ads Audit Services help businesses evaluate their advertising accounts, uncover performance gaps and identify opportunities to improve **return on ad spend (ROAS)**. A detailed audit evaluates campaign performance, audience targeting, conversion tracking and advertising budget management." },
+          { "t": "p", "text": "A Google Ads audit is an in-depth examination of an Ads account to establish whether campaigns are set up properly and meeting business goals. It covers campaign configuration, keywords, text ads, bidding, audience targeting and analytics." },
+          { "t": "p", "text": "The aim is to find out what is effective, what is costing money and what changes might help achieve better results. An audit gives a business a clear path forward for optimising, whether the goal is more qualified leads or more ecommerce sales." }
+        ]
+      },
+      {
+        "id": "includes",
+        "title": "What does a Google Ads audit include?",
+        "blocks": [
+          { "t": "p", "text": "A thorough audit reviews several important areas of campaign performance." },
+          { "t": "h3", "text": "1. Keyword and search term analysis" },
+          { "t": "p", "text": "Advertising money can be spent on irrelevant searches that bring no leads or sales. Analysing keyword performance and search term reports reveals which keywords are underperforming, which negative keywords are missing and where search intent targeting falls short." },
+          { "t": "p", "text": "This analysis lets companies move their budgets towards searches that are genuinely relevant to their products and services." },
+          { "t": "h3", "text": "2. Campaign structure and ad quality" },
+          { "t": "p", "text": "The structure of a campaign affects how effectively an account can be managed and optimised. An audit verifies **ad groups, keywords, responsive search ads, ad assets and landing page alignment**." },
+          { "t": "p", "text": "Improving these elements helps deliver a more consistent user journey and contributes to better campaign performance." },
+          { "t": "h3", "text": "3. Budget and bidding strategy review" },
+          { "t": "p", "text": "An inefficient bidding strategy can limit campaign growth or waste money. A Google Ads audit checks budget allocation, bidding options, cost per click (CPC), cost per acquisition (CPA) and conversion rates." },
+          { "t": "p", "text": "The results show businesses where their budget may need to be adjusted and which campaigns deserve more focus." },
+          { "t": "h3", "text": "4. Conversion tracking and analytics" },
+          { "t": "p", "text": "For PPC advertising to succeed, accurate measurement is crucial. An audit validates conversion actions, Google Analytics 4 integration, Google tag implementation and conversion attribution settings." },
+          { "t": "callout", "kind": "warn", "title": "Why tracking issues matter", "text": "Tracking problems can lead to incorrect performance reporting and poor optimisation decisions. Accurate metrics let advertisers judge the real value of campaigns." },
+          { "t": "h3", "text": "5. Landing page and performance analysis" },
+          { "t": "p", "text": "Even well-targeted ads can underperform when landing pages load slowly, communicate unclear offers or provide a poor mobile experience. Reviewing landing page relevance, page speed, calls to action and conversion paths can reveal opportunities to improve conversion rates." }
+        ]
+      },
+      {
+        "id": "why",
+        "title": "Why do businesses need Google Ads audit services?",
+        "blocks": [
+          { "t": "p", "text": "Businesses should consider an audit when advertising costs rise, conversions decline or campaign performance becomes inconsistent. Google Ads Audit Services can help identify wasted ad spend, uncover targeting issues and highlight opportunities to improve campaign efficiency." },
+          { "t": "callout", "kind": "tip", "title": "Other good times to audit", "text": "Before increasing advertising budgets, before launching new campaigns, or when taking over an account managed by another agency." }
+        ]
+      },
+      {
+        "id": "choose",
+        "title": "How to choose the right Google Ads audit partner",
+        "blocks": [
+          { "t": "p", "text": "Choose a provider that evaluates both technical settings and business performance. Look for a clear audit report, actionable recommendations, transparent communication and an approach tailored to your campaign goals." },
+          { "t": "p", "text": "A performance marketing partner such as Unnity can help businesses understand account issues and prioritise improvements based on their advertising objectives." },
+          { "t": "cta", "title": "Not sure where your budget is leaking?", "text": "We’ll review your keywords, tracking, bidding and landing pages, then tell you what to fix first.", "label": "Get a free audit" }
+        ]
+      },
+      {
+        "id": "conclusion",
+        "title": "Conclusion",
+        "blocks": [
+          { "t": "p", "text": "Google Ads Audit Services provide a structured way to assess campaign health, improve measurement and identify opportunities for better returns. Regular reviews help businesses make smarter advertising decisions and build a stronger foundation for long-term growth." }
+        ]
+      }
+    ],
+    "takeaways": [
+      "An audit shows what is working, what is wasting money and what to change.",
+      "Keyword and search term reviews stop budget leaking into irrelevant searches.",
+      "Accurate conversion tracking is the base for every good optimisation decision.",
+      "Audit when costs rise, conversions drop, before raising budgets, or when taking over an account.",
+      "A quarterly review is a useful starting point."
+    ],
+    "faqs": [
+      { "q": "What are Google Ads Audit Services?", "a": "They assess advertising campaigns to identify errors, wasted spending and optimisation opportunities." },
+      { "q": "How often should Google Ads campaigns be audited?", "a": "A quarterly review is a useful starting point, with additional audits after major campaign changes or performance declines." },
+      { "q": "What does a Google Ads audit check?", "a": "It reviews keywords, ads, budgets, bidding strategies, conversion tracking and landing pages." },
+      { "q": "Can a Google Ads audit reduce wasted ad spend?", "a": "Yes. It can identify irrelevant search terms, inefficient targeting and budget allocation issues." },
+      { "q": "How long does a Google Ads audit take?", "a": "It depends on account size, campaign complexity and tracking requirements. Smaller accounts may be reviewed faster than complex accounts." }
+    ]
+  },
+
+  {
+    "slug": "seo-strategies-2026",
+    "cat": "SEO",
+    "catKey": "seo",
+    "cover": "seo",
+    "title": "Why Is My Website Not Ranking on Google? A Complete SEO Guide",
+    "dek": "Find out the most common reasons a website struggles to rank on Google and the practical SEO fixes that help.",
+    "date": "Oct 2, 2024",
+    "iso": "2024-10-02",
+    "minutes": 7,
+    "tags": ["SEO", "Google Rankings", "Technical SEO", "Backlinks"],
+    "lead": "If your site isn’t on Google’s first page, you could be losing valuable opportunities to attract potential customers. Many businesses spend money on their websites and content but still can’t get better rankings. Knowing why your website is not ranking on Google is key to boosting visibility, growing organic traffic and creating leads. This guide covers the most common SEO problems and the practical solutions that help your website perform better in search results.",
+    "sections": [
+      {
+        "id": "indexing",
+        "title": "Google may not have indexed your website",
+        "blocks": [
+          { "t": "p", "text": "Indexing problems are the most common reason a site doesn’t rank. Pages can’t appear in organic search until Google has discovered and indexed them." },
+          { "t": "p", "text": "Use Google Search Console and check the **Pages indexing report** to see whether your site appears on Google. Make sure important pages are accessible, your XML sitemap is submitted and your robots.txt file isn’t blocking search engines." },
+          { "t": "callout", "kind": "tip", "title": "Is your website new?", "text": "Indexing and discovery can take some time. Fix any issues you find, then request indexing for your pages in Google Search Console." }
+        ]
+      },
+      {
+        "id": "intent",
+        "title": "Your content may not answer what users are searching for",
+        "blocks": [
+          { "t": "p", "text": "Google wants to show users the content that is most relevant to their query. If your content doesn’t match what searchers are looking for, it may not rank. To improve it:" },
+          { "t": "ul", "items": [
+            "**Understand the search intent** behind your target keywords.",
+            "**Answer users’ questions** clearly and directly.",
+            "**Add relevant examples,** practical tips and useful information.",
+            "**Update outdated content** regularly."
+          ] },
+          { "t": "p", "text": "Creating helpful, relevant content improves your chances of attracting qualified organic traffic." }
+        ]
+      },
+      {
+        "id": "keywords",
+        "title": "Your target keywords may be too competitive",
+        "blocks": [
+          { "t": "p", "text": "Ranking is hard when you target highly competitive keywords without considering your website’s authority. Established websites often dominate general phrases." },
+          { "t": "p", "text": "Aim for specific **long-tail keywords** that meet the needs of users instead. For example, rather than a general term like “SEO services”, use something specific like “SEO services for small businesses” or “technical SEO audit services”." },
+          { "t": "p", "text": "Do keyword research to assess search volume, competition and user intent before you develop content." }
+        ]
+      },
+      {
+        "id": "technical",
+        "title": "Technical SEO problems may be limiting your visibility",
+        "blocks": [
+          { "t": "p", "text": "Technical SEO helps search engines crawl, understand and index your website. Issues with site structure, broken links, page speed, mobile usability or duplicate content can all hurt performance. Review these technical elements:" },
+          { "t": "ul", "items": [
+            "**Crawlability:** make sure search engines can easily crawl and access all important pages.",
+            "**Indexing:** check for accidental noindex tags and indexing errors.",
+            "**Mobile usability:** make sure your website works well on mobile devices.",
+            "**Page experience:** improve loading performance and address Core Web Vitals issues.",
+            "**Internal links:** connect related pages using descriptive anchor text."
+          ] },
+          { "t": "p", "text": "Regular technical SEO audits help you spot problems before they affect important pages." }
+        ]
+      },
+      {
+        "id": "backlinks",
+        "title": "Your website may need stronger backlinks",
+        "blocks": [
+          { "t": "p", "text": "Backlinks from authoritative, trustworthy sites help search engines judge the credibility of your content. But collecting a large number of poor-quality links is not a good strategy." },
+          { "t": "p", "text": "Focus on earning quality, long-term and relevant backlinks through content, resources, digital PR and genuine partnerships." },
+          { "t": "callout", "kind": "warn", "title": "Avoid spammy link building", "text": "Spammy link building can harm your website. A strong backlink strategy works best alongside excellent content and a technically sound site, and together they support sustainable SEO growth." }
+        ]
+      },
+      {
+        "id": "internal-links",
+        "title": "Your internal linking structure may be weak",
+        "blocks": [
+          { "t": "p", "text": "Internal links help search engines and users understand your website and show how different pages relate to each other. Without good internal linking, it is hard for search engines to tell how important your service pages are." },
+          { "t": "p", "text": "Use relevant, descriptive anchor text to connect related blog posts with their matching service pages. For example, an article about ranking issues can link to your SEO audit or technical SEO services page, which is genuinely helpful for the reader." }
+        ]
+      },
+      {
+        "id": "tracking",
+        "title": "You may not be tracking SEO performance properly",
+        "blocks": [
+          { "t": "p", "text": "SEO is an ongoing process. Check **impressions, clicks, average position and indexing issues** in Google Search Console. Google Analytics helps you track organic traffic, understand user behaviour and measure engagement on your website." },
+          { "t": "p", "text": "If your website is not ranking, work out which pages have lost rankings, which keywords are performing poorly and whether competitors have better content. Make data-driven improvements based on evidence rather than random changes." }
+        ]
+      },
+      {
+        "id": "unnity",
+        "title": "How Unnity can help improve your Google rankings",
+        "blocks": [
+          { "t": "p", "text": "Improving search visibility takes a combination of keyword research, technical SEO, content optimisation, internal linking and authority building. Unnity helps businesses identify digital marketing opportunities and develop strategies aligned with their growth goals." },
+          { "t": "p", "text": "A structured SEO approach can help address ranking issues, attract relevant visitors and create more opportunities to generate qualified leads." },
+          { "t": "cta", "title": "Not sure why your site isn’t ranking?", "text": "We’ll check your indexing, content, technical setup and links, then tell you what to fix first.", "label": "Get an SEO audit" }
+        ]
+      },
+      {
+        "id": "conclusion",
+        "title": "Conclusion",
+        "blocks": [
+          { "t": "p", "text": "If your website is not ranking on Google, the reasons may include indexing problems, mismatched search intent, technical SEO errors, high keyword competition, weak backlinks or poor internal linking. The first step to better organic visibility is to pinpoint what the problem is." },
+          { "t": "p", "text": "Monitoring performance, publishing helpful content, fixing technical issues and improving your SEO efforts all build a more solid groundwork for future growth. By sticking to a consistent strategy, Unnity can help your business achieve better search positions and more relevant traffic." }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Make sure Google has indexed your important pages.",
+      "Match your content to search intent and answer questions directly.",
+      "Target specific long-tail keywords instead of highly competitive phrases.",
+      "Fix technical issues like crawl errors, broken links, mobile usability and page speed.",
+      "Build quality backlinks and strong internal links, and track performance with data."
+    ],
+    "faqs": [
+      { "q": "Why is my website not ranking on Google?", "a": "Common reasons include indexing issues, poor content, technical SEO errors and high keyword competition." },
+      { "q": "How can you check whether Google has indexed your website?", "a": "Use Google Search Console or search site:yourdomain.com on Google." },
+      { "q": "How long does SEO take to improve rankings?", "a": "SEO results typically take weeks or months, depending on competition and website performance." },
+      { "q": "Can technical SEO issues affect rankings?", "a": "Yes. Crawl errors, broken links and incorrect indexing settings can affect search visibility." },
+      { "q": "Can an SEO agency help improve Google rankings?", "a": "Yes. An SEO agency can improve technical SEO, content optimisation, keyword targeting and backlink quality." }
+    ]
+  },
+
+  {
+    "slug": "meta-ads-vs-google-ads",
+    "cat": "Meta Ads",
+    "catKey": "meta-ads",
+    "cover": "chart",
+    "title": "How Meta Ads Management Services Help Businesses Grow",
+    "dek": "Learn how professional Meta Ads management helps you reach the right audience, generate leads and make your ad budget work harder.",
+    "date": "Sep 28, 2024",
+    "iso": "2024-09-28",
+    "minutes": 6,
+    "tags": ["Meta Ads", "Facebook Ads", "Instagram Ads", "Lead Generation"],
+    "lead": "In today’s competitive digital landscape, businesses need effective advertising strategies to reach their target audience, increase brand awareness, and generate sales. Facebook and Instagram offer powerful opportunities, but successful campaigns need proper planning, audience targeting, engaging creatives and continuous optimisation. This is where Meta Ads Management Services help.",
+    "sections": [
+      {
+        "id": "how-it-works",
+        "title": "How Meta Ads management works",
+        "blocks": [
+          { "t": "p", "text": "Meta advertising allows businesses to promote their products and services across platforms such as Facebook and Instagram. Professional campaign management involves audience research, campaign setup, ad creation, budget allocation, conversion tracking and performance analysis." },
+          { "t": "p", "text": "These activities help businesses build targeted campaigns that align with their marketing objectives. A well-planned strategy can improve audience engagement, attract potential customers and make advertising budgets more effective." }
+        ]
+      },
+      {
+        "id": "audience",
+        "title": "Reach the right target audience",
+        "blocks": [
+          { "t": "p", "text": "One of the biggest advantages of Meta advertising is its audience targeting. Businesses can connect with potential customers based on **location, demographics, interests and online behaviour**." },
+          { "t": "p", "text": "Effective segmentation focuses your efforts on people who are more likely to be interested in your offerings. For example, an e-commerce store can target users interested in particular product categories, while a local service provider can reach potential customers within selected locations." },
+          { "t": "p", "text": "With Meta Ads Management Services, businesses can test different audience segments and refine targeting based on campaign performance. This reduces irrelevant ad delivery and improves the chances of attracting qualified prospects." }
+        ]
+      },
+      {
+        "id": "awareness",
+        "title": "Increase brand awareness",
+        "blocks": [
+          { "t": "p", "text": "Building brand awareness is essential for establishing a strong online presence. Facebook and Instagram offer multiple ad formats:" },
+          { "t": "ul", "items": [
+            "**Image ads** for clear, simple product showcases.",
+            "**Video ads** to tell your brand story.",
+            "**Stories and Reels** to reach people in fast, full-screen formats.",
+            "**Carousel ads** to present several products or features at once."
+          ] },
+          { "t": "p", "text": "Consistent social media advertising introduces your brand to new audiences and keeps your offerings visible. Compelling creatives, clear messaging and strong calls to action encourage people to learn more about your business." }
+        ]
+      },
+      {
+        "id": "leads",
+        "title": "Generate quality leads",
+        "blocks": [
+          { "t": "p", "text": "Lead generation helps businesses attract enquiries and convert interested prospects into customers. Meta advertising supports it through **instant forms, landing pages and click-to-message campaigns**." },
+          { "t": "p", "text": "For example, real estate businesses can generate property enquiries, educational institutions can collect course registrations, and service providers can encourage consultation requests." },
+          { "t": "callout", "kind": "tip", "title": "What a successful lead campaign needs", "text": "Relevant ad creatives, appropriate targeting and a simple enquiry process. Follow up with potential customers promptly to improve conversion opportunities." }
+        ]
+      },
+      {
+        "id": "sales",
+        "title": "Improve sales and website conversions",
+        "blocks": [
+          { "t": "p", "text": "Facebook and Instagram advertising can drive relevant traffic to your website and encourage purchases. Product ads, promotional offers, customer testimonials and clear calls to action guide potential customers towards conversion." },
+          { "t": "p", "text": "Retargeting campaigns let you reconnect with people who have visited your website, viewed products or interacted with your business but did not complete a purchase." },
+          { "t": "p", "text": "With Meta Ads Management Services, businesses can monitor results, identify opportunities for improvement and refine their strategies. A well-designed landing page and accurate conversion tracking are also important for turning visitors into customers." }
+        ]
+      },
+      {
+        "id": "budget",
+        "title": "Optimise advertising budgets",
+        "blocks": [
+          { "t": "p", "text": "Effective budget management helps you use your advertising investment strategically. Spending more does not automatically guarantee better results. Campaigns need regular monitoring, testing and optimisation." },
+          { "t": "table", "head": ["Metric", "What it tells you"], "rows": [
+            ["CTR (click-through rate)", "How compelling your ad is to the audience"],
+            ["CPL (cost per lead)", "How much each enquiry costs you"],
+            ["Conversion rate", "How many visitors complete the desired action"],
+            ["CPA (cost per acquisition)", "How much each customer costs you"],
+            ["ROAS (return on ad spend)", "Revenue earned for every unit of ad spend"]
+          ] },
+          { "t": "p", "text": "Analysing these metrics helps you identify high-performing ads and adjust spending according to your objectives. Testing different creatives, placements and audience segments also supports better budget decisions." }
+        ]
+      },
+      {
+        "id": "data",
+        "title": "Make data-driven marketing decisions",
+        "blocks": [
+          { "t": "p", "text": "Successful digital advertising depends on continuous performance analysis. Meta Ads Manager provides insights into impressions, clicks, engagement, conversions and campaign costs." },
+          { "t": "p", "text": "You can use these insights to compare audience groups, evaluate creative performance and understand customer behaviour. A/B testing different headlines, visuals and calls to action helps identify which ads resonate with your target audience." },
+          { "t": "p", "text": "A data-driven approach improves campaigns based on measurable results rather than assumptions. Regular reporting also makes it easier to see whether your advertising supports your business goals." }
+        ]
+      },
+      {
+        "id": "why-unnity",
+        "title": "Why choose Unnity for digital marketing?",
+        "blocks": [
+          { "t": "p", "text": "Choosing the right digital marketing approach can help businesses build visibility, connect with relevant audiences and improve online performance. A structured advertising strategy focuses on business objectives, audience needs, creative quality and measurable outcomes." },
+          { "t": "p", "text": "Whether you want to increase brand awareness, generate qualified leads or improve online sales, effective campaign planning and ongoing optimisation are essential for sustainable growth." },
+          { "t": "cta", "title": "Ready to grow with Meta Ads?", "text": "Unnity helps businesses strengthen their digital presence with strategic marketing designed to support lead generation, customer engagement and sustainable growth.", "label": "Talk to Unnity" }
+        ]
+      },
+      {
+        "id": "conclusion",
+        "title": "Conclusion",
+        "blocks": [
+          { "t": "p", "text": "Meta advertising offers valuable opportunities to reach potential customers, increase brand awareness, generate qualified leads and improve conversions. Consistent results, however, require effective audience targeting, engaging ad creatives, accurate conversion tracking and continuous campaign optimisation." },
+          { "t": "p", "text": "Investing in Meta Ads Management Services can help businesses improve advertising performance, manage budgets effectively and make data-driven marketing decisions." }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Meta targeting lets you reach people by location, demographics, interests and behaviour.",
+      "Facebook and Instagram formats like Reels, Stories, video and carousels build brand awareness.",
+      "Instant forms, landing pages and click-to-message ads drive quality leads.",
+      "Track CTR, CPL, conversion rate, CPA and ROAS to optimise your budget.",
+      "Continuous testing and reporting beat assumptions."
+    ],
+    "faqs": [
+      { "q": "What are Meta Ads Management Services?", "a": "Meta Ads Management Services help businesses plan, manage and optimise advertising campaigns on Facebook and Instagram." },
+      { "q": "How do Meta Ads Management Services help businesses grow?", "a": "They help businesses reach target audiences, generate quality leads, increase sales and improve conversions with Unnity." },
+      { "q": "Which platforms are covered by Meta Ads Management Services?", "a": "These services cover advertising on Facebook, Instagram, Messenger and other eligible Meta placements." },
+      { "q": "How can Meta Ads Management Services generate quality leads?", "a": "They use targeted ads, instant forms, landing pages and click-to-message campaigns to attract potential customers." },
+      { "q": "Why choose Unnity for Meta Ads Management Services?", "a": "Unnity focuses on audience targeting, campaign optimisation and performance tracking to help businesses achieve measurable advertising results." }
+    ]
+  },
+
+  {
+    "slug": "performance-marketing-guide",
+    "cat": "Performance Marketing",
+    "catKey": "performance",
+    "cover": "perf",
+    "title": "Performance Marketing: A Strategic Approach to Digital Growth in 2026",
+    "dek": "Learn how performance marketing connects ad spend to measurable results like leads, sales and conversions.",
+    "date": "Sep 25, 2024",
+    "iso": "2024-09-25",
+    "minutes": 8,
+    "tags": ["Performance Marketing", "Google Ads", "Meta Ads", "Conversions"],
+    "lead": "In today’s competitive digital landscape, businesses need effective strategies to attract potential customers, generate qualified leads and increase sales. Simply running online ads is no longer enough for sustainable growth. Performance Marketing is a data-driven approach that connects advertising spend with measurable outcomes, helping businesses evaluate campaign effectiveness, identify growth opportunities and optimise their marketing strategies.",
+    "sections": [
+      {
+        "id": "intro",
+        "title": "Why data-driven advertising matters in 2026",
+        "blocks": [
+          { "t": "p", "text": "As businesses look to expand their digital presence in 2026, data-driven decision-making has become increasingly important. By selecting the right advertising channels, targeting relevant audiences and tracking conversions, companies can turn digital advertising into a measurable and scalable growth opportunity." }
+        ]
+      },
+      {
+        "id": "audience",
+        "title": "Reach the right audience",
+        "blocks": [
+          { "t": "p", "text": "One of the primary advantages of digital advertising is the ability to target audiences based on **interests, search behaviour, location, demographics and purchasing intent**. Platforms such as Google Ads and Meta Ads let businesses reach relevant customer segments instead of relying on broad campaigns." },
+          { "t": "p", "text": "Google Ads helps businesses connect with users actively searching for specific products or services, while Facebook and Instagram advertising can increase brand awareness, encourage engagement and generate leads. An effective strategy aligns audience targeting with clear business objectives to improve campaign relevance and efficiency." }
+        ]
+      },
+      {
+        "id": "leads",
+        "title": "Generate quality leads and increase sales",
+        "blocks": [
+          { "t": "p", "text": "Generating website traffic is important, but attracting qualified prospects is essential for sustainable growth. Businesses should focus on reaching audiences who are more likely to enquire, make a purchase or complete another valuable action." },
+          { "t": "p", "text": "Through pay-per-click (PPC) advertising, lead generation campaigns and remarketing, businesses can engage potential customers at different stages of the buying journey. For example, a service-based business can use Google Search campaigns to generate enquiries, while an e-commerce company can promote its products through targeted shopping and social media ads." },
+          { "t": "p", "text": "A well-planned strategy also involves testing different ad creatives, audience segments, landing pages and calls to action. This helps identify the combinations that improve lead quality, increase conversions and support sales growth." }
+        ]
+      },
+      {
+        "id": "budget",
+        "title": "Optimise advertising budgets",
+        "blocks": [
+          { "t": "p", "text": "Poor targeting and inadequate measurement can lead to unnecessary ad spend. Regular campaign analysis helps businesses identify inefficient spending, refine targeting and allocate budgets to campaigns that deliver meaningful results." },
+          { "t": "table", "head": ["Metric", "What it tells you"], "rows": [
+            ["CPC (cost per click)", "How much each click costs"],
+            ["CPL (cost per lead)", "How much each lead costs"],
+            ["CAC (customer acquisition cost)", "How much each new customer costs"],
+            ["Conversion rate", "How many visitors take the desired action"],
+            ["ROAS (return on ad spend)", "Revenue earned for every unit of ad spend"]
+          ] },
+          { "t": "callout", "kind": "warn", "title": "Lowest cost is not always best", "text": "Also consider lead quality, customer lifetime value, revenue and profitability. Effective Performance Marketing focuses on measurable business value, not just lower ad costs." }
+        ]
+      },
+      {
+        "id": "conversions",
+        "title": "Improve conversions through data and testing",
+        "blocks": [
+          { "t": "p", "text": "Attracting visitors is only one part of the customer journey. A well-designed landing page with relevant content, intuitive navigation and clear calls to action encourages visitors to take the next step." },
+          { "t": "p", "text": "Conversion rate optimisation (CRO) helps businesses find barriers that stop users from completing desired actions. Testing different headlines, forms, page layouts, offers and calls to action can reveal ways to improve the user experience and increase conversions." },
+          { "t": "p", "text": "Accurate conversion tracking and analytics are equally important. They show whether campaigns generate qualified enquiries, purchases, registrations or other valuable actions, so businesses can keep refining their campaigns and improve efficiency." }
+        ]
+      },
+      {
+        "id": "trends",
+        "title": "Adapt to digital advertising trends in 2026",
+        "blocks": [
+          { "t": "p", "text": "Digital advertising keeps evolving, with platforms such as Google Ads introducing AI-powered tools for campaign automation, creative optimisation, audience targeting and measurement." },
+          { "t": "p", "text": "Automation can improve efficiency, but successful advertising still needs strategic planning, reliable data and regular human oversight. Make sure of the following:" },
+          { "t": "ul", "items": [
+            "**Conversion tracking** is configured correctly.",
+            "**Customer insights** inform campaign decisions.",
+            "**Ad creatives** stay relevant to your target audiences."
+          ] },
+          { "t": "p", "text": "Performance Marketing combines technology with strategic decision-making to help businesses adapt to changing customer behaviour and advertising trends. By setting clear objectives, monitoring meaningful metrics and reviewing performance regularly, companies can make informed adjustments and pursue sustainable growth." }
+        ]
+      },
+      {
+        "id": "unnity",
+        "title": "Grow your business with Unnity",
+        "blocks": [
+          { "t": "p", "text": "Choosing the right digital advertising strategy depends on a business’s objectives, target audience, competitive landscape and available budget. Unnity helps businesses explore digital growth opportunities through strategic advertising, campaign optimisation and data-driven marketing solutions." },
+          { "t": "p", "text": "Whether the goal is to generate leads through Google Ads, increase engagement through Meta Ads, reconnect with potential customers through remarketing or improve website conversions, marketing activities should be aligned with measurable business outcomes." },
+          { "t": "p", "text": "A structured approach lets businesses evaluate results, identify areas for improvement and adapt campaigns as customer expectations and business priorities change. With continuous optimisation and effective measurement, businesses can make better use of their ad investments and strengthen their digital presence." },
+          { "t": "cta", "title": "Want a performance plan for your business?", "text": "We’ll look at your goals, audience and budget, then show you where growth is hiding.", "label": "Book a strategy call" }
+        ]
+      },
+      {
+        "id": "conclusion",
+        "title": "Conclusion",
+        "blocks": [
+          { "t": "p", "text": "In 2026, Performance Marketing plays an important role in sustainable digital growth. Businesses can no longer depend solely on online visibility and clicks. They need precise audience targeting, effective budget management, optimised landing pages and reliable performance measurement to achieve meaningful results." },
+          { "t": "p", "text": "By combining data-driven strategies, continuous testing and consistent campaign optimisation, businesses can improve lead generation, increase sales and better understand their return on investment. With a clear strategy and a focus on measurable outcomes, Unnity can help businesses strengthen their digital marketing and support long-term growth." }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Performance Marketing ties ad spend to measurable results like leads, sales and conversions.",
+      "Target by interests, search behaviour, location, demographics and intent.",
+      "Track CPC, CPL, CAC, conversion rate and ROAS, but also look at lead quality and profitability.",
+      "Test headlines, forms, layouts, offers and calls to action to improve conversions.",
+      "AI automation helps, but it still needs reliable data and human oversight."
+    ],
+    "faqs": [
+      { "q": "What is Performance Marketing?", "a": "Performance Marketing is a data-driven advertising strategy that focuses on measurable results, such as leads, sales and conversions." },
+      { "q": "How does Performance Marketing help businesses grow?", "a": "It helps businesses reach the right audience, generate quality leads, improve conversions and optimise advertising budgets with Unnity." },
+      { "q": "Which platforms are used for Performance Marketing?", "a": "Popular platforms include Google Ads, Facebook Ads, Instagram Ads and other digital advertising channels." },
+      { "q": "How can businesses measure Performance Marketing success?", "a": "Businesses can track cost per lead (CPL), conversion rates, customer acquisition cost (CAC) and return on ad spend (ROAS)." },
+      { "q": "Why is Performance Marketing important in 2026?", "a": "It helps businesses make data-driven decisions, improve campaign efficiency and achieve measurable growth with Unnity." }
+    ]
+  },
+
+  {
+    "slug": "website-features-conversions",
+    "cat": "Web Development",
+    "catKey": "web-dev",
+    "amber": true,
+    "cover": "browser",
+    "title": "7 Website Features That Increase Conversions",
+    "dek": "Build a website that turns visitors into customers, starting with the features that matter most.",
+    "date": "Sep 20, 2024",
+    "iso": "2024-09-20",
+    "minutes": 6,
+    "tags": ["Web Development", "Conversion", "UX", "Shopify"],
+    "lead": "A beautiful website that doesn’t convert is an expensive brochure. The good news is that conversion rarely depends on one big redesign. It comes from a handful of features done well.",
+    "sections": [
+      {
+        "id": "seven",
+        "title": "The seven features",
+        "blocks": [
+          { "t": "ol", "items": [
+            "**Fast loading.** Compress images, limit heavy scripts and test on a mid-range phone.",
+            "**Mobile-first layout.** Thumb-friendly buttons and readable text without zooming.",
+            "**One clear call to action** per screen, repeated where decisions happen.",
+            "**Social proof.** Reviews, client logos and short case studies near the CTA.",
+            "**Short, friendly forms.** Ask only what you need to follow up.",
+            "**Trust signals.** Secure checkout, clear policies and visible contact details.",
+            "**Built-in analytics.** Track key actions so you know what to improve."
+          ] },
+          { "t": "callout", "kind": "tip", "title": "Start here", "text": "If you can only do two things this month, speed up your slowest landing page and cut your longest form in half." }
+        ]
+      },
+      {
+        "id": "why",
+        "title": "Why these matter more than design trends",
+        "blocks": [
+          { "t": "p", "text": "Visitors decide quickly. If a page is slow, confusing or doesn’t feel trustworthy, they leave, and no amount of ad spend fixes that. These features remove friction at the exact moments people hesitate." },
+          { "t": "callout", "kind": "warn", "title": "Don’t guess", "text": "Check your analytics or session recordings before changing things, so you fix what’s actually costing you leads." }
+        ]
+      },
+      {
+        "id": "audit",
+        "title": "Quick conversion audit",
+        "blocks": [
+          { "t": "checklist", "items": [
+            "Main page loads comfortably on mobile data",
+            "Every key page has one obvious next step",
+            "Reviews or proof appear near the CTA",
+            "Forms ask for the minimum information",
+            "Contact details and policies are easy to find"
+          ] },
+          { "t": "cta", "title": "Want a site that converts?", "text": "Our team designs and builds fast, conversion-focused websites and Shopify stores.", "label": "Plan your website" }
+        ]
+      }
+    ],
+    "takeaways": [
+      "Speed and mobile experience come first.",
+      "Give every page one clear call to action.",
+      "Show proof and trust where decisions happen.",
+      "Keep forms short and track what visitors do."
+    ],
+    "faqs": [
+      { "q": "Do I need a full redesign to improve conversions?", "a": "Usually not. Targeted fixes to speed, calls to action and forms often deliver the biggest gains." },
+      { "q": "How do I know what to fix first?", "a": "Look at where visitors drop off in your analytics, then address the biggest drop-off page first." },
+      { "q": "Do these apply to Shopify stores too?", "a": "Yes. Speed, mobile layout, social proof and checkout trust are just as important on e-commerce." }
+    ]
+  }
+]
