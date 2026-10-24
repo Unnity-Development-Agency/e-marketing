@@ -229,7 +229,7 @@ export default function Hero() {
             >
               Marketing that{" "}
               <span className="relative inline-block whitespace-nowrap">
-               shop up
+               shows up
 
                 <svg
                   viewBox="0 0 200 20"
