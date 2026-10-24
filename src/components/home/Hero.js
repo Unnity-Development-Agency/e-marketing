@@ -5,11 +5,12 @@ import { motion, useReducedMotion } from "framer-motion";
 import Button from "./Button";
 
 const rotatingWords = [
-  "revenue.",
-  "qualified leads.",
-  "repeat customers.",
-  "brand demand.",
+  "order count.",
+  "lead sheet.",
+  " monthly revenue.",
+  "bank account.",
 ];
+
 
 const platforms = [
   "Meta Ads",
@@ -226,9 +227,9 @@ export default function Hero() {
               id="home-hero-heading"
               className="mb-6 mt-6 text-[clamp(2rem,4.5vw,4.4rem)] font-bold leading-[1.1] tracking-[-0.035em]"
             >
-              We turn{" "}
+              Marketing that{" "}
               <span className="relative inline-block whitespace-nowrap">
-                ad spend
+               shop up
 
                 <svg
                   viewBox="0 0 200 20"
@@ -247,11 +248,11 @@ export default function Hero() {
                   />
                 </svg>
               </span>{" "}
-              into
+              in your
               <br />
 
               <span className="sr-only">
-                revenue, qualified leads, repeat customers and brand demand.
+                order count., lead sheet., monthly revenue. and bank account.
               </span>
 
               <span
