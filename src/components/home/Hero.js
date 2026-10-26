@@ -213,7 +213,7 @@ export default function Hero() {
       <div className="mx-auto w-full max-w-[1200px]">
         <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_1fr] lg:gap-12 xl:gap-14">
           {/* Left content */}
-          <div className="min-w-0 text-center lg:text-left">
+          <div className="max-lg:mt-8 min-w-0 text-center lg:text-left">
             <span className="inline-flex items-center gap-2 rounded-full border border-[#1B1855]/15 bg-[#0f032b]/5 px-3.5 py-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#0f032b] sm:text-xs">
               <span
                 aria-hidden="true"
@@ -286,12 +286,12 @@ export default function Hero() {
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3.5 lg:justify-start">
-              <Button href="#contact">
+              <Button href="#contact-form">
                 Get a free growth audit
               </Button>
 
               <Button
-                href="#work"
+                href="explore-project"
                 variant="secondary"
                 showArrow={false}
               >
@@ -639,23 +639,9 @@ export default function Hero() {
         </div>
 
         {/* Bottom advantages */}
-        <ul className="mt-12 flex list-none flex-wrap justify-center gap-2.5 p-0 sm:mt-14 lg:mt-16">
-          {advantages.map((advantage, index) => (
-            <li
-              key={advantage}
-              className="flex items-center gap-2.5 rounded-full border border-[#1B1855]/10 bg-white/90 px-3.5 py-2.5 text-xs text-[#5F5C80] transition-colors hover:border-[#0f032b]/40 sm:px-[18px] sm:text-sm"
-            >
-              <span className="text-[11px] font-bold text-[#6D63F2]">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-
-              {advantage}
-            </li>
-          ))}
-        </ul>
-
+      
         {/* Scroll indicator */}
-        <div className="mt-10 flex justify-center">
+        {/* <div className="mt-10 flex justify-center">
           <a
             href="#services"
             aria-label="Scroll to services"
@@ -684,7 +670,7 @@ export default function Hero() {
               className="h-2 w-1 rounded-full bg-[#6D63F2]"
             />
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );

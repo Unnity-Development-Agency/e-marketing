@@ -161,7 +161,7 @@ function ServiceCard({ service }) {
           ))}
         </ul>
 
-        <div className="mt-auto border-t border-[#1B1855]/10 pt-4">
+        {/* <div className="mt-auto border-t border-[#1B1855]/10 pt-4">
           <a
             href="#contact"
             aria-label={service.cta}
@@ -192,7 +192,7 @@ function ServiceCard({ service }) {
               <ArrowIcon />
             </span>
           </a>
-        </div>
+        </div> */}
       </div>
     </article>
   );
