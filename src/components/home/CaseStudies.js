@@ -35,7 +35,7 @@ const caseStudies = [
   {
     id: "Cupid Clothing",
     brand: "Cupid Clothing",
-    logo: "",
+    logo: "/cupid.webp",
     category: "ecom",
     industry: "Fashion",
     location: "India",
@@ -61,7 +61,7 @@ const caseStudies = [
     description:
       "Scaled a ₹34 Cr-funded brand on Meta and Google, cutting ₹6L in wasted spend.",
     metrics: [
-       { value: "₹1.29cr", label: "Sales" },
+       { value: "₹1.29Cr", label: "Sales" },
       { value: "₹46L", label: "Spend" },
        { value: "2.7", label: "ROAS" },
     ],
@@ -71,7 +71,7 @@ const caseStudies = [
   {
     id: "Hubhawks",
     brand: "Hubhawks",
-    logo: "",
+    logo: "/hub1.png",
     category: "lead",
     industry: "Real estate",
     location: "Dehradun",
@@ -89,7 +89,7 @@ const caseStudies = [
   {
       id: "E-Travelsim",
     brand: "E-Travelsim",
-    logo: "",
+    logo: "/e-travel.avif",
     category: "web",
     industry: "Fitness",
     location: "India",
@@ -97,8 +97,8 @@ const caseStudies = [
     description:
       "Global Google Ads for an eSIM brand, converting at nearly 10% with sharp targeting",
     metrics: [
-      { value: "₹2.82cr", label: "Sales" },
-      { value: "₹1.02cr", label: "Spend" },
+      { value: "₹2.82Cr", label: "Sales" },
+      { value: "₹1.02Cr", label: "Spend" },
        { value: "2.76", label: "ROAS" },
     ],
     channels: "Web dev · Social",
@@ -107,7 +107,7 @@ const caseStudies = [
   {
     id: "Donmiller",
     brand: "Donmiller",
-    logo: "",
+    logo: "/donmiller1.png",
     category: "web",
     industry: "Travel",
     location: "Delhi",
@@ -125,7 +125,7 @@ const caseStudies = [
   {
     id: "Core",
     brand: "Core",
-    logo: "",
+    logo: "/the_core1.png",
     category: "web",
     industry: "Travel",
     location: "Delhi",
@@ -143,7 +143,7 @@ const caseStudies = [
   {
     id: "Uberlyfe",
     brand: "Uberlyfe",
-    logo: "",
+    logo: "/uberlyfe1.png",
     category: "web",
     industry: "Travel",
     location: "Delhi",
@@ -227,7 +227,7 @@ function CaseStudyCard({ item }) {
           )}
         </div>
 
-        <a
+        {/* <a
           href={destination}
           aria-label={`Learn about ${item.brand}`}
           className={[
@@ -240,7 +240,7 @@ function CaseStudyCard({ item }) {
           ].join(" ")}
         >
           <ArrowIcon diagonal />
-        </a>
+        </a> */}
       </div>
 
       {/* Category and location */}
@@ -290,7 +290,7 @@ function CaseStudyCard({ item }) {
       </dl>
 
       {/* Card footer */}
-      <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
+      {/* <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
         <span className="text-[10px] leading-4 text-[#5F5C80]">
           {item.channels}
         </span>
@@ -309,7 +309,7 @@ function CaseStudyCard({ item }) {
 
           <ArrowIcon />
         </a>
-      </div>
+      </div> */}
     </article>
   );
 }
