@@ -85,7 +85,7 @@ export default function LeadForm() {
         className="fixed inset-0 bg-black/60 cursor-default"
       />
 
-    <div className="relative bg-[#fafbff] rounded-2xl pt-14 pb-8 px-4 w-full max-w-6xl">
+    <div className="relative bg-[#fafbff] rounded-2xl pt-14 pb-8 px-4 w-full max-w-3xl">
   {/* close button */}
   <a
     href="#"
@@ -95,8 +95,8 @@ export default function LeadForm() {
     ✕
   </a>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-2 gap-10 items-center max-lg:grid-cols-1">
-          <div className="relative">
+        <div className="max-w-2xl mx-auto grid grid-cols-1 gap-10 items-center max-lg:grid-cols-1">
+          {/* <div className="relative">
             <div className="relative rounded-full bg-[radial-linear(120%_120%_at_30%_20%,#fff_0%,#f3f5fb_45%,#efeefe_100%)] border-2 border-[#ececf6] aspect-square grid place-items-center overflow-hidden max-lg:max-w-lg max-lg:mx-auto">
               <Image
                 src="/sayyam2.png"
@@ -107,7 +107,7 @@ export default function LeadForm() {
                 className="w-full h-auto object-contain"
               />
             </div>
-          </div>
+          </div> */}
 
           <div>
             <span className="text-[#070c1a] text-3xl font-bold">

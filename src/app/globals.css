@@ -97,3 +97,59 @@ h1 {
 .swiper-wrapper {
   transition-timing-function: linear !important;
 }
+
+
+
+
+
+
+
+
+@keyframes sv-heart {
+  0% { opacity: 0; transform: translateY(0) scale(.6); }
+  15% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-150px) scale(1.2) rotate(15deg); }
+}
+@keyframes sv-bob { 50% { transform: translateY(-6px); } }
+@keyframes sv-ring {
+  from { opacity: .9; width: 8px; height: 8px; }
+  to { opacity: 0; width: 70px; height: 70px; }
+}
+@keyframes sv-grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+/* SEO: row 4 upar chadhti hai, baaki neeche khisakti hain (6.4s loop) */
+@keyframes sv-rank-you {
+  0%, 18% { transform: translateY(0); }
+  25%, 43% { transform: translateY(-40px); }
+  50%, 68% { transform: translateY(-80px); }
+  75%, 90% { transform: translateY(-120px); }
+  100% { transform: translateY(0); }
+}
+@keyframes sv-rank-c {
+  0%, 18% { transform: translateY(0); }
+  25%, 90% { transform: translateY(40px); }
+  100% { transform: translateY(0); }
+}
+@keyframes sv-rank-b {
+  0%, 43% { transform: translateY(0); }
+  50%, 90% { transform: translateY(40px); }
+  100% { transform: translateY(0); }
+}
+@keyframes sv-rank-a {
+  0%, 68% { transform: translateY(0); }
+  75%, 90% { transform: translateY(40px); }
+  100% { transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sv-heart { animation: sv-heart 3.2s ease-out infinite; }
+  .sv-heart-1 { animation-delay: 1.1s; margin-left: 24px; }
+  .sv-heart-2 { animation-delay: 2.1s; margin-left: -28px; }
+  .sv-bob { animation: sv-bob 2.4s ease-in-out infinite; }
+  .sv-ring { animation: sv-ring 2.4s ease-out infinite; }
+  .sv-grow { animation: sv-grow 1.4s cubic-bezier(.2,.8,.2,1) both; }
+  .sv-rank-you { animation: sv-rank-you 6.4s ease-in-out infinite; }
+  .sv-rank-a { animation: sv-rank-a 6.4s ease-in-out infinite; }
+  .sv-rank-b { animation: sv-rank-b 6.4s ease-in-out infinite; }
+  .sv-rank-c { animation: sv-rank-c 6.4s ease-in-out infinite; }
+}
