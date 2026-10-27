@@ -10,7 +10,7 @@ const testimonials = [
   {
     id: "client-1",
     quote:
-      "[Client testimonial — what changed after working with Unnity, ideally with a number.]",
+      "We started with ₹500 a day in ads. Team Unnity scaled us to ₹20,000+ a day. Weekly reviews, detailed reports and a personal touch we never got from other agencies.",
     name: "Client name",
     role: "Founder, Brand",
     initials: "A",
@@ -20,7 +20,7 @@ const testimonials = [
   {
     id: "client-2",
     quote:
-      "[Client testimonial — what changed after working with Unnity, ideally with a number.]",
+      "Sayam managed our ad accounts with a sharp focus on high-quality leads. Reliable, responsible, and a big part of our campaign success.",
     name: "Client name",
     role: "Marketing Head, Brand",
     initials: "B",
@@ -30,7 +30,7 @@ const testimonials = [
   {
     id: "client-3",
     quote:
-      "[Client testimonial — what changed after working with Unnity, ideally with a number.]",
+      "Unnity delivered excellent results through their performance marketing and website development services",
     name: "Client name",
     role: "Co-founder, Brand",
     initials: "C",

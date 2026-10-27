@@ -7,6 +7,7 @@ import Contact from '@/components/home/Contact'
 import FAQ from '@/components/home/FAQ'
 import FounderVideo from '@/components/home/FounderVideo'
 import Hero from '@/components/home/Hero'
+import ResultsSection from '@/components/home/ResultsSection'
 import Services from '@/components/home/Services'
 import Stats from '@/components/home/Stats'
 import Testimonials from '@/components/home/Testimonials'
@@ -21,7 +22,9 @@ const page = () => {
         <Hero/>
         <ClientMarquee/>
         <Stats/>
+         
         <Services/>
+        <ResultsSection/>
         <CaseStudies/>
       <WhyUnnity/>
         {/* <FounderVideo/> */}
@@ -29,6 +32,7 @@ const page = () => {
         <Contact/>
        <FAQ/>
          <BrandMarquee/>
+        
 
 
         <Footer/>

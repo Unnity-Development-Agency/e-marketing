@@ -1,7 +1,5 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
-
 import {
   MapPin,
   ShoppingCart,
@@ -54,7 +52,7 @@ function PerformanceVisual() {
             <div className="h-3 overflow-hidden rounded bg-[#6D63F2]/10">
               <span
                 className={[
-                  "block h-full rounded",
+                  "sv-grow block h-full origin-left rounded",
                   "bg-gradient-to-r from-[#8A82EE] to-[#0f032b]",
                   step.width,
                 ].join(" ")}
@@ -157,7 +155,7 @@ function WebsiteVisual() {
   );
 }
 
-function SocialVisual({ reduceMotion }) {
+function SocialVisual() {
   return (
     <>
       <div className="flex justify-center gap-2 pt-8">
@@ -196,47 +194,35 @@ function SocialVisual({ reduceMotion }) {
         ))}
       </div>
 
-      <motion.span
-        initial={false}
-        animate={
-          reduceMotion === false
-            ? { y: [0, -8, 0], rotate: [-8, 8, -8] }
-            : { y: 0, rotate: 0 }
-        }
-        transition={
-          reduceMotion === false
-            ? {
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }
-            : { duration: 0 }
-        }
-        className="absolute right-[15%] top-4 text-2xl"
-      >
-        💙
-      </motion.span>
+      {["💙", "❤️", "💙"].map((h, i) => (
+        <span
+          key={i}
+          className={`sv-heart sv-heart-${i} pointer-events-none absolute bottom-5 left-1/2 z-10 text-sm opacity-0`}
+        >
+          {h}
+        </span>
+      ))}
     </>
   );
 }
 
-function SEOVisual({ reduceMotion }) {
+function SEOVisual() {
+  const base =
+    "absolute inset-x-0 flex h-[34px] items-center gap-3 rounded-lg border pl-9 pr-3";
+
   return (
     <>
       <span className="absolute left-5 top-4 text-[10px] font-medium uppercase tracking-[0.12em] text-[#5F5C80]">
         Search results
       </span>
 
-      <div className="absolute inset-x-4 top-11 grid gap-1.5">
-        {[1, 2, 3].map((position) => (
+      <div className="absolute inset-x-4 top-11 h-[154px]">
+        {["sv-rank-a", "sv-rank-b", "sv-rank-c"].map((cls, i) => (
           <div
-            key={position}
-            className="flex h-[34px] items-center gap-3 rounded-lg border border-[#1B1855]/10 bg-[#6D63F2]/5 px-3"
+            key={cls}
+            style={{ top: i * 40 }}
+            className={`${base} border-[#1B1855]/10 bg-[#F4F2FD] ${cls}`}
           >
-            <span className="w-3 text-[10px] text-[#5F5C80]">
-              {position}
-            </span>
-
             <div className="flex-1 space-y-1.5">
               <div className="h-1 w-full rounded bg-[#6D63F2]/15" />
               <div className="h-1 w-3/5 rounded bg-[#6D63F2]/10" />
@@ -244,28 +230,10 @@ function SEOVisual({ reduceMotion }) {
           </div>
         ))}
 
-        <motion.div
-          initial={false}
-          animate={
-            reduceMotion === false
-              ? { x: [0, 3, 0] }
-              : { x: 0 }
-          }
-          transition={
-            reduceMotion === false
-              ? {
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }
-              : { duration: 0 }
-          }
-          className="flex h-[34px] items-center gap-3 rounded-lg border border-[#0f032b] bg-[#0f032b]/10 px-3"
+        <div
+          style={{ top: 120 }}
+          className={`${base} sv-rank-you z-10 border-[#0f032b] bg-[#E6E2F3]`}
         >
-          <span className="w-3 text-[10px] font-semibold text-[#0f032b]">
-            4
-          </span>
-
           <span className="min-w-0 flex-1 truncate text-[10px] font-semibold text-[#14123A]">
             yourbrand.com
           </span>
@@ -273,7 +241,18 @@ function SEOVisual({ reduceMotion }) {
           <span className="whitespace-nowrap rounded-full bg-[#15803D]/10 px-1.5 py-0.5 text-[8px] font-semibold text-[#15803D]">
             + AI cited
           </span>
-        </motion.div>
+        </div>
+
+        {/* numbers fixed rehte hain, rows upar-neeche hoti hain */}
+        {[1, 2, 3, 4].map((n, i) => (
+          <span
+            key={n}
+            style={{ top: i * 40 }}
+            className="absolute left-3 z-20 flex h-[34px] w-3 items-center text-[10px] text-[#5F5C80]"
+          >
+            {n}
+          </span>
+        ))}
       </div>
     </>
   );
@@ -323,9 +302,12 @@ function LocalBusinessVisual() {
         <span className="absolute left-[22%] top-[56%] h-2 w-2 rounded-full bg-[#6D63F2]/25" />
         <span className="absolute right-[28%] top-[52%] h-2 w-2 rounded-full bg-[#6D63F2]/25" />
 
+        {/* pulse ring */}
+        <span className="sv-ring absolute left-1/2 top-[36%] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#6D63F2]" />
+
         <div className="absolute left-1/2 top-[36%] flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#0f032b] text-white shadow-[0_0_0_12px_rgba(55,48,163,0.1)]">
           <MapPin
-            className="h-6 w-6"
+            className="sv-bob h-6 w-6"
             strokeWidth={1.8}
           />
         </div>
@@ -367,25 +349,15 @@ function LocalBusinessVisual() {
 }
 
 export default function ServiceVisual({ type }) {
-  const reduceMotion = useReducedMotion();
-
   return (
     <div
       aria-hidden="true"
       className="relative h-[210px] overflow-hidden border-b border-[#1B1855]/10 bg-gradient-to-br from-[#F1EFFB] to-[#F6F5FC]"
     >
       {type === "ads" && <PerformanceVisual />}
-
       {type === "web" && <WebsiteVisual />}
-
-      {type === "social" && (
-        <SocialVisual reduceMotion={reduceMotion} />
-      )}
-
-      {type === "seo" && (
-        <SEOVisual reduceMotion={reduceMotion} />
-      )}
-
+      {type === "social" && <SocialVisual />}
+      {type === "seo" && <SEOVisual />}
       {type === "local" && <LocalBusinessVisual />}
     </div>
   );

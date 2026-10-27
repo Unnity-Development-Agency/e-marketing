@@ -52,8 +52,8 @@ const caseStudies = [
   },
   {
     id: "Kisan Say",
-    brand: "Kisan Say",
-    logo: "",
+    brand: "kisan-say",
+    logo: "/kisan-se.jpeg",
     category: "lead",
     industry: "Agritech",
     location: "Delhi NCR",
@@ -335,8 +335,8 @@ export default function CaseStudies() {
           <div className="max-w-[680px]">
             <SectionHeading
               eyebrow="Proven growth"
-              title="Real brands."
-              highlightedText="Real numbers."
+              title="Your brand"
+              highlightedText="could be next."
               description="A look at how we've helped businesses scale with data-driven strategy."
             />
           </div>
