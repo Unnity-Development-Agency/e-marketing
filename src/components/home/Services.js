@@ -11,7 +11,7 @@ const services = [
     tags: [
       "Meta Ads",
       "Google Search",
-      "Shopping & PMax",
+      // "Shopping & PMax",
       "Retargeting",
       "Creative testing",
       "Weekly reporting",
@@ -216,7 +216,7 @@ export default function Services() {
             />
           </div>
 
-          <div>
+          {/* <div>
             <p className="max-w-[500px] text-base leading-7 text-[#5F5C80]">
               Your ads, website, content and search all pull
               in the same direction — because the people
@@ -236,7 +236,7 @@ export default function Services() {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Service cards */}

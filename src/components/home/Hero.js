@@ -29,13 +29,12 @@ const advantages = [
 ];
 
 const avatars = [
-  { text: "TC", color: "bg-[#0f032b]" },
-  { text: "PS", color: "bg-[#1B1855]" },
-  { text: "OL", color: "bg-[#8A82EE]" },
-  { text: "SP", color: "bg-[#2E2A80]" },
-  { text: "+", color: "bg-[#6D63F2]" },
+  { name: "cupid", src: "/cupid.webp" },
+  { name: "Kapur", src: "/kapur1.png" },
+  { name: "Uberlyfe", src: "/uberlyfe1.png" },
+  { name: "Hubhawks", src: "/hub1.png" },
+  { name: "Powers-movers", src: "power-mower.webp" },
 ];
-
 export default function Hero() {
   const [activeWord, setActiveWord] = useState(0);
 
@@ -166,38 +165,38 @@ export default function Hero() {
           </div>
 
           {/* Social proof */}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <div
-              aria-hidden="true"
-              className="flex items-center -space-x-2.5"
-            >
-              {avatars.map((avatar) => (
-                <span
-                  key={avatar.text}
-                  className={[
-                    "flex h-[38px] w-[38px] items-center justify-center",
-                    "rounded-full border-2 border-white",
-                    "text-xs font-bold text-white",
-                    avatar.color,
-                  ].join(" ")}
-                >
-                  {avatar.text}
-                </span>
-              ))}
-            </div>
+         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+  <div className="flex items-center -space-x-2.5">
+    {avatars.map((avatar) => (
+      <span
+        key={avatar.name}
+        className="flex h-[38px] w-[38px] shrink-0 items-center justify-center overflow-hidden rounded-full border-2 border-white bg-white"
+      >
+        <img
+          src={avatar.src}
+          alt={avatar.name}
+          className="h-full w-full object-contain p-1"
+        />
+      </span>
+    ))}
 
-            <p className="text-left text-sm leading-5 text-[#5F5C80]">
-              <strong className="font-semibold text-[#14123A]">
-                100+ brands
-              </strong>{" "}
-              scaled across
-              <br />
-              India & Australia
-            </p>
-          </div>
+    <span className="relative flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-full border-2 border-white bg-[#6D63F2] text-sm font-bold text-white">
+      +
+    </span>
+  </div>
+
+  <p className="text-left text-sm leading-5 text-[#5F5C80]">
+    <strong className="font-semibold text-[#14123A]">
+      100+ brands
+    </strong>{" "}
+    scaled across
+    <br />
+    India &amp; Australia
+  </p>
+</div>
 
           {/* Platforms */}
-          <div className="mt-6 flex flex-wrap justify-center gap-2">
+          {/* <div className="mt-6 flex flex-wrap justify-center gap-2">
             {platforms.map((platform) => (
               <span
                 key={platform}
@@ -206,7 +205,7 @@ export default function Hero() {
                 {platform}
               </span>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

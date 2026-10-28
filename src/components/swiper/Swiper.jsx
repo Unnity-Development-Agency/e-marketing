@@ -92,21 +92,21 @@ export default function App() {
         "Rebuilt Google Ads from scratch — intent-based keyword splits, brand vs. category separation, and a tight negative keyword framework. Drove 39% order growth YoY in a high-AOV segment.",
       image: "/powermover-anls.jpeg",
     },
-    {
-      tags: ["META ADS","LEAD GENRATION", "BOOK PUBLISHING"],
-      country: "IN INDIA",
-      title: "HubHawks",
-      subtitle: "Mar 2026 – May 2026 · Book Publishing Platform · 3 months",
-      stats: [
-        { value: "$6.2K",label: "TOTAL AD SPEND" },
-        { value: "9,058",label: "TOTAL LEADS" },
-        { value: "$0.69",label: "COST PER LEAD" },
-        { value: "1.50%",label: "AVERAGE CTR" },
-      ],
-      description:
-        "Ran multi-vertical Meta lead gen across 5 publishing divisions — NuVoice Press, Foster Reads, The Write Agency, Penguin Book Festival, and Book Fair activations. Built separate ABO ad sets per vertical with LAL, interest, and static audience stacks. Drove 9,000+ leads at under $0.70 CPL across a 3-month window.",
-      image: "/hubhawks data.png",
-    },
+    // {
+    //   tags: ["META ADS","LEAD GENRATION", "BOOK PUBLISHING"],
+    //   country: "IN INDIA",
+    //   title: "HubHawks",
+    //   subtitle: "Mar 2026 – May 2026 · Book Publishing Platform · 3 months",
+    //   stats: [
+    //     { value: "$6.2K",label: "TOTAL AD SPEND" },
+    //     { value: "9,058",label: "TOTAL LEADS" },
+    //     { value: "$0.69",label: "COST PER LEAD" },
+    //     { value: "1.50%",label: "AVERAGE CTR" },
+    //   ],
+    //   description:
+    //     "Ran multi-vertical Meta lead gen across 5 publishing divisions — NuVoice Press, Foster Reads, The Write Agency, Penguin Book Festival, and Book Fair activations. Built separate ABO ad sets per vertical with LAL, interest, and static audience stacks. Drove 9,000+ leads at under $0.70 CPL across a 3-month window.",
+    //   image: "/hubhawks data.png",
+    // },
     // {
     //   tags: ["SHOPIFY", "SEO", "E-COMMERCE"],
     //   country: "UK UNITED KINGDOM",

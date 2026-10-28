@@ -123,12 +123,12 @@ export default function CaseStudies() {
       href: "https://thecraftofarchitecture.net/",
     },
     
-    {
-      id: 17,
-      title: "Prateek Suri",
-      image: "/prateek-suri.png",
-      href: "https://author-rose.vercel.app/",
-    },
+    // {
+    //   id: 17,
+    //   title: "Prateek Suri",
+    //   image: "/prateek-suri.png",
+    //   href: "https://author-rose.vercel.app/",
+    // },
     {
       id: 18,
       title: "Arihant",
