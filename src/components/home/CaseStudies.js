@@ -16,9 +16,9 @@ const caseStudies = [
   {
     id: "lawnmower",
     brand: "Power Movers",
-    logo: "",
+    logo: "power-mower.webp",
     category: "ecom",
-    industry: "E-commerce",
+    // industry: "E-commerce",
     location: "Australia",
     title: "26x ROAS on 12,000+ SKUs",
     description:
@@ -37,7 +37,7 @@ const caseStudies = [
     brand: "Cupid Clothing",
     logo: "/cupid.webp",
     category: "ecom",
-    industry: "Fashion",
+    // industry: "Fashion",
     location: "India",
     title: "₹15K to ₹1.5L in daily sales",
     description:
@@ -55,7 +55,7 @@ const caseStudies = [
     brand: "kisan-say",
     logo: "/kisan-se.jpeg",
     category: "lead",
-    industry: "Agritech",
+    // industry: "Agritech",
     location: "Delhi NCR",
     title: "₹1.29 Cr in monthly sales",
     description:
@@ -73,7 +73,7 @@ const caseStudies = [
     brand: "Hubhawks",
     logo: "/hub1.png",
     category: "lead",
-    industry: "Real estate",
+    // industry: "Real estate",
     location: "Dehradun",
     title: "₹52L in sales at 16.5x ROAS",
     description:
@@ -91,7 +91,7 @@ const caseStudies = [
     brand: "E-Travelsim",
     logo: "/e-travel.avif",
     category: "web",
-    industry: "Fitness",
+    // industry: "Fitness",
     location: "India",
     title: "$2K to $100K in monthly sales",
     description:
@@ -109,7 +109,7 @@ const caseStudies = [
     brand: "Donmiller",
     logo: "/donmiller1.png",
     category: "web",
-    industry: "Travel",
+    // industry: "Travel",
     location: "Delhi",
     title: "₹7.42L in sales in 3 months",
     description:
@@ -127,7 +127,7 @@ const caseStudies = [
     brand: "Core",
     logo: "/the_core1.png",
     category: "web",
-    industry: "Travel",
+    // industry: "Travel",
     location: "Delhi",
     title: "₹2.09L in sales in the first month",
     description:
@@ -145,7 +145,7 @@ const caseStudies = [
     brand: "Uberlyfe",
     logo: "/uberlyfe1.png",
     category: "web",
-    industry: "Travel",
+    // industry: "Travel",
     location: "Delhi",
     title: "183% sales growth in 2 months",
     description:
@@ -244,8 +244,8 @@ function CaseStudyCard({ item }) {
       </div>
 
       {/* Category and location */}
-      <div className="mb-4 flex flex-wrap gap-2">
-        {[item.industry, item.location].map((label) => (
+      {/* <div className="mb-4 flex flex-wrap gap-2">
+        {[ item.location].map((label) => (
           <span
             key={label}
             className="rounded-full border border-[#1B1855]/10 px-2.5 py-1 text-[10px] text-[#5F5C80]"
@@ -253,7 +253,7 @@ function CaseStudyCard({ item }) {
             {label}
           </span>
         ))}
-      </div>
+      </div> */}
 
       <h3 className="mb-3 text-[22px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#14123A]">
         {item.title}
@@ -342,7 +342,7 @@ export default function CaseStudies() {
           </div>
 
           {/* Category filters */}
-          <div
+          {/* <div
             role="group"
             aria-label="Filter case studies"
             className="flex flex-wrap gap-2"
@@ -369,7 +369,7 @@ export default function CaseStudies() {
                 {filter.label}
               </button>
             ))}
-          </div>
+          </div> */}
         </div>
 
         <p

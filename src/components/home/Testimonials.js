@@ -11,7 +11,7 @@ const testimonials = [
     id: "client-1",
     quote:
       "We started with ₹500 a day in ads. Team Unnity scaled us to ₹20,000+ a day. Weekly reviews, detailed reports and a personal touch we never got from other agencies.",
-    name: "Client name",
+    name: "Tanya",
     role: "Founder, Brand",
     initials: "A",
     image: "",
@@ -21,7 +21,7 @@ const testimonials = [
     id: "client-2",
     quote:
       "Sayam managed our ad accounts with a sharp focus on high-quality leads. Reliable, responsible, and a big part of our campaign success.",
-    name: "Client name",
+    name: "Tarun",
     role: "Marketing Head, Brand",
     initials: "B",
     image: "",
@@ -31,7 +31,7 @@ const testimonials = [
     id: "client-3",
     quote:
       "Unnity delivered excellent results through their performance marketing and website development services",
-    name: "Client name",
+    name: "Rishabh",
     role: "Co-founder, Brand",
     initials: "C",
     image: "",
