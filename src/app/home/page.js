@@ -15,6 +15,15 @@ import Testimonials from '@/components/home/Testimonials'
 import React from 'react'
 
 
+
+
+export const metadata = {
+  title: 'Digital Marketing Agency for Business Growth | Unnity',
+  description:
+    "Grow your business with Unnity's digital marketing services, including Google Ads, Meta Ads, SEO, performance marketing and lead generation.",
+};
+
+
 const page = () => {
   return (
     <section>
