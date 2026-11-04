@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const results = [
   {
-    image: "/result-1.png",
+    image: "/resultttt1.png",
     description:
       "We managed a ₹90.6 lakh monthly ad budget for a global eSIM brand. By refining targeting and bidding, we drove 6,700+ conversions in a month at ₹1,350 per conversion and a 12% conversion rate, reaching ~$15,000 in daily sales.",
   },
@@ -74,15 +74,15 @@ export default function ResultsSection() {
   return (
     <section className="w-full overflow-hidden py-12 md:py-16">
       {/* Marquee keyframe */}
-      <style>{`
+      {/* <style>{`
         @keyframes results-marquee {
           from { transform: translateX(0); }
           to   { transform: translateX(-50%); }
         }
-      `}</style>
+      `}</style> */}
 
       <h2 className="mb-10 px-4 text-center text-3xl font-bold text-[#0f032b] md:text-5xl">
-        Rely On Us For Such Results
+       Performance Marketing That Drives Growth
       </h2>
 
       {/* group = hover pe pause karne ke liye */}

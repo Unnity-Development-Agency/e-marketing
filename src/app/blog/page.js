@@ -1142,49 +1142,49 @@ function PerformanceInsights() {
     router.push(href);
   };
 
-  return (
-    <section className="perf" aria-labelledby="pf-title">
-      <div className="band" id="band" ref={bandRef} onMouseLeave={resetGlow}>
-        <div className="glow" aria-hidden="true" />
+  // return (
+  //   <section className="perf" aria-labelledby="pf-title">
+  //     <div className="band" id="band" ref={bandRef} onMouseLeave={resetGlow}>
+  //       <div className="glow" aria-hidden="true" />
 
-        <Reveal className="intro">
-          <div className="eyebrow">Performance marketing insights</div>
-          <h2 id="pf-title">
-            Strategies built around <em>real results</em>
-          </h2>
-          <p>Explore our latest insights on Google Ads, Meta Ads, PPC, remarketing, lead generation and more.</p>
-          <Link href="/blog/performance-marketing" className="cta">
-            Explore Performance Marketing
-            <ArrowRight className="arrow" size={16} strokeWidth={2.2} />
-          </Link>
-        </Reveal>
+  //       <Reveal className="intro">
+  //         <div className="eyebrow">Performance marketing insights</div>
+  //         <h2 id="pf-title">
+  //           Strategies built around <em>real results</em>
+  //         </h2>
+  //         <p>Explore our latest insights on Google Ads, Meta Ads, PPC, remarketing, lead generation and more.</p>
+  //         <Link href="/blog/performance-marketing" className="cta">
+  //           Explore Performance Marketing
+  //           <ArrowRight className="arrow" size={16} strokeWidth={2.2} />
+  //         </Link>
+  //       </Reveal>
 
-        <div className="cards">
-          {insights.map((item) => (
-            <Reveal
-              key={item.href}
-              as="article"
-              className="card"
-              delay={item.delay}
-              onMouseEnter={driftGlow}
-              onClick={(e) => openCard(e, item.href)}
-            >
-              <div className={`icon${item.amber ? " amber" : ""}`} aria-hidden="true">
-                <InsightIconSvg name={item.icon} />
-              </div>
-              <span className={`cat${item.amber ? " amber" : ""}`}>{item.cat}</span>
-              <h3>
-                <Link href={item.href}>{item.title}</Link>
-              </h3>
-              <span className="read">
-                Read more <ArrowRight className="arrow" size={14} strokeWidth={2.2} />
-              </span>
-            </Reveal>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+  //       <div className="cards">
+  //         {insights.map((item) => (
+  //           <Reveal
+  //             key={item.href}
+  //             as="article"
+  //             className="card"
+  //             delay={item.delay}
+  //             onMouseEnter={driftGlow}
+  //             onClick={(e) => openCard(e, item.href)}
+  //           >
+  //             <div className={`icon${item.amber ? " amber" : ""}`} aria-hidden="true">
+  //               <InsightIconSvg name={item.icon} />
+  //             </div>
+  //             <span className={`cat${item.amber ? " amber" : ""}`}>{item.cat}</span>
+  //             <h3>
+  //               <Link href={item.href}>{item.title}</Link>
+  //             </h3>
+  //             <span className="read">
+  //               Read more <ArrowRight className="arrow" size={14} strokeWidth={2.2} />
+  //             </span>
+  //           </Reveal>
+  //         ))}
+  //       </div>
+  //     </div>
+  //   </section>
+  // );
 }
 
 /* ======================== PAGE ======================== */
