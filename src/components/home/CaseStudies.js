@@ -335,9 +335,9 @@ export default function CaseStudies() {
           <div className="max-w-[680px]">
             <SectionHeading
               eyebrow="Proven growth"
-              title="Your brand"
-              highlightedText="could be next."
-              description="A look at how we've helped businesses scale with data-driven strategy."
+              title="Real Results. Real Growth."
+              highlightedText="Your brand could be next."
+              description="Explore how we've helped businesses achieve measurable growth through data-driven strategies, performance marketing and continuous optimisation"
             />
           </div>
 

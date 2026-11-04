@@ -32,9 +32,9 @@ export default function LeadForm() {
         "https://script.google.com/macros/s/AKfycbzGvjdcGxwSeaz_2jJErGaeM2qrgBoLmZ6b9S69geyKqC5obyaXAC5UoS7SvAsngdr-/exec",
         {
           method: "POST",
-          headers: {
-            "Content-Type": "text/plain;charset=utf-8",
-          },
+          // headers: {
+          //   "Content-Type": "text/plain;charset=utf-8",
+          // },
           body: JSON.stringify(formData),
         },
       );

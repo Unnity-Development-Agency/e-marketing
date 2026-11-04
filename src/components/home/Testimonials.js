@@ -137,9 +137,9 @@ export default function Testimonials() {
         <div className="mb-9 max-w-[720px] sm:mb-12">
           <SectionHeading
             eyebrow="Client love"
-            title="95% of our work comes from"
-            highlightedText="referrals."
-            description="Here's why clients keep sending their friends our way."
+            title="Happy Clients."
+            highlightedText="Strong Relationships. Lasting Growth."
+            description="95% of our work comes from referrals. Discover why clients trust us, value our work and recommend us to others. "
           />
         </div>
 

@@ -105,6 +105,9 @@ const Footer = () => {
               <li>
                 <Link href="/performance-marketing-agency-in-australia">Australia</Link>
               </li>
+              <li>
+                <Link href="/blog">Blog</Link>
+              </li>
             </ul>
           </div>
 

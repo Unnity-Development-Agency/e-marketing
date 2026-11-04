@@ -85,7 +85,7 @@ const closeDropdownSafe2 = () => {
         </div>
 
         {/* CENTER — NAV */}
-        <nav className="hidden text-lg md:flex items-center gap-10 absolute left-1/2 -translate-x-1/2 pr-6.5">
+        <nav className="hidden text-lg md:flex items-center justify-between gap-6 absolute left-1/2 -translate-x-1/2 w-[50%] whitespace-nowrap">
           <Link href="/" className="cursor-pointer">
             Home
           </Link>
@@ -151,6 +151,9 @@ const closeDropdownSafe2 = () => {
               </Link>
             </ul>
           </div>
+          <Link href="/blog" className="cursor-pointer">
+            Blog
+          </Link>
           <Link href="/brands" className="cursor-pointer">
             Brands
           </Link>
@@ -316,6 +319,9 @@ const closeDropdownSafe2 = () => {
             
               </div>
             </div>
+            <Link href="/blog" className="cursor-pointer">
+              Blog
+            </Link>
             <Link href="/brands" className="cursor-pointer">
               Brands
             </Link>

@@ -7,6 +7,8 @@ import Contact from '@/components/home/Contact'
 import FAQ from '@/components/home/FAQ'
 import FounderVideo from '@/components/home/FounderVideo'
 import Hero from '@/components/home/Hero'
+import ProblemBridge from '@/components/home/ProblemBridge'
+import Service from '@/components/home/Service'
 import ResultsSection from '@/components/home/ResultsSection'
 import Services from '@/components/home/Services'
 import Stats from '@/components/home/Stats'
@@ -29,11 +31,15 @@ const page = () => {
     <section>
         <Header/>
         <Hero/>
+        
+        
         <ClientMarquee/>
+        
         <Stats/>
-         
-        <Services/>
+         <Service/>
+        {/* <Services/> */}
         <ResultsSection/>
+        <ProblemBridge/>
         <CaseStudies/>
       <WhyUnnity/>
         {/* <FounderVideo/> */}

@@ -164,9 +164,19 @@ export default function RootLayout({ children }) {
            
       </head>
 
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
+     <body className={`${geistSans.variable} ${geistMono.variable}`}>
+  <noscript>
+    <img
+      height="1"
+      width="1"
+      style={{ display: "none" }}
+      src="https://www.facebook.com/tr?id=1660292408308023&ev=PageView&noscript=1"
+      alt=""
+    />
+  </noscript>
+
+  {children}
+</body>
     </html>
   );
 }
