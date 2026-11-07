@@ -47,7 +47,7 @@ export default function AdsHero() {
               <span className="flex-1 text-base leading-[1.4]">
                 <b className="font-semibold">{o.bold}</b> {o.rest}
               </span>
-              <span className="h-5 w-5 flex-none rounded-full border-[1.5px] border-[#C9CFE6]" />
+              {/* <span className="h-5 w-5 flex-none rounded-full border-[1.5px] border-[#C9CFE6]" /> */}
             </div>
           ))}
         </div>
