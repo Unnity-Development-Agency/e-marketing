@@ -16,12 +16,13 @@ export const metadata = {
   metadataBase: new URL("https://unnity.in"),
 
   title: {
-    default: "Unnity | Digital Marketing & Web Development Agency",
+    default: "Performance Marketing Agency for Business Growth | Unnity",
     template: "%s | Unnity",
   },
 
   description:
-    "Unnity is a performance marketing agency managing Meta Ads and Google Ads for D2C brands in Australia. Data-driven campaigns, full transparency, and measurable ROAS.",
+   "Grow your business with Unnity's performance marketing services. Get expert Google Ads, Meta Ads, SEO and lead generation solutions worldwide.",
+    // "Unnity is a performance marketing agency managing Meta Ads and Google Ads for D2C brands in Australia. Data-driven campaigns, full transparency, and measurable ROAS.",
 
   keywords: [
     "Digital Marketing Agency",
