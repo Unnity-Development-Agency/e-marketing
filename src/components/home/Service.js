@@ -93,9 +93,9 @@ export default function Services() {
             >
               WHAT WE DO
             </div>
-            <h2 className="text-[length:clamp(38px,5.4vw,72px)] font-extrabold leading-[1.02] tracking-[-2.4px]">
+            <h2 className="mb-6 mt-6 text-[clamp(2rem,4.5vw,4.4rem)] font-bold leading-[1.1] tracking-[-0.035em]">
              Smart Solutions<br />
-              For<span className="text-[#2f5bff]">Bigger Growth.</span>
+              For<span className=" pb-1 italic bg-gradient-to-r from-[#e0d7ff] via-[#a78bfa] to-[#7c3aed] bg-clip-text text-transparent">Bigger Growth.</span>
             </h2>
           </div>
           <p className="max-w-[520px] pb-2 text-lg leading-[1.6] text-[#5b6385]">
