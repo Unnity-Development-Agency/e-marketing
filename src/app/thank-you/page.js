@@ -6,28 +6,49 @@ import Link from "next/link";
 
 export default function ThankYouPage() {
 
-  useEffect(() => {
-    // Only fire after contact form redirect
+useEffect(() => {
+  let retryTimer;
+  let attempts = 0;
+
+  const fireLead = () => {
+    // Sirf successful form submission ke baad event chalega
     const leadRedirect = sessionStorage.getItem(
       "unnityLeadRedirect"
     );
 
     if (leadRedirect !== "true") return;
 
-    // Prevent firing again on page refresh
-    sessionStorage.removeItem(
-      "unnityLeadRedirect"
-    );
-
-    // Meta Pixel Lead Event
+    // Pixel ready hai toh Lead event queue karo
     if (typeof window.fbq === "function") {
-      window.fbq("track", "Lead");
-      console.log("Meta Pixel Lead event fired");
-    } else {
-      console.warn("Meta Pixel is not loaded");
+      window.fbq(
+        "trackSingle",
+        "1781082229613832",
+        "Lead"
+      );
+
+      // Refresh par dobara event fire hone se roko
+      sessionStorage.removeItem("unnityLeadRedirect");
+
+      console.log("Meta Pixel Lead event queued");
+      return;
     }
 
-  }, []);
+    // Pixel ready hone ke liye 15 seconds tak retry
+    attempts += 1;
+
+    if (attempts < 60) {
+      retryTimer = window.setTimeout(fireLead, 250);
+    } else {
+      console.warn("Meta Pixel initialize nahi hua");
+    }
+  };
+
+  fireLead();
+
+  return () => {
+    window.clearTimeout(retryTimer);
+  };
+}, []);
 
   return (
     <main className="min-h-screen bg-[#fafbff] flex items-center justify-center px-4 py-12">

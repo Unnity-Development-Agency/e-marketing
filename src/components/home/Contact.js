@@ -112,6 +112,7 @@ sessionStorage.setItem(
 );
 
 // Redirect to Thank You page
+sessionStorage.setItem("unnityLeadRedirect", "true");
 window.location.href = "/thank-you";
 
     } catch (error) {
