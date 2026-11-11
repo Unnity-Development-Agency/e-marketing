@@ -22,7 +22,7 @@ useEffect(() => {
     if (typeof window.fbq === "function") {
       window.fbq(
         "trackSingle",
-        "1660292408308023",
+        "1781082229613832",
         "Lead"
       );
 
