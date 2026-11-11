@@ -9,6 +9,7 @@ export default function ThankYouPage() {
 useEffect(() => {
   let retryTimer;
   let attempts = 0;
+  fbq('trackCustom', 'EventName', {parameter: 'value'})
 
   const fireLead = () => {
     // Sirf successful form submission ke baad event chalega
