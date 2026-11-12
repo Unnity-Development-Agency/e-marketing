@@ -21,7 +21,7 @@ import React from 'react'
 
 
 export const metadata = {
-  title: 'Performance Marketing Agency for Business Growth | Unnity',
+  title: 'Performance Marketing Agency for Business Growth',
   description:
     "Grow your business with Unnity's digital marketing services, including Google Ads, Meta Ads, SEO, performance marketing and lead generation.",
 };
