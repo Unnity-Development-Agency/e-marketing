@@ -9,46 +9,44 @@ export default function ThankYouPage() {
 useEffect(() => {
   let retryTimer;
   let attempts = 0;
-  let cancelled = false;
+  fbq('trackCustom', 'Thank-you', {parameter: 'value'})
 
-  const trackEvents = () => {
-    if (cancelled) return;
+  const fireLead = () => {
+    // Sirf successful form submission ke baad event chalega
+    const leadRedirect = sessionStorage.getItem(
+      "unnityLeadRedirect"
+    );
 
-    if (
-      typeof window.fbq !== "function" ||
-      window.__unnityPixelReady !== true
-    ) {
-      attempts += 1;
+    if (leadRedirect !== "true") return;
 
-      if (attempts < 60) {
-        retryTimer = window.setTimeout(trackEvents, 250);
-      }
+    // Pixel ready hai toh Lead event queue karo
+    if (typeof window.fbq === "function") {
+      window.fbq(
+        "trackSingle",
+        "1781082229613832",
+        "Lead"
+      );
 
+      // Refresh par dobara event fire hone se roko
+      sessionStorage.removeItem("unnityLeadRedirect");
+
+      console.log("Meta Pixel Lead event queued");
       return;
     }
 
-    const pixelId = "1781082229613832";
-    const currentUrl = window.location.href;
+    // Pixel ready hone ke liye 15 seconds tak retry
+    attempts += 1;
 
-    // Thank-you PageView: client navigation par bhi bhejo
-    if (window.__unnityLastPageViewUrl !== currentUrl) {
-      window.fbq("trackSingle", pixelId, "PageView");
-      window.__unnityLastPageViewUrl = currentUrl;
-    }
-
-    // Lead: successful form submission ke baad hi
-    if (
-      sessionStorage.getItem("unnityLeadRedirect") === "true"
-    ) {
-      window.fbq("trackSingle", pixelId, "Lead");
-      sessionStorage.removeItem("unnityLeadRedirect");
+    if (attempts < 60) {
+      retryTimer = window.setTimeout(fireLead, 250);
+    } else {
+      console.warn("Meta Pixel initialize nahi hua");
     }
   };
 
-  trackEvents();
+  fireLead();
 
   return () => {
-    cancelled = true;
     window.clearTimeout(retryTimer);
   };
 }, []);
@@ -102,5 +100,3 @@ useEffect(() => {
     </main>
   );
 }
-
-
