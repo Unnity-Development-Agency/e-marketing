@@ -175,10 +175,11 @@ export default function RootLayout({ children }) {
     (window,document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
 
-    fbq('init', '1781082229613832');
-    
-    fbq('track', 'PageView');
-    fbq('track', 'Lead');
+   fbq('init', '1781082229613832');
+fbq('trackSingle', '1781082229613832', 'PageView');
+
+window.__unnityPixelReady = true;
+window.__unnityLastPageViewUrl = window.location.href;
   `}
 </Script>
 
