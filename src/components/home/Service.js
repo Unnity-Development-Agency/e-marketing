@@ -67,13 +67,13 @@ const Foot = ({ s, mobile }) => (
       <b className={`block font-extrabold ${mobile ? 'text-2xl tracking-[-.5px]' : 'text-[30px] tracking-[-.8px]'}`}>{s.stat}</b>
       <small className="text-[13px] text-[#c7d3ff]">{s.statLabel}</small>
     </div>
-    <a
+    {/* <a
       href="#"
       className={`inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-[#0b1140] font-semibold text-white no-underline hover:bg-[#141c5c]
         ${mobile ? 'px-4 py-[11px] text-sm' : 'px-5 py-[13px] text-[15px]'}`}
     >
       Explore {s.short} <Arrow />
-    </a>
+    </a> */}
   </div>
 );
 
