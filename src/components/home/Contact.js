@@ -106,8 +106,10 @@ export default function LeadForm() {
       // cannot be confirmed in no-cors mode.
 
 // Mark form submission for thank-you page
-sessionStorage.setItem("unnityLeadRedirect", "true");
-router.push("/thank-you");
+sessionStorage.setItem(
+  "unnityLeadRedirect",
+  "true"
+);
 
 // Redirect to Thank You page
 
