@@ -54,9 +54,9 @@ export default function ProblemBridge() {
         [&>*]:relative"
     >
       <h2 className="mx-auto max-w-[820px] text-[length:clamp(30px,4.4vw,52px)] font-extrabold leading-[1.12] tracking-[-1.4px]">
-        Ad spend going out, but customers{' '}
+        Spending on Ads but Missing{' '}
         <span className="relative whitespace-nowrap text-[#2f5bff]">
-          not coming in?
+          Out on Sales? 
           <svg className="absolute left-0 -bottom-2 h-[14px] w-full" viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true">
             <path d="M3 9 C 60 3, 120 12, 180 6 S 260 4, 297 8" stroke="#2f5bff" strokeWidth="4" fill="none" strokeLinecap="round" />
           </svg>
@@ -64,7 +64,8 @@ export default function ProblemBridge() {
       </h2>
 
       <p className="mx-auto mt-5 max-w-[520px] text-[17.5px] leading-[1.55] text-[#5b6385]">
-        Usually it&apos;s not your product. It&apos;s the gaps between the click and the sale.
+        Get better results from every ad spend. Unnity optimizes targeting, creatives, and tracking to reduce wasted budget and drive business growth. 
+
       </p>
 
       {/* mobile: crop the drawing with CSS instead of switching viewBox in JS */}
