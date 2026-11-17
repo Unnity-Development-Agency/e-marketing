@@ -6,29 +6,34 @@ import SectionHeading from "./SectionHeading";
 
 const faqs = [
   {
-    question: "Does Unnity have a specialty?",
+    question: "Does Unnity Specialise in Performance Marketing?",
     answer:
-      "Yes, we specialise in performance marketing and creative solutions for online businesses. From Meta Ads to Google Ads and beyond, we have extensive experience in paid media across various industries, including eCommerce, D2C Fashion, Hospitality, B2B, and more. Every campaign we run is tied to clear goals - whether that’s revenue, leads, or growth",
+      "Yes! We specialise in performance marketing and creative solutions, including Google Ads and Meta Ads, helping businesses generate leads, increase sales and grow online.",
   },
   {
-    question: "What are the key metrics used to measure performance marketing success?",
+    question: "Which Metrics Measure Performance Marketing Success?",
     answer:
-      "In performance marketing, success isn’t about how many people just saw your ad — it’s about what meaningful actions they took. To measure that, we rely on clear, data-backed metrics that show actual performance.",
+      "We track ROAS, ROI, CPL, CPA, CTR and conversion rates to measure campaign performance and business growth.",
   },
   {
-    question: "What makes Unnity different from other agencies?",
+    question: "What Makes Unnity Different from Other Agencies?",
     answer:
-      "Unnity delivers high-impact performance marketing services in Australia across a wide range of industries. Our expertise spans E-commerce, D2C Fashion, Hospitality, EdTech, Real Estate, SaaS, B2B, and several other sectors. What sets us apart is our ability to adapt strategies based on each industry’s unique audience behavior and conversion goals. Whether it’s driving product sales for a D2C brand, generating quality leads for a hospitality business, or scaling user acquisition for a SaaS platform — we tailor every campaign with precision. Our data-driven approach ensures measurable growth, regardless of the vertical. Every strategy we build is rooted in real numbers, clear KPIs, and a relentless focus on ROI. If you’re in a competitive market and looking to scale smartly, Unnity is the performance marketing agency in India that delivers results across industries.",
+      "We focus on measurable results, creative strategies, transparent reporting and continuous campaign optimisation.",
   },
   {
-    question: "Is a performance marketing agency right for my business?",
+    question: "Is Performance Marketing Right for My Business?",
     answer:
-      "If you aim to maximise ROI and get measurable results from every rupee spent, partnering with a performance marketing agency like Unnity is a smart choice. We have collaborated with D2C brands, eCommerce businesses, SaaS companies, and more - with a performance model that reduces risk and ensures accountability.",
+      "Yes! Whether you're a startup or an established brand, we create strategies based on your goals, audience and budget.",
   },
   {
-    question: "Do you work with brands outside India?",
+    question: " Does Unnity Work with International Brands?",
     answer:
-      "Yes. Most of our clients are in India, and we also run accounts for international brands, including in Australia.",
+      "Yes! We work with brands in India and international markets to help them reach the right audience and grow their business.",
+  },
+  {
+    question: "Does Unnity Use A/B Testing in Performance Marketing?",
+    answer:
+      "Yes! We use A/B testing to compare ad creatives, headlines, audiences and landing pages to improve campaign performance and conversions.",
   },
 ];
 
