@@ -31,10 +31,10 @@ const wave = (k) => {
 };
 
 const NOTES = [
-  { n: 1, x: 238, y: 36, lines: ['Boosted posts got likes,', 'not enquiries'], arrow: 'M296 86 Q280 150 310 204' },
-  { n: 3, x: 618, y: 36, lines: ['Reports full of reach,', 'silent on revenue'], arrow: 'M660 86 Q656 160 602 210' },
-  { n: 2, x: 300, y: 454, lines: ['Leads go cold before', 'anyone calls back'], arrow: 'M400 434 Q372 330 442 240' },
-  { n: 4, x: 624, y: 454, lines: ['No idea which ad', 'brought the customer'], arrow: 'M690 434 Q664 330 718 240' },
+  { n: 1, x: 238, y: 36, lines: ['Clicks Without Leads'], arrow: 'M296 86 Q280 150 310 204' },
+  { n: 3, x: 618, y: 36, lines: [' Leads Without Sales'], arrow: 'M660 86 Q656 160 602 210' },
+  { n: 2, x: 300, y: 454, lines: ['Rising Ad Spend'], arrow: 'M400 434 Q372 330 442 240' },
+  { n: 4, x: 624, y: 454, lines: ['No Clear Insights'], arrow: 'M690 434 Q664 330 718 240' },
 ];
 
 // SVG text styles
@@ -64,7 +64,7 @@ export default function ProblemBridge() {
       </h2>
 
       <p className="mx-auto mt-5 max-w-[520px] text-[17.5px] leading-[1.55] text-[#5b6385]">
-        Get better results from every ad spend. Unnity optimizes targeting, creatives, and tracking to reduce wasted budget and drive business growth. 
+Get better ad results and grow your business with Unnity.  
 
       </p>
 
@@ -207,7 +207,11 @@ export default function ProblemBridge() {
       </ol>
 
       <p className="mt-9 text-lg font-semibold">
-        Every gap is fixable. <b className="text-[#2f5bff]">That&apos;s the bridge we build.</b>
+       Stop Wasting Ad Spend. <b className="text-[#2f5bff]">Start Growing Your Business.
+</b>
+      </p>
+      <p className="mt-3 text-lg font-semibold">
+       That's the bridge Unnity builds.
       </p>
     </section>
   );
