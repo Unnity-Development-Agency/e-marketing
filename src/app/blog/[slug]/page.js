@@ -257,7 +257,7 @@ export default async function ArticlePage({ params }) {
               </details>
 
               <div className="art-prose">
-                <p className="lead">{post.lead}</p>
+                <p className="lead whitespace-pre-line">{post.lead}</p>
 
                 {post.sections.map((s, i) => (
                   <section key={s.id} className="sec">
