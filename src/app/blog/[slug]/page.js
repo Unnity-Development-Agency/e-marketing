@@ -27,7 +27,10 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) return {};
-  return { title: `${post.title} | Unnity Blog`, description: post.dek };
+  return {
+  title: { absolute: `${post.title} | Unnity Blog` },
+  description: post.dek,
+};
 }
 
 /* ---------- helpers ---------- */
