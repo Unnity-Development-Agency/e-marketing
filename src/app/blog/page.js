@@ -304,7 +304,7 @@ const latestPosts = [
     desc: "Optimize your campaigns, targeting and landing pages for better results.",
     minutes: 8,
     date: "Oct 5, 2024",
-    href: "/blog/google-ads-audit-service",
+    href: "/blog/google-ads-audit-services",
     delay: ".12s",
   },
   {
