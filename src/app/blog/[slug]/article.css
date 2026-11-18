@@ -92,7 +92,7 @@
 
 /* ================= PROSE ================= */
 .ua .art-prose{font-size:18px;line-height:1.75;color:var(--body)}
-.ua .art-prose p,.ua .art-prose h2,.ua .art-prose h3,.ua .art-prose ul,.ua .art-prose ol{margin:0}
+.ua .art-prose p,.ua .art-prose h2,.ua .art-prose h3,.ua .art-prose ul,.ua .art-prose ol{margin-top:13}
 .ua .art-prose > * + *,.ua .sec > * + *{margin-top:1.25em}
 .ua .art-prose > .sec,.ua .art-prose > h2,.ua .art-prose > .takeaways{margin-top:2.2em}
 .ua .sec > h2 + *{margin-top:.75em}
