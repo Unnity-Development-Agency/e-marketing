@@ -37,7 +37,7 @@ const results = [
       "Running Meta ads for an apparel brand, we turned ₹6.1L in monthly spend into ₹21.9L in revenue at a 3.58x ROAS. We got there through consistent creative testing and a focus on new customer acquisition, with 1,835 purchases in a month.",
   },
   {
-    image: "/gp10.png",
+    image: "/gp10.PNG",
     description:
       "For an Australian brand, we turned $4,490 in monthly Meta ad spend into $118K+ in revenue, a 26.44x ROAS, with 367 purchases in 30 days.",
   },
