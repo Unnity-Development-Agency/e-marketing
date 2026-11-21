@@ -173,7 +173,7 @@ const members = [
   { name: "Rohit", role: "Head of Marketing", photo: "/rohit2.jpeg" },
   { name: "Muskan", role: "Project Coordinator", photo: "/muskanT.jpg" },
   { name: "Palak", role: "Marketing Intern", photo: "/palak.jpg" },
-  { name: "Paesha", role: "Video Editor Intern", photo: "/paesha.jpeg" },
+  { name: "Paesha", role: "Video Editor Intern", photo: "" },
   { name: "Sidharth", role: "Social Media", photo: "/sidharth.jpg" },
   { name: "Jagriti", role: "Human Resources", photo: "/jagritii.jpg" },
   { name: "Shekar", role: "Marketing", photo: "/Shekhar.jpg" },
