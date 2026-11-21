@@ -171,14 +171,16 @@ const members = [
   { name: "Shubham", role: "Web Developer", photo: "/shubham.jpeg" },
   { name: "Manisha", role: "Creatives", photo: "/manisha-03.jpeg" },
   { name: "Rohit", role: "Head of Marketing", photo: "/rohit2.jpeg" },
-  { name: "Muskan", role: "Project Coordinator", photo: "/muskanT.jpg" },
+  { name: "Muskan", role: "Project Coordinator", photo: "" },
   { name: "Palak", role: "Marketing Intern", photo: "/palak.jpg" },
-  { name: "Paesha", role: "Video Editor Intern", photo: "" },
+  { name: "Paesha", role: "Video Editor Intern", photo: "/paesha.jpeg" },
   { name: "Sidharth", role: "Social Media", photo: "/sidharth.jpg" },
   { name: "Jagriti", role: "Human Resources", photo: "/jagritii.jpg" },
   { name: "Shekar", role: "Marketing", photo: "/Shekhar.jpg" },
   { name: "Mukund", role: "Marketing", photo: "/mukund.jpg" },
 ];
+
+
 
 const gallery = [
   {
