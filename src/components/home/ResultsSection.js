@@ -2,12 +2,12 @@ import Image from "next/image";
 
 const results = [
   {
-    image: "/gp1.png",
+    image: "/gp9.png",
     description:
       "We managed a ₹90.6 lakh monthly ad budget for a global eSIM brand. By refining targeting and bidding, we drove 6,700+ conversions in a month at ₹1,350 per conversion and a 12% conversion rate, reaching ~$15,000 in daily sales.",
   },
   {
-    image: "/gp2.png",
+    image: "/gp1.png",
     description:
       "A saree brand came to us in July with strong content but stalled growth. By restructuring their campaigns to make the most of that content, we grew revenue by 87% in a single month, crossing ₹20 lakh in sales.",
   },
@@ -17,12 +17,12 @@ const results = [
       "By managing Google and Meta ads for a lawn mower brand, we delivered its highest-ever monthly revenue of A$384K. That was a 20% jump in a single month, with orders up 36%.",
   },
   {
-    image: "/gp4.png",
+    image: "/gp2.png",
     description:
       "Over nine months, our Google and Meta campaigns for a lawn mower brand drove A$2.34M in gross sales, up 25% on the previous nine months, with orders up 35%.",
   },
   {
-    image: "/gp5.png",
+    image: "/gp4.png",
     description:
       "Over nine months, we drove ₹11 Cr in sales for an FMCG brand, nearly 40% more than the previous nine months, by cutting budget leakage and sharpening the focus of their ads.",
   },
@@ -37,12 +37,12 @@ const results = [
       "Running Meta ads for an apparel brand, we turned ₹6.1L in monthly spend into ₹21.9L in revenue at a 3.58x ROAS. We got there through consistent creative testing and a focus on new customer acquisition, with 1,835 purchases in a month.",
   },
   {
-    image: "/gp8.png",
+    image: "/gp10.png",
     description:
       "For an Australian brand, we turned $4,490 in monthly Meta ad spend into $118K+ in revenue, a 26.44x ROAS, with 367 purchases in 30 days.",
   },
   {
-    image: "/gp9.png",
+    image: "/gp8.png",
     description:
       "For a dental chain with 500+ clinics across India, we managed ₹1.8 Cr in monthly Google Ads spend and generated nearly 48,000 conversions, at about ₹385 per conversion.",
   },
