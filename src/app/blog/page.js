@@ -300,7 +300,7 @@ const latestPosts = [
     tag: "Google Ads",
     thumb: "googleAds",
     thumbClass: "t-navy",
-    title: "Why Is My Website Not Ranking on Google? A Complete SEO Guide",
+    title: "Google Ads Audit Services: Find and Fix Campaign Issues",
     desc: "Optimize your campaigns, targeting and landing pages for better results.",
     minutes: 8,
     date: "Oct 5, 2024",
