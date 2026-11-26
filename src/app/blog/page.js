@@ -300,7 +300,7 @@ const latestPosts = [
     tag: "Google Ads",
     thumb: "googleAds",
     thumbClass: "t-navy",
-    title: "5 Proven Ways to Improve Your Google Ads ROI",
+    title: "Why Is My Website Not Ranking on Google? A Complete SEO Guide",
     desc: "Optimize your campaigns, targeting and landing pages for better results.",
     minutes: 8,
     date: "Oct 5, 2024",
@@ -355,6 +355,18 @@ const latestPosts = [
     date: "Sep 20, 2024",
     href: "/blog/website-features-conversions",
     delay: ".44s",
+  },
+  {
+    cat: "google-ads",
+    tag: "Google Ads",
+    thumb: "googleAds",
+    thumbClass: "t-navy",
+    title: "Google Ads Account Audit for Better Leads and Conversions",
+    desc: "Optimize your campaigns, targeting and landing pages for better results.",
+    minutes: 8,
+    date: "Oct 5, 2024",
+    href: "/blog/google-ads-account-audit",
+    delay: ".12s",
   },
 ];
 
