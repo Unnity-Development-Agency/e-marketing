@@ -28,8 +28,8 @@ export async function generateMetadata({ params }) {
   const post = getPost(slug);
   if (!post) return {};
  return {
-  title: { absolute: post.title },
-  description: post.dek,
+  title: { absolute: post.metaTitle ?? post.title },
+description: post.metaDescription ?? post.dek,
 };
 }
 

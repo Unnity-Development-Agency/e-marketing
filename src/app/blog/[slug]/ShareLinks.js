@@ -22,53 +22,34 @@ const icons = {
 };
 
 const labels = {
-  linkedin: "Share on LinkedIn",
-  x: "Share on X",
-  whatsapp: "Share on WhatsApp",
-  copy: "Copy link",
+  linkedin: "Open Unnity on LinkedIn",
+  x: "Open on X",
+  whatsapp: "Chat on WhatsApp",
+  instagram: "Open Unnity on Instagram",
+};
+
+const urls = {
+  linkedin: "https://www.linkedin.com/company/unnityglobal/posts/",
+  x: "https://x.com/SayamJa92667175",
+  whatsapp: "https://wa.me/919910187451",
+  instagram: "https://www.instagram.com/_unnity/",
 };
 
 export default function ShareLinks({ title }) {
-  const share = (kind) => () => {
-    const u = encodeURIComponent(window.location.href);
-    const t = encodeURIComponent(title);
-    const urls = {
-      linkedin: `https://www.linkedin.com/company/unnityglobal/posts/`,
-      x: `https://x.com/SayamJa92667175`,
-      whatsapp: `https://wa.me/919910187451?text=${t}%20${u}`,
-    };
-    window.open(urls[kind], "_blank", "noopener,width=600,height=560");
-  };
-
-  const copy = async (e) => {
-    const btn = e.currentTarget;
-    try {
-      await navigator.clipboard.writeText(window.location.href);
-      btn.dataset.copied = "1"; // CSS tooltip dikhata hai
-      setTimeout(() => delete btn.dataset.copied, 1800);
-    } catch {}
-  };
-
   return (
     <>
-      {["linkedin", "x", "whatsapp"].map((k) => (
-        <button key={k} type="button" aria-label={labels[k]} onClick={share(k)}>
+      {["linkedin", "x", "whatsapp", "instagram"].map((k) => (
+        <a
+          key={k}
+          href={urls[k]}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={labels[k]}
+          title={labels[k]}
+        >
           {icons[k]}
-        </button>
+        </a>
       ))}
-      <button
-  type="button"
-  aria-label="Open Unnity on Instagram"
-  onClick={() =>
-    window.open(
-      "https://www.instagram.com/_unnity/",
-      "_blank",
-      "noopener,noreferrer"
-    )
-  }
->
-  {icons.instagram}
-</button>
     </>
   );
 }
