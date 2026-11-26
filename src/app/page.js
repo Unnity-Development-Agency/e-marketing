@@ -726,7 +726,7 @@ export default function Home() {
                 letterSpacing: "-0.03em",
               }}
             >
-              <h1 className="block text-white">Crafting Digital Brands</h1>
+<span className="block text-white">Crafting Digital Brands</span>
               <span className="block mt-1 bg-linear-to-r from-[#e0d7ff] via-[#a78bfa] to-[#7c3aed] bg-clip-text text-transparent">
                 That Stand Out.
               </span>

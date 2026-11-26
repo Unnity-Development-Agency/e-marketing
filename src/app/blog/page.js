@@ -359,7 +359,7 @@ const latestPosts = [
   {
     cat: "google-ads",
     tag: "Google Ads",
-    thumb: "googleAds",
+    thumb: "googleAdsAudit",
     thumbClass: "t-navy",
     title: "Google Ads Account Audit for Better Leads and Conversions",
     desc: "Optimize your campaigns, targeting and landing pages for better results.",
@@ -627,6 +627,8 @@ function ThumbMetaAds() {
   );
 }
 
+
+
 function ThumbPerformance() {
   return (
     <svg viewBox="0 0 120 80" fill="none">
@@ -638,6 +640,28 @@ function ThumbPerformance() {
   );
 }
 
+
+function ThumbGoogleAdsAudit() {
+  return (
+  <svg viewBox="0 0 120 80" fill="none">
+    <circle cx="52" cy="42" r="32" fill="#9DB8E8" />
+    <circle cx="52" cy="42" r="24" fill="#E8EEF8" />
+    <circle cx="52" cy="42" r="17" fill="#5578B8" />
+    <circle className="pulse" cx="52" cy="42" r="9" fill="#1E3A6E" />
+
+    <path d="M52 42 L95 8"
+      stroke="#0F172A"
+      strokeWidth="4"
+      strokeLinecap="round" />
+
+    <path d="M95 8 L84 9 L89 18 L101 17Z"
+      fill="#33508A" />
+
+    <path d="M95 8 L96 0 L84 9 L89 18Z"
+      fill="#1E3A6E" />
+  </svg>
+);
+}
 function ThumbWebDev() {
   return (
     <svg viewBox="0 0 120 80" fill="none">
@@ -659,6 +683,7 @@ const thumbMap = {
   googleAds: ThumbGoogleAds,
   seo: ThumbSeo,
   metaAds: ThumbMetaAds,
+  googleAdsAudit: ThumbGoogleAdsAudit,
   performance: ThumbPerformance,
   webDev: ThumbWebDev,
 };
@@ -1089,7 +1114,7 @@ function LatestArticles() {
             >
               {/* Swap the thumb contents for: <img src="cover.jpg" alt="" style={{width:"100%",height:"100%",objectFit:"cover"}} /> */}
               <div className={`thumb ${p.thumbClass}`} aria-hidden="true">
-                <Thumb name={p.thumb} />
+                <Thumb name={p.cover || p.thumb} />
               </div>
               <div className="body">
                 <span className={`tag${p.amber ? " amber" : ""}`}>{p.tag}</span>
