@@ -87,6 +87,38 @@ function Cover({ name }) {
           <rect x="146" y="62" width="56" height="60" rx="8" fill="rgba(255,255,255,.12)" />
         </svg>
       );
+
+      case "googleAdsAudit":
+  return (
+    <svg
+      className="sm"
+      viewBox="0 0 120 80"
+      fill="none"
+      aria-hidden="true"
+    >
+      <circle cx="52" cy="42" r="32" fill="#9DB8E8" />
+      <circle cx="52" cy="42" r="24" fill="#E8EEF8" />
+      <circle cx="52" cy="42" r="17" fill="#5578B8" />
+      <circle className="pulse" cx="52" cy="42" r="9" fill="#1E3A6E" />
+
+      <path
+        d="M52 42 L95 8"
+        stroke="#FFFFFF"
+        strokeWidth="4"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M95 8 L84 9 L89 18 L101 17Z"
+        fill="#9DB8E8"
+      />
+
+      <path
+        d="M95 8 L96 0 L84 9 L89 18Z"
+        fill="#5578B8"
+      />
+    </svg>
+  );
     default: // chart
       return (
         <svg viewBox="0 0 560 240" fill="none" aria-hidden="true">
@@ -173,7 +205,7 @@ function Block({ b }) {
       return (
         <aside className="cta-box reveal">
           <div><h3>{b.title}</h3><p>{b.text}</p></div>
-          <Link href="/contact" className="btn-light">{b.label}<Arrow /></Link>
+          <Link href="/work-with-us" className="btn-light">{b.label}<Arrow /></Link>
         </aside>
       );
     default:
@@ -319,7 +351,7 @@ export default async function ArticlePage({ params }) {
                     <h3>Unnity Growth Team</h3>
                     <div className="role">Performance marketing · Web development · Shopify</div>
                     <p>We plan, build and optimise websites and paid campaigns for growing brands, and share what we learn here.</p>
-                    <Link href="/about">More about Unnity <Arrow size={14} /></Link>
+                    <Link href="/case-studies">More about Unnity <Arrow size={14} /></Link>
                   </div>
                 </div>
               </div>
