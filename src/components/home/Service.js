@@ -184,7 +184,7 @@ export default function Services() {
             <div
               key={s.name}
               aria-live="polite"
-              className={`relative hidden min-h-[520px] flex-col overflow-hidden rounded-[28px] bg-[#2f5bff] p-12 pb-11 text-white shadow-[0_30px_70px_rgba(47,91,255,.28)]
+              className={`relative hidden min-h-[520px] flex-col overflow-hidden rounded-[28px] bg-[#0f032b] p-12 pb-11 text-white shadow-[0_30px_70px_rgba(47,91,255,.28)]
                 before:absolute before:inset-0 before:content-['']
                 before:bg-[linear-gradient(rgba(255,255,255,.07)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.07)_1px,transparent_1px)]
                 before:bg-[length:40px_40px] before:[mask-image:linear-gradient(160deg,transparent_30%,#000_100%)]

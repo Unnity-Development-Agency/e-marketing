@@ -15,6 +15,7 @@ import Stats from '@/components/home/Stats'
 import Testimonials from '@/components/home/Testimonials'
  import WhyUnnity from '@/components/home/WhyUnnity'
 import React from 'react'
+import WhatsAppButton from '@/components/home/WhatsAppButton'
 
 
 
@@ -51,6 +52,9 @@ const page = () => {
 
 
         <Footer/>
+
+
+<WhatsAppButton/>
     </section>
   )
 }
