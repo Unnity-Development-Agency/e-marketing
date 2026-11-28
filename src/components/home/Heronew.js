@@ -22,7 +22,7 @@ export default function AdsHero() {
 
         <h1 className="mb-[30px] mt-[22px] text-[clamp(36px,6vw,68px)] font-extrabold leading-[1.05] tracking-[-1.5px]">
           We Help Ambitious Brands{" "}
-          <span className="relative whitespace-nowrap text-[#3355FF] after:absolute after:inset-x-[2%] after:-bottom-2 after:h-1.5 after:-rotate-1 after:rounded-md after:bg-[#3355FF] after:content-['']">
+          <span className="relative whitespace-nowrap bg-gradient-to-r from-[#e0d7ff] via-[#a78bfa] to-[#7c3aed] bg-clip-text text-transparent after:absolute after:inset-x-[2%] after:-bottom-2 after:h-1.5 after:-rotate-1 after:rounded-md after:bg-[#0F032B] after:content-['']">
             Break Through.
           </span>
         </h1>

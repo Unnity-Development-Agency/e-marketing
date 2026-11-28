@@ -55,7 +55,7 @@ export default function ProblemBridge() {
     >
       <h2 className="mx-auto max-w-[820px] text-[length:clamp(30px,4.4vw,52px)] font-extrabold leading-[1.12] tracking-[-1.4px]">
         Spending on Ads but Missing{' '}
-        <span className="relative whitespace-nowrap text-[#2f5bff]">
+        <span className="relative whitespace-nowrap bg-gradient-to-r from-[#e0d7ff] via-[#a78bfa] to-[#7c3aed] bg-clip-text text-transparent">
           Out on Sales? 
           <svg className="absolute left-0 -bottom-2 h-[14px] w-full" viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true">
             <path d="M3 9 C 60 3, 120 12, 180 6 S 260 4, 297 8" stroke="#2f5bff" strokeWidth="4" fill="none" strokeLinecap="round" />
@@ -207,8 +207,8 @@ Get better ad results and grow your business with Unnity.
       </ol>
 
       <p className="mt-9 text-lg font-semibold">
-       Stop Wasting Ad Spend. <b className="text-[#2f5bff]">Start Growing Your Business.
-</b>
+       Stop Wasting Ad Spend. Start Growing Your Business.
+
       </p>
       <p className="mt-3 text-lg font-semibold">
        That's the bridge Unnity builds.
